@@ -4,160 +4,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プロダクト利用規約 | Shimataiyaki</title>
-    <!-- 外部CSSファイルを読み込み -->
+    
+    <!-- 共通スタイルシート -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="terms-wrapper">
-        
-        <div class="page-header">
-            <h1>プロダクト利用規約</h1>
-            <div class="last-updated">
-                最終更新日：2026年4月13日
-            </div>
-        </div>
-        
-        <div class="lead">
-            本規約は、Shimataiyaki が制作・公開する以下のプロダクト群に適用されます。<br>
-            最初に「全プロダクト共通規約」を、その後に各プロダクト固有の規約をご確認ください。
-        </div>
 
-        <nav class="toc">
-            <p>目次</p>
-            <ul>
-                <li><a href="#common-terms">全プロダクト共通規約</a></li>
-                <li><a href="#digital-ema">デジタル絵馬 固有規約</a></li>
-                <li><a href="#binary-omikuji">二進数おみくじ 固有規約</a></li>
-            </ul>
-        </nav>
+<!-- ===== 共通ヘッダー ===== -->
+<header class="site-header">
+    <a href="index.html" class="site-title">Shimataiyaki</a>
+    <nav class="header-nav">
+        <button class="menu-toggle" id="menuToggle" aria-label="メニュー" aria-expanded="false">☰</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="terms.html">利用規約</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <!-- ===== 全プロダクト共通規約 ===== -->
-        <div class="common-section">
-            <h2 id="common-terms" style="margin-top: 0; border-bottom: none; padding-bottom: 0;">全プロダクト共通規約</h2>
-            <p style="margin-bottom: 1.5rem;">以下の条項は、Shimataiyaki が提供するすべてのプロダクトに共通して適用されます。</p>
-            
-            <h3>1. 定義</h3>
-            <p>「本プロダクト」とは、Shimataiyaki が制作したデジタル絵馬、二進数おみくじ、および関連するソフトウェア群を指します。</p>
-            
-            <h3>2. 禁止事項</h3>
-            <ul class="rule-list">
-                <li>公序良俗に反する行為、またはそのおそれがある行為。</li>
-                <li>他の利用者、第三者、または制作者に迷惑、不利益、損害を与える行為。</li>
-                <li>本プロダクトの運営を妨げる行為、またはそのおそれがある行為。</li>
-                <li>ソースコードのライセンスに違反する行為（MITライセンスの範囲を超えた無断転載・商用利用の詐称など）。</li>
-            </ul>
-            
-            <h3>3. ソースコード・ライセンス</h3>
-            <ul class="rule-list">
-                <li>本プロダクトのソースコードは、特に明記がない限り <strong>MITライセンス</strong> に基づき公開されています。</li>
-                <li>詳細は各プロダクトの GitHub リポジトリをご確認ください。
-                    <ul style="margin-top: 0.5rem; list-style: none;">
-                        <li>🔗 デジタル絵馬: <a href="https://github.com/shimataiyaki/digital-ema" class="github-link" target="_blank">github.com/shimataiyaki/digital-ema</a></li>
-                        <li>🔗 二進数おみくじ: <a href="https://github.com/shimataiyaki/binary-omikuji" class="github-link" target="_blank">github.com/shimataiyaki/binary-omikuji</a></li>
-                    </ul>
-                </li>
-            </ul>
-            
-            <h3>4. 免責事項</h3>
-            <ul class="rule-list">
-                <li>本プロダクトは、教育・研究・非営利目的で制作された個人開発作品です。</li>
-                <li>システムの不具合、表示の遅延、端末との相性による動作不良、入力内容の消失などについて、制作者は一切の責任を負いかねます。</li>
-                <li>おみくじ等、乱数を用いた機能の結果について、実際の運勢や効果を保証するものではありません。娯楽としてお楽しみください。</li>
-            </ul>
-            
-            <h3>5. 個人情報の取り扱い</h3>
-            <ul class="rule-list">
-                <li>個人情報の取り扱いについては、別途「プライバシーポリシー」に定めるものとします。</li>
-            </ul>
-            <a href="./privacy.html" class="privacy-link">プライバシーポリシーはこちら（別ページ）</a>
-            
-            <h3>6. 規約の変更</h3>
-            <ul class="rule-list">
-                <li>本内容は、必要に応じて予告なく変更される場合があります。変更後は本ページにて随時告知します。</li>
-            </ul>
-            
-            <h3>7. 準拠法</h3>
-            <ul class="rule-list">
-                <li>本規約の解釈および適用は、日本法に準拠するものとします。</li>
-            </ul>
-        </div>
-
-        <!-- ===== デジタル絵馬 固有規約 ===== -->
-        <div class="product-card">
-            <div class="product-header">
-                <h2 id="digital-ema" style="border-bottom: none; margin: 0; padding: 0;">デジタル絵馬 ご利用にあたって</h2>
-                <p style="margin-top: 0.5rem; color: #64748b;">以下の規約は「デジタル絵馬」固有の取り決めです。上記の共通規約とあわせてお読みください。</p>
-            </div>
-            
-            <h3>運営者</h3>
-            <p class="operator-name">Shimataiyaki</p>
-            
-            <h3>表示について</h3>
-            <ul class="rule-list">
-                <li>ご入力いただいた「ニックネーム」と「願い事」は、接続されたモニターに絵馬として表示されます。</li>
-                <li>表示は自動で更新され、最大6件まで同時に掲示されます。</li>
-            </ul>
-            
-            <h3>ご入力にあたってのお願い</h3>
-            <ul class="rule-list">
-                <li>すべての参拝者が気持ちよくご覧になれるよう、公序良俗に反する内容や、他の方が不快に感じる表現はお控えください。</li>
-                <li>本名や連絡先など、個人を特定できる情報の入力はご遠慮ください。</li>
-                <li>不適切と判断した内容は、予告なく表示を停止または削除する場合があります。</li>
-            </ul>
-            
-            <h3>データの取り扱い</h3>
-            <ul class="rule-list">
-                <li>入力いただいた内容は、本文化祭の展示期間中のみ利用し、終了後は責任を持って削除します。</li>
-            </ul>
-            
-            <h3>お問い合わせ</h3>
-            <ul class="rule-list">
-                <li>ご意見・ご感想は、GitHub の Issue よりお寄せください。<br>
-                    <a href="https://github.com/shimataiyaki/digital-ema/issues" class="github-link" target="_blank" rel="noopener">https://github.com/shimataiyaki/digital-ema/issues</a>
-                </li>
-            </ul>
-            
-            <p class="closing-message">それでは、素敵な願い事をどうぞ <span class="emoji">⛩️</span></p>
-        </div>
-
-        <!-- ===== 二進数おみくじ 固有規約 ===== -->
-        <div class="product-card">
-            <div class="product-header">
-                <h2 id="binary-omikuji" style="border-bottom: none; margin: 0; padding: 0;">二進数おみくじ ご利用にあたって</h2>
-                <p style="margin-top: 0.5rem; color: #64748b;">以下の規約は「二進数おみくじ」固有の取り決めです。上記の共通規約とあわせてお読みください。</p>
-            </div>
-            
-            <h3>運営者</h3>
-            <p class="operator-name">Shimataiyaki</p>
-            
-            <h3>おみくじのしくみ</h3>
-            <ul class="rule-list">
-                <li>画面上では「二進数（例：0110）」のみが表示されます。</li>
-                <li>表示された数字を展示ブースの部員に見せることで、対応する紙のおみくじカードを受け取ることができます。</li>
-                <li>画面上に運勢（大吉など）は表示されません。紙カードと引き換えることで初めて結果が判明します。</li>
-            </ul>
-            
-            <h3>ご利用にあたってのお願い</h3>
-            <ul class="rule-list">
-                <li>本プロダクトは無料でご利用いただけます。</li>
-                <li>連続してお引きいただくことは可能ですが、多くの方に楽しんでいただくため、譲り合ってご利用ください。</li>
-                <li>表示された二進数のスクリーンショットをSNS等に投稿する際は、ハッシュタグ #二進数おみくじ をつけていただけると幸いです。</li>
-            </ul>
-            
-            <h3>お問い合わせ</h3>
-            <ul class="rule-list">
-                <li>ご意見・ご感想は、GitHub の Issue よりお寄せください。<br>
-                    <a href="https://github.com/shimataiyaki/binary-omikuji/issues" class="github-link" target="_blank" rel="noopener">https://github.com/shimataiyaki/binary-omikuji/issues</a>
-                </li>
-            </ul>
-            
-            <p class="closing-message">それでは、素敵な運試しをどうぞ <span class="emoji">⛩️</span></p>
-        </div>
-        
-        <!-- 共通フッター -->
-        <div class="copyright">
-            © 2026 Shimataiyaki
+<!-- ===== メインコンテンツ ===== -->
+<div class="terms-wrapper">
+    
+    <div class="page-header">
+        <h1>プロダクト利用規約</h1>
+        <div class="last-updated">
+            最終更新日：2026年4月13日
         </div>
     </div>
+    
+    <div class="lead">
+        本規約は、Shimataiyaki が制作・公開する以下のプロダクト群に適用されます。<br>
+        最初に「全プロダクト共通規約」を、その後に各プロダクト固有の規約をご確認ください。
+    </div>
+
+    <nav class="toc">
+        <p>目次</p>
+        <ul>
+            <li><a href="#common-terms">全プロダクト共通規約</a></li>
+            <li><a href="#digital-ema">デジタル絵馬 固有規約</a></li>
+            <li><a href="#binary-omikuji">二進数おみくじ 固有規約</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== 全プロダクト共通規約 ===== -->
+    <div class="common-section">
+        <h2 id="common-terms" style="margin-top: 0; border-bottom: none; padding-bottom: 0;">全プロダクト共通規約</h2>
+        <p style="margin-bottom: 1.5rem;">以下の条項は、Shimataiyaki が提供するすべてのプロダクトに共通して適用されます。</p>
+        
+        <h3>1. 定義</h3>
+        <p>「本プロダクト」とは、Shimataiyaki が制作したデジタル絵馬、二進数おみくじ、および関連するソフトウェア群を指します。</p>
+        
+        <h3>2. 禁止事項</h3>
+        <ul class="rule-list">
+            <li>公序良俗に反する行為、またはそのおそれがある行為。</li>
+            <li>他の利用者、第三者、または制作者に迷惑、不利益、損害を与える行為。</li>
+            <li>本プロダクトの運営を妨げる行為、またはそのおそれがある行為。</li>
+            <li>ソースコードのライセンスに違反する行為（MITライセンスの範囲を超えた無断転載・商用利用の詐称など）。</li>
+        </ul>
+        
+        <h3>3. ソースコード・ライセンス</h3>
+        <ul class="rule-list">
+            <li>本プロダクトのソースコードは、特に明記がない限り <strong>MITライセンス</strong> に基づき公開されています。</li>
+            <li>詳細は各プロダクトの GitHub リポジトリをご確認ください。
+                <ul style="margin-top: 0.5rem; list-style: none;">
+                    <li>🔗 デジタル絵馬: <a href="https://github.com/shimataiyaki/digital-ema" class="github-link" target="_blank" rel="noopener">github.com/shimataiyaki/digital-ema</a></li>
+                    <li>🔗 二進数おみくじ: <a href="https://github.com/shimataiyaki/binary-omikuji" class="github-link" target="_blank" rel="noopener">github.com/shimataiyaki/binary-omikuji</a></li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>4. 免責事項</h3>
+        <ul class="rule-list">
+            <li>本プロダクトは、教育・研究・非営利目的で制作された個人開発作品です。</li>
+            <li>システムの不具合、表示の遅延、端末との相性による動作不良、入力内容の消失などについて、制作者は一切の責任を負いかねます。</li>
+            <li>おみくじ等、乱数を用いた機能の結果について、実際の運勢や効果を保証するものではありません。娯楽としてお楽しみください。</li>
+        </ul>
+        
+        <h3>5. 個人情報の取り扱い</h3>
+        <ul class="rule-list">
+            <li>個人情報の取り扱いについては、別途「プライバシーポリシー」に定めるものとします。</li>
+        </ul>
+        <a href="privacy.html" class="privacy-link">プライバシーポリシーはこちら</a>
+        
+        <h3>6. 規約の変更</h3>
+        <ul class="rule-list">
+            <li>本内容は、必要に応じて予告なく変更される場合があります。変更後は本ページにて随時告知します。</li>
+        </ul>
+        
+        <h3>7. 準拠法</h3>
+        <ul class="rule-list">
+            <li>本規約の解釈および適用は、日本法に準拠するものとします。</li>
+        </ul>
+    </div>
+
+    <!-- ===== デジタル絵馬 固有規約 ===== -->
+    <div class="product-card">
+        <div class="product-header">
+            <h2 id="digital-ema" style="border-bottom: none; margin: 0; padding: 0;">デジタル絵馬 ご利用にあたって</h2>
+            <p style="margin-top: 0.5rem; color: #64748b;">以下の規約は「デジタル絵馬」固有の取り決めです。上記の共通規約とあわせてお読みください。</p>
+        </div>
+        
+        <h3>運営者</h3>
+        <p class="operator-name">Shimataiyaki</p>
+        
+        <h3>表示について</h3>
+        <ul class="rule-list">
+            <li>ご入力いただいた「ニックネーム」と「願い事」は、正面のモニターに絵馬として表示されます。</li>
+            <li>表示は自動で更新され、最大6件まで同時に掲示されます。</li>
+        </ul>
+        
+        <h3>ご入力にあたってのお願い</h3>
+        <ul class="rule-list">
+            <li>すべての参拝者が気持ちよくご覧になれるよう、公序良俗に反する内容や、他の方が不快に感じる表現はお控えください。</li>
+            <li>本名や連絡先など、個人を特定できる情報の入力はご遠慮ください。</li>
+            <li>不適切と判断した内容は、予告なく表示を停止または削除する場合があります。</li>
+        </ul>
+        
+        <h3>データの取り扱い</h3>
+        <ul class="rule-list">
+            <li>入力いただいた内容は、本文化祭の展示期間中のみ利用し、終了後は責任を持って削除します。</li>
+        </ul>
+        
+        <h3>お問い合わせ</h3>
+        <ul class="rule-list">
+            <li>ご意見・ご感想は、GitHub の Issue よりお寄せください。<br>
+                <a href="https://github.com/shimataiyaki/digital-ema/issues" class="github-link" target="_blank" rel="noopener">https://github.com/shimataiyaki/digital-ema/issues</a>
+            </li>
+        </ul>
+        
+        <p class="closing-message">それでは、素敵な願い事をどうぞ <span class="emoji">⛩️</span></p>
+    </div>
+
+    <!-- ===== 二進数おみくじ 固有規約 ===== -->
+    <div class="product-card">
+        <div class="product-header">
+            <h2 id="binary-omikuji" style="border-bottom: none; margin: 0; padding: 0;">二進数おみくじ ご利用にあたって</h2>
+            <p style="margin-top: 0.5rem; color: #64748b;">以下の規約は「二進数おみくじ」固有の取り決めです。上記の共通規約とあわせてお読みください。</p>
+        </div>
+        
+        <h3>運営者</h3>
+        <p class="operator-name">Shimataiyaki</p>
+        
+        <h3>おみくじのしくみ</h3>
+        <ul class="rule-list">
+            <li>画面上では「二進数（例：0110）」のみが表示されます。</li>
+            <li>表示された数字を展示ブースの部員に見せることで、対応する紙のおみくじカードを受け取ることができます。</li>
+            <li>画面上に運勢（大吉など）は表示されません。紙カードと引き換えることで初めて結果が判明します。</li>
+        </ul>
+        
+        <h3>ご利用にあたってのお願い</h3>
+        <ul class="rule-list">
+            <li>本プロダクトは無料でご利用いただけます。</li>
+            <li>連続してお引きいただくことは可能ですが、多くの方に楽しんでいただくため、譲り合ってご利用ください。</li>
+            <li>表示された二進数のスクリーンショットをSNS等に投稿する際は、ハッシュタグ #二進数おみくじ をつけていただけると幸いです。</li>
+        </ul>
+        
+        <h3>お問い合わせ</h3>
+        <ul class="rule-list">
+            <li>ご意見・ご感想は、GitHub の Issue よりお寄せください。<br>
+                <a href="https://github.com/shimataiyaki/binary-omikuji/issues" class="github-link" target="_blank" rel="noopener">https://github.com/shimataiyaki/binary-omikuji/issues</a>
+            </li>
+        </ul>
+        
+        <p class="closing-message">あなたの運勢を占ってみませんか？ <span class="emoji">⛩️</span></p>
+    </div>
+    
+    <!-- 共通フッター -->
+    <div class="copyright">
+        © 2026 Shimataiyaki
+    </div>
+</div>
+
+<!-- 共通JavaScript -->
+<script src="script.js"></script>
+
 </body>
 </html>
