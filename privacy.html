@@ -3,224 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー</title>
-    <link rel="stylesheet" href="./style.css">
-    <style>
-        /* style.cssの変数を踏襲した追加スタイル（プライバシーポリシー固有） */
-        .email-container {
-            background-color: var(--toc-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.2rem 1.5rem;
-            margin: 1.5rem 0;
-        }
-        .email-display {
-            font-family: 'SF Mono', 'Menlo', 'Monaco', 'Cascadia Code', 'Consolas', monospace;
-            font-size: 1rem;
-            background-color: var(--container-bg);
-            padding: 0.6rem 1rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            flex-grow: 1;
-        }
-        .btn {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 0.6rem 1.2rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: opacity 0.2s;
-            white-space: nowrap;
-        }
-        .btn:hover {
-            opacity: 0.85;
-        }
-        .external-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s;
-        }
-        .external-link:hover {
-            border-bottom: 1px solid var(--primary-color);
-        }
-        .back-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-            margin-bottom: 1rem;
-        }
-        .back-links a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .back-links a:hover {
-            text-decoration: underline;
-        }
-        .policy-section {
-            margin-bottom: 2rem;
-        }
-    </style>
+    <title>プライバシーポリシー ｜Shimataiyaki</title>
+    
+    <!-- 外部スタイルシート -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="terms-wrapper">
-        <header class="page-header">
-            <h1>プライバシーポリシー</h1>
-            <p class="last-updated">最終更新日：2026年4月13日</p>
-        </header>
 
-        <p class="lead">
-            当ポートフォリオサイト（以下「当サイト」）は、Shimataiyaki が運営する個人サイトです。<br>
-            本ポリシーでは、当サイトおよび関連プロダクトにおける情報の取り扱いについて説明します。
+<!-- ===== 共通ヘッダー ===== -->
+<header class="site-header">
+    <a href="index.html" class="site-title">Shimataiyaki</a>
+    <nav class="header-nav">
+        <button class="menu-toggle" id="menuToggle" aria-label="メニュー">≡</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="terms.html">利用規約</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ===== メインコンテンツ ===== -->
+<div class="terms-wrapper">
+    <header class="page-header">
+        <h1>プライバシーポリシー</h1>
+        <p class="last-updated">最終更新日：2026年4月13日</p>
+    </header>
+
+    <p class="lead">
+        本ポリシーでは、当サイトおよび関連プロダクトにおける情報の取り扱いについて説明します。
+    </p>
+
+    <!-- 目次 -->
+    <nav class="toc">
+        <p>目次</p>
+        <ul>
+            <li><a href="#section1">1. 当サイトの情報収集</a></li>
+            <li><a href="#section2">2. デジタル絵馬の情報</a></li>
+            <li><a href="#section3">3. メール問い合わせ</a></li>
+            <li><a href="#section4">4. 外部リンク</a></li>
+            <li><a href="#section5">5. 著作権</a></li>
+            <li><a href="#section6">6. 免責事項</a></li>
+            <li><a href="#section7">7. ポリシー変更</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. 当サイトの情報収集 -->
+    <section id="section1" class="policy-section">
+        <h2>1. 当サイトにおける情報収集</h2>
+        <p>
+            当サイト自体は、アクセス解析ツール（Google Analytics等）やお問い合わせフォームを一切使用しておりません。<br>
+            そのため、<strong>訪問者の皆様のIPアドレス、閲覧履歴、Cookie情報等を自動的に収集することは一切ございません</strong>。
+        </p>
+    </section>
+
+    <!-- 2. デジタル絵馬 -->
+    <section id="section2" class="common-section">
+        <h2 style="margin-top: 0; border-bottom-color: var(--accent-color);">2. プロダクト「デジタル絵馬」における情報の取り扱い</h2>
+        <p>
+            当サイトで紹介している作品「デジタル絵馬」では、願い事の投稿に <strong>Google フォーム</strong> を利用しています。<br>
+            ご入力いただいた「ニックネーム」および「願い事」は Google のサーバーに送信され、同社のプライバシーポリシーに従って管理されます。
+        </p>
+        <p>
+            当方は、収集した内容を以下の目的のみに利用します。
+        </p>
+        <ul class="rule-list">
+            <li>展示用モニターへの絵馬表示（イベント開催期間中のみ）</li>
+            <li>イベント終了後のデータ完全削除</li>
+        </ul>
+        <p>
+            それ以外の目的（マーケティングや第三者提供）に利用することはありません。<br>
+            Google フォームのデータ取り扱い詳細は、<a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener" class="external-link">Google プライバシーポリシー</a> をご確認ください。
+        </p>
+    </section>
+
+    <!-- 3. メール問い合わせ -->
+    <section id="section3" class="policy-section">
+        <h2>3. メールでのお問い合わせについて</h2>
+        <p>
+            当サイトでは連絡手段として、以下のメールアドレスを掲載しています。<br>
+            （迷惑メール対策のため、ボタンクリックで表示されます）
         </p>
 
-        <!-- 目次 -->
-        <nav class="toc">
-            <p>目次</p>
-            <ul>
-                <li><a href="#section1">1. 当サイトの情報収集</a></li>
-                <li><a href="#section2">2. デジタル絵馬の情報</a></li>
-                <li><a href="#section3">3. メール問い合わせ</a></li>
-                <li><a href="#section4">4. 外部リンク</a></li>
-                <li><a href="#section5">5. 著作権</a></li>
-                <li><a href="#section6">6. 免責事項</a></li>
-                <li><a href="#section7">7. ポリシー変更</a></li>
-            </ul>
-        </nav>
-
-        <!-- 1. 当サイトの情報収集 -->
-        <section id="section1" class="policy-section">
-            <h2>1. 当サイトにおける情報収集</h2>
-            <p>
-                当サイト自体は、アクセス解析ツール（Google Analytics等）やお問い合わせフォームを一切使用しておりません。<br>
-                そのため、<strong>訪問者の皆様のIPアドレス、閲覧履歴、Cookie情報等を自動的に収集することは一切ございません</strong>。
-            </p>
-        </section>
-
-        <!-- 2. デジタル絵馬（common-sectionクラスで強調） -->
-        <section id="section2" class="common-section">
-            <h2 style="margin-top: 0; border-bottom-color: var(--accent-color);">2. プロダクト「デジタル絵馬」における情報の取り扱い</h2>
-            <p>
-                当サイトで紹介している作品「デジタル絵馬」では、願い事の投稿に <strong>Google フォーム</strong> を利用しています。<br>
-                ご入力いただいた「ニックネーム」および「願い事」は Google のサーバーに送信され、同社のプライバシーポリシーに従って管理されます。
-            </p>
-            <p>
-                当方は、収集した内容を以下の目的のみに利用します。
-            </p>
-            <ul class="rule-list">
-                <li>展示用モニターへの絵馬表示（イベント開催期間中のみ）</li>
-                <li>イベント終了後のデータ完全削除</li>
-            </ul>
-            <p>
-                それ以外の目的（マーケティングや第三者提供）に利用することはありません。<br>
-                Google フォームのデータ取り扱い詳細は、<a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener" class="external-link">Google プライバシーポリシー</a> をご確認ください。
-            </p>
-        </section>
-
-        <!-- 3. メール問い合わせ -->
-        <section id="section3" class="policy-section">
-            <h2>3. メールでのお問い合わせについて</h2>
-            <p>
-                当サイトでは連絡手段として、以下のメールアドレスを掲載しています。<br>
-                （迷惑メール対策のため、ボタンクリックで表示されます）
-            </p>
-
-            <div class="email-container">
-                <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
-                    <span id="emailDisplay" class="email-display">[アドレスを表示するには右のボタンを押してください]</span>
-                    <button id="showEmailBtn" class="btn">表示</button>
-                </div>
-                <p style="margin-top: 12px; margin-bottom: 0; font-size: 0.9rem; color: #64748b;">
-                    ※ メールソフトが起動し、あなたが自発的にメッセージを送信した場合に限り、あなたのメールアドレスが当方に表示されます。
-                </p>
+        <div class="email-container">
+            <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <span id="emailDisplay" class="email-display">[アドレスを表示するには右のボタンを押してください]</span>
+                <button id="showEmailBtn" class="btn"> 表示</button>
             </div>
+        </div>
 
-            <p>
-                お寄せいただいたメールアドレスおよび本文は、<strong>ご質問への返信目的のみ</strong>に利用し、ご本人の同意なく第三者に提供することはありません。
-            </p>
-        </section>
+        <p>
+            お寄せいただいたメールアドレスおよび本文は、<strong>ご質問への返信目的のみ</strong>に利用し、ご本人の同意なく第三者に提供することはありません。
+        </p>
+    </section>
 
-        <!-- 4. 外部リンク -->
-        <section id="section4" class="policy-section">
-            <h2>4. 外部リンクについて</h2>
-            <p>
-                当サイトには GitHub など外部サービスへのリンクが含まれています。<br>
-                リンク先における個人情報の取り扱いについては、各サービスのプライバシーポリシーをご確認ください。
-            </p>
-        </section>
+    <!-- 4. 外部リンク -->
+    <section id="section4" class="policy-section">
+        <h2>4. 外部リンクについて</h2>
+        <p>
+            当サイトには GitHub など外部サービスへのリンクが含まれています。<br>
+            リンク先における個人情報の取り扱いについては、各サービスのプライバシーポリシーをご確認ください。
+        </p>
+    </section>
 
-        <!-- 5. 著作権 -->
-        <section id="section5" class="policy-section">
-            <h2>5. 著作権について</h2>
-            <p>
-                当サイトに掲載されている作品の著作権は、特に明記がない限り Shimataiyaki に帰属します。<br>
-                ソースコードについては、各リポジトリに記載されたライセンス（MIT License）に従ってご利用ください。
-            </p>
-        </section>
+    <!-- 5. 著作権 -->
+    <section id="section5" class="policy-section">
+        <h2>5. 著作権について</h2>
+        <p>
+            当サイトに掲載されている作品の著作権は、特に明記がない限り Shimataiyaki に帰属します。<br>
+            ソースコードについては、各リポジトリに記載されたライセンス（MIT License）に従ってご利用ください。
+        </p>
+    </section>
 
-        <!-- 6. 免責事項 -->
-        <section id="section6" class="policy-section">
-            <h2>6. 免責事項</h2>
-            <p>
-                当サイトおよび関連プロダクトの利用により生じたいかなる損害についても、当方は一切の責任を負いかねます。
-            </p>
-        </section>
+    <!-- 6. 免責事項 -->
+    <section id="section6" class="policy-section">
+        <h2>6. 免責事項</h2>
+        <p>
+            当サイトおよび関連プロダクトの利用により生じたいかなる損害についても、当方は一切の責任を負いかねます。
+        </p>
+    </section>
 
-        <!-- 7. ポリシー変更 -->
-        <section id="section7" class="policy-section">
-            <h2>7. プライバシーポリシーの変更</h2>
-            <p>
-                本ポリシーは、必要に応じて予告なく変更される場合があります。変更後は本ページにて随時告知します。
-            </p>
-        </section>
+    <!-- 7. ポリシー変更 -->
+    <section id="section7" class="policy-section">
+        <h2>7. プライバシーポリシーの変更</h2>
+        <p>
+            本ポリシーは、必要に応じて予告なく変更される場合があります。変更後は本ページにて随時告知します。
+        </p>
+    </section>
 
-        <!-- フッター -->
-        <footer class="copyright">
-            <div class="back-links">
-                <a href="./terms.html">← プロダクト利用規約に戻る</a>
-                <a href="./index.html">← ポートフォリオトップに戻る</a>
-            </div>
-            <p>© 2026 Shimataiyaki</p>
-        </footer>
-    </div>
+    <!-- フッター -->
+    <footer class="copyright">
+        <p>© 2026 Shimataiyaki</p>
+    </footer>
+</div>
 
-    <script>
-        (function() {
-            // ---------- 実際のメールアドレスに変更してください ----------
-            const user = 'shimataiyaki.dev';      // @ の前
-            const domain = 'gmail.com';           // @ の後ろ
-            // --------------------------------------------------------
+<!-- 共通JavaScript -->
+<script src="script.js"></script>
 
-            const fullEmail = user + '@' + domain;
-            const emailDisplay = document.getElementById('emailDisplay');
-            const showBtn = document.getElementById('showEmailBtn');
-            let revealed = false;
-
-            showBtn.addEventListener('click', function() {
-                if (!revealed) {
-                    emailDisplay.innerHTML = `<a href="mailto:${fullEmail}" style="color: var(--primary-color); text-decoration: none;">${fullEmail}</a>`;
-                    showBtn.textContent = 'コピー';
-                    revealed = true;
-                } else {
-                    navigator.clipboard.writeText(fullEmail).then(() => {
-                        const original = showBtn.textContent;
-                        showBtn.textContent = 'コピー完了';
-                        setTimeout(() => { showBtn.textContent = original; }, 1500);
-                    }).catch(() => {
-                        const range = document.createRange();
-                        range.selectNodeContents(emailDisplay);
-                        const selection = window.getSelection();
-                        selection.removeAllRanges();
-                        selection.addRange(range);
-                        alert('コピーに失敗しました。手動でコピーしてください。');
-                    });
-                }
-            });
-        })();
-    </script>
 </body>
 </html>
