@@ -4,42 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオ｜Shimataiyaki</title>
-    
-    <!-- スタイルシート -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- ===== 共通ヘッダー ===== -->
+<!-- ===== 共通ヘッダー（目次統合） ===== -->
 <header class="site-header">
     <a href="index.html" class="site-title">Shimataiyaki</a>
-    <nav class="header-nav">
-        <button class="menu-toggle" id="menuToggle" aria-label="メニュー">≡</button>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html">ホーム</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- ===== メインコンテンツ ===== -->
-<div class="terms-wrapper">
     
-    <header class="page-header">
-        <h1>ポートフォリオトップ</h1>
-        <div class="last-updated">最終更新日：2026年4月16日</div>
-        <div class="lead">
-            個人開発・デジタル遊び・フィールドワークの記録。
-        </div>
-    </header>
-
-    <!-- 目次 -->
-    <nav class="toc">
-        <p>目次</p>
+    <!-- デスクトップ用目次 -->
+    <nav class="toc toc-desktop">
         <ul>
             <li><a href="#about">自己紹介</a></li>
             <li><a href="#projects">プロダクト</a></li>
@@ -49,6 +26,34 @@
             <li><a href="#contact">お問い合わせ</a></li>
         </ul>
     </nav>
+    
+    <!-- ハンバーガーメニュー（モバイル用＋補完リンク） -->
+    <nav class="header-nav">
+        <button class="menu-toggle" id="menuToggle" aria-label="メニュー">≡</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#about">自己紹介</a></li>
+            <li><a href="#projects">プロダクト</a></li>
+            <li><a href="#achievements">受賞実績</a></li>
+            <li><a href="#activities">活動実績</a></li>
+            <li><a href="#articles">note</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+            <li><hr></li>
+            <li><a href="terms.html">利用規約</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ===== メインコンテンツ ===== -->
+<div class="terms-wrapper">
+    
+    <header class="page-header">
+        <h1>ポートフォリオトップ</h1>
+        <div class="last-updated">最終更新日：2026年4月17日</div>
+        <div class="lead">
+            個人開発・デジタル遊び・フィールドワークの記録。
+        </div>
+    </header>
 
     <!-- About -->
     <section id="about">
@@ -64,8 +69,8 @@
         <p style="margin-bottom: 1.5rem; color: #475569;">各プロダクトの詳細なコードやドキュメントは、GitHubリポジトリをご参照ください。</p>
         
         <!-- デジタル絵馬 -->
-        <div class="product-card">
-            <div class="product-header">
+        <div class="general-card">
+            <div class="card-header">
                 <h3>デジタル絵馬 <span style="font-weight: normal; font-size: 0.9rem; margin-left: 0.5rem;">digital-ema</span></h3>
             </div>
             <p>入力した願い事がモニターに絵馬として表示される、文化祭向け参加型インスタレーション。最大6件まで同時掲示され、定期的に自動更新されます。</p>
@@ -77,8 +82,8 @@
         </div>
 
         <!-- 二進数おみくじ -->
-        <div class="product-card">
-            <div class="product-header">
+        <div class="general-card">
+            <div class="card-header">
                 <h3>二進数おみくじ <span style="font-weight: normal; font-size: 0.9rem; margin-left: 0.5rem;">binary-omikuji</span></h3>
             </div>
             <p>画面に二進数のみを表示し、対応する紙のおみくじカードと引き換えることで結果が分かる、アナログ連動型の運試しジェネレーター。</p>
@@ -90,8 +95,8 @@
         </div>
 
         <!-- Hama-Portal（アーカイブ） -->
-        <div class="product-card" style="opacity: 0.85; background: #fdfdfd;">
-            <div class="product-header">
+        <div class="general-card" style="opacity: 0.85; background: #fdfdfd;">
+            <div class="card-header">
                 <h3>Hama-Portal <span style="font-weight: normal; font-size: 0.9rem; margin-left: 0.5rem;">浜松市紹介サイト</span></h3>
                 <span class="archived-badge">運用終了</span>
             </div>
@@ -108,8 +113,11 @@
     <!-- Achievements -->
     <section id="achievements">
         <h2>受賞実績</h2>
-        <div class="common-section" style="margin-top: 0;">
-            <ul class="rule-list" style="margin-bottom: 0;">
+        <div class="general-card">
+            <div class="card-header">
+                <h3>🏆 受賞歴</h3>
+            </div>
+            <ul class="rule-list">
                 <li><strong>LOVOT活用アイデアコンテスト</strong><span class="badge">最優秀賞</span></li>
                 <li><strong>アーバンデータチャレンジ2025</strong> <span class="badge">銀賞</span></li>
             </ul>
@@ -120,22 +128,19 @@
     <!-- Activities -->
     <section id="activities">
         <h2>活動実績</h2>
-        <p>開発以外のフィールドワークや海外経験が、制作の背景に影響を与えています。</p>
-        
-        <div class="activity-grid">
-            <div class="activity-card">
-                <h4>国際交流経験</h4>
-                <ul class="rule-list">
-                    <li><strong>第25回世界スカウトジャンボリー</strong>（韓国／全羅北道セマングム）参加</li>
-                    <li><strong>令和７年度静岡県モンゴル国・ドルノゴビ県高校生交流</strong> — 現地文化交流・フィールドワーク</li>
-                </ul>
+        <div class="general-card">
+            <div class="card-header">
+                <h3>国際交流経験</h3>
             </div>
+            <ul class="rule-list">
+                <li><strong>第25回世界スカウトジャンボリー</strong>（韓国／全羅北道セマングム）参加</li>
+                <li><strong>令和７年度静岡県モンゴル国・ドルノゴビ県高校生交流</strong> — 現地文化交流・フィールドワーク</li>
+            </ul>
         </div>
-        
         <p>これらの経験から、「オフラインの体験をデジタルで拡張する」あるいは「デジタルをきっかけにオフラインの交流を生む」プロダクトに興味があります。</p>
     </section>
 
-        <!-- Articles -->
+    <!-- Articles -->
     <section id="articles">
         <h2>note</h2>
         <p>技術的メモやプロジェクトの舞台裏は、note にて公開しています。</p>
@@ -162,14 +167,11 @@
         <a href="https://github.com/shimataiyaki" class="github-link" target="_blank" rel="noopener">GitHub Profile</a></p>
     </section>
 
-    <!-- フッター -->
     <footer class="copyright">
         <p>© 2026 Shimataiyaki</p>
     </footer>
 </div>
 
-<!-- 共通JavaScript -->
 <script src="script.js"></script>
-
 </body>
 </html>
