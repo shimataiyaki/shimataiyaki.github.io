@@ -24,21 +24,30 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.7;
-    padding: 2rem 1rem;
+     padding: 5rem 1rem 2rem 1rem; 
 }
 
 /* ===== 共通ヘッダー ===== */
+/* ===== 共通ヘッダー（固定・四角） ===== */
 .site-header {
     max-width: 880px;
-    margin: 0 auto 1.5rem auto;
+    margin: 0 auto;
     padding: 0.75rem 1.5rem;
     background-color: var(--container-bg);
-    border-radius: 40px;
+    border-radius: 0;                    /* 四角に変更 */
     box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.03);
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: 1px solid var(--border-color);
+    
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 880px;
+    z-index: 100;
 }
 
 .site-title {
