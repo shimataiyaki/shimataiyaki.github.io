@@ -11,37 +11,39 @@
 </head>
 <body>
 
-<!-- ===== 共通ヘッダー（目次統合） ===== -->
+<!-- ===== 共通ヘッダー（全幅） ===== -->
 <header class="site-header">
-    <a href="index.html" class="site-title">Shimataiyaki</a>
-    
-    <!-- デスクトップ用目次 -->
-    <nav class="toc toc-desktop">
-        <ul>
-            <li><a href="#about">自己紹介</a></li>
-            <li><a href="#projects">プロダクト</a></li>
-            <li><a href="#achievements">受賞実績</a></li>
-            <li><a href="#activities">活動実績</a></li>
-            <li><a href="#articles">note</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
-        </ul>
-    </nav>
-    
-    <!-- ハンバーガーメニュー（モバイル用＋補完リンク） -->
-    <nav class="header-nav">
-        <button class="menu-toggle" id="menuToggle" aria-label="メニュー">≡</button>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#about">自己紹介</a></li>
-            <li><a href="#projects">プロダクト</a></li>
-            <li><a href="#achievements">受賞実績</a></li>
-            <li><a href="#activities">活動実績</a></li>
-            <li><a href="#articles">note</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
-            <li><hr></li>
-            <li><a href="terms.html">利用規約</a></li>
-            <li><a href="privacy.html">プライバシーポリシー</a></li>
-        </ul>
-    </nav>
+    <div class="header-container">
+        <a href="index.html" class="site-title">Shimataiyaki</a>
+        
+        <!-- デスクトップ用目次 -->
+        <nav class="toc toc-desktop">
+            <ul>
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#projects">プロダクト</a></li>
+                <li><a href="#achievements">受賞実績</a></li>
+                <li><a href="#activities">活動実績</a></li>
+                <li><a href="#articles">note</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        
+        <!-- ハンバーガーメニュー（モバイル用＋補完リンク） -->
+        <nav class="header-nav">
+            <button class="menu-toggle" id="menuToggle" aria-label="メニュー">≡</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#projects">プロダクト・作品</a></li>
+                <li><a href="#achievements">受賞実績</a></li>
+                <li><a href="#activities">活動実績</a></li>
+                <li><a href="#articles">note</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+                <li><hr></li>
+                <li><a href="terms.html">利用規約</a></li>
+                <li><a href="privacy.html">プライバシーポリシー</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <!-- ===== メインコンテンツ ===== -->
@@ -65,13 +67,13 @@
 
     <!-- Projects -->
     <section id="projects">
-        <h2>プロダクト</h2>
+        <h2>プロダクト・作品</h2>
         <p style="margin-bottom: 1.5rem; color: #475569;">各プロダクトの詳細なコードやドキュメントは、GitHubリポジトリをご参照ください。</p>
         
         <!-- デジタル絵馬 -->
         <div class="general-card">
             <div class="card-header">
-                <h3>デジタル絵馬 <span style="font-weight: normal; font-size: 0.9rem; margin-left: 0.5rem;">digital-ema</span></h3>
+                <h3>デジタル絵馬 <span style="font-weight: normal; font-size: 0.9rem; margin-left: 0.5rem;">digital-ema</span><span class="badge">プロダクト</span></h3>
             </div>
             <p>入力した願い事がモニターに絵馬として表示される、文化祭向け参加型インスタレーション。最大6件まで同時掲示され、定期的に自動更新されます。</p>
             <p><a href="https://github.com/shimataiyaki/digital-ema" class="github-link" target="_blank" rel="noopener">GitHub: digital-ema</a></p>
@@ -84,7 +86,7 @@
         <!-- 二進数おみくじ -->
         <div class="general-card">
             <div class="card-header">
-                <h3>二進数おみくじ <span style="font-weight: normal; font-size: 0.9rem; margin-left: 0.5rem;">binary-omikuji</span></h3>
+                <h3>二進数おみくじ <span style="font-weight: normal; font-size: 0.9rem; margin-left: 0.5rem;">binary-omikuji</span><span class="badge">プロダクト</span></h3>
             </div>
             <p>画面に二進数のみを表示し、対応する紙のおみくじカードと引き換えることで結果が分かる、アナログ連動型の運試しジェネレーター。</p>
             <p><a href="https://github.com/shimataiyaki/binary-omikuji" class="github-link" target="_blank" rel="noopener">GitHub: binary-omikuji</a></p>
@@ -97,7 +99,7 @@
         <!-- Hama-Portal（アーカイブ） -->
         <div class="general-card" style="opacity: 0.85; background: #fdfdfd;">
             <div class="card-header">
-                <h3>Hama-Portal <span style="font-weight: normal; font-size: 0.9rem; margin-left: 0.5rem;">浜松市紹介サイト</span></h3>
+                <h3>Hama-Portal <span style="font-weight: normal; font-size: 0.9rem; margin-left: 0.5rem;">浜松市紹介サイト</span><span class="badge">作品</span></h3>
                 <span class="archived-badge">運用終了</span>
             </div>
             <p>中学3年次の「総合的な学習の時間」の一貫として制作した、地元・浜松市の魅力を発信するポータルサイト。観光スポットやグルメ情報をまとめ、実際に一般公開していました。</p>
@@ -115,7 +117,7 @@
         <h2>受賞実績</h2>
         <div class="general-card">
             <div class="card-header">
-                <h3>🏆 受賞歴</h3>
+                <h3>受賞実績</h3>
             </div>
             <ul class="rule-list">
                 <li><strong>LOVOT活用アイデアコンテスト</strong><span class="badge">最優秀賞</span></li>
