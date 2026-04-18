@@ -18,7 +18,7 @@
 <header class="site-header">
     <div class="header-container">
         <!-- サイトタイトル（ロゴ） -->
-        <a href="#" class="site-title">Shimataiyaki</a>
+        <a href="#" class="site-title">テキストを入力</a>
         
         <!-- ハンバーガーボタン（常時表示） -->
         <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
