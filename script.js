@@ -1,100 +1,77 @@
-/* ============================================
-   script.js - ポートフォリオサイト共通機能
-   ============================================ */
-
 (function() {
     'use strict';
 
-    // ---------- スムーススクロール（目次リンク用） ----------
-    const setupSmoothScroll = () => {
-        const tocLinks = document.querySelectorAll('.toc a');
-        tocLinks.forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href && href.startsWith('#')) {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-            });
-        });
-    };
+    // ---------- ハンバーガーメニュー ----------
+    const toggleBtn = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
 
-    // ---------- ハンバーガーメニュー制御 ----------
-    const setupMobileMenu = () => {
-        const toggleBtn = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-        
-        if (!toggleBtn || !navMenu) return;
-
-        toggleBtn.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            const expanded = navMenu.classList.contains('active');
-            this.setAttribute('aria-expanded', expanded);
+    if (toggleBtn && navMenu) {
+        toggleBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navMenu.classList.toggle('show');
+            toggleBtn.classList.toggle('active');
         });
 
         document.addEventListener('click', function(e) {
             if (!toggleBtn.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('active');
-                toggleBtn.setAttribute('aria-expanded', 'false');
+                navMenu.classList.remove('show');
+                toggleBtn.classList.remove('active');
             }
         });
 
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 600) {
-                navMenu.classList.remove('active');
-                toggleBtn.setAttribute('aria-expanded', 'false');
-            }
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+                toggleBtn.classList.remove('active');
+            });
         });
-    };
+    }
 
-    // ---------- メールアドレス表示・コピー機能（プライバシーポリシー用） ----------
-    const setupEmailReveal = () => {
-        const emailDisplay = document.getElementById('emailDisplay');
-        const showBtn = document.getElementById('showEmailBtn');
-        if (!emailDisplay || !showBtn) return;
+    // ---------- サイドバー目次 アクティブハイライト ----------
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-link');
 
-        // ★★★ 実際のメールアドレスに変更してください ★★★
-        const user = 'shimataiyaki.dev';
-        const domain = 'gmail.com';
-        const fullEmail = user + '@' + domain;
-
-        let revealed = false;
-
-        showBtn.addEventListener('click', function() {
-            if (!revealed) {
-                emailDisplay.innerHTML = `<a href="mailto:${fullEmail}" style="color: var(--primary-color); text-decoration: none;">${fullEmail}</a>`;
-                showBtn.textContent = 'コピー';
-                revealed = true;
-            } else {
-                navigator.clipboard.writeText(fullEmail).then(() => {
-                    const original = showBtn.textContent;
-                    showBtn.textContent = 'コピー完了';
-                    setTimeout(() => { showBtn.textContent = original; }, 1500);
-                }).catch(() => {
-                    const range = document.createRange();
-                    range.selectNodeContents(emailDisplay);
-                    const selection = window.getSelection();
-                    selection.removeAllRanges();
-                    selection.addRange(range);
-                    alert('コピーに失敗しました。手動でコピーしてください。');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                tocLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
                 });
             }
         });
-    };
+    }, { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' });
 
-    // ---------- 初期化 ----------
-    const init = () => {
-        setupSmoothScroll();
-        setupMobileMenu();
-        setupEmailReveal();  // 追加
-    };
+    sections.forEach(section => observer.observe(section));
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
+    // ---------- スムーススクロール（目次リンク） ----------
+    tocLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const target = document.querySelector(targetId);
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // ---------- ハンバーガーメニュー内リンクもスムーススクロール ----------
+    document.querySelectorAll('.nav-menu a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const target = document.querySelector(targetId);
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            }
+        });
+    });
+
 })();
