@@ -28,15 +28,9 @@
         <!-- メニュー本体（全幅） -->
         <ul class="nav-menu" id="navMenu">
             <div class="nav-menu-inner">
-                <li><a href="#about">About</a></li>
-                <li><a href="#story">ものがたり</a></li>
-                <li><a href="#works">制作物</a></li>
-                <li><a href="#achievements">受賞実績</a></li>
-                <li><a href="#activities">活動実績</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><hr></li>
-                <li><a href="https://github.com/shimataiyaki" target="_blank">GitHub</a></li>
-                <li><a href="#" target="_blank">note（準備中）</a></li>
+                <li><a href="#">テキストを入力</a></li>
+                <li><a href="#s">テキストを入力</a></li>
+                <li><a href="#">テキストを入力</a></li>
             </div>
         </ul>
     </div>
