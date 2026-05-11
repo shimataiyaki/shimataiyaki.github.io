@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shimataiyaki｜ポートフォリオ</title>
+    <meta name="description" content="Shimataiyakiのポートフォリオ。好奇心とアソビゴコロをカタチに。">
+    
+    <!-- ファビコン -->
+    <link rel="icon" type="image/x-icon" href="https://shimataiyaki.github.io/images/favicon.ico">
+    
     <!-- M PLUS 1p -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
     <!-- スタイルシート -->
     <link rel="stylesheet" href="style.css">
-     <!-- ファビコン -->
-    <link rel="icon" type="image/x-icon" href="https://shimataiyaki.github.io/images/favicon.ico">
 </head>
 <body>
 
 <!-- ===== 全幅固定ヘッダー ===== -->
 <header class="site-header">
     <div class="header-container">
-        <a href="#" class="site-title">Shimataiyaki</a>
-        
-        <!-- ハンバーガーボタン -->
+        <a href="index.html" class="site-title">Shimataiyaki</a>
+
         <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
             <span></span><span></span><span></span>
         </button>
-        
-        <!-- 全幅ナビゲーションメニュー -->
+
         <ul class="nav-menu" id="navMenu">
             <div class="nav-menu-inner">
                 <li><a href="#about">About</a></li>
@@ -35,7 +37,7 @@
                 <li><a href="#activities">活動実績</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><hr></li>
-                 <li><a href="https://shimataiyaki.github.io/e-colleague/">e-colleague</a></li>
+                <li><a href="https://shimataiyaki.github.io/e-colleague/">e-colleague</a></li>
                 <li><a href="https://shimataiyaki.github.io/bunkasai-tenji/">R8年度文化祭プロジェクトページ</a></li>
                 <li><a href="https://github.com/shimataiyaki" target="_blank">GitHub</a></li>
                 <li><a href="https://note.com/shimataiyaki" target="_blank">note</a></li>
@@ -44,35 +46,44 @@
     </div>
 </header>
 
-<!-- ===== レイアウト：左サイドバー + メインコンテンツ ===== -->
-<div class="layout-wrapper">
-    <!-- 左固定サイドバー（目次） -->
-    <aside class="sidebar-toc">
-        <div class="toc-title">目次</div>
-        <ul class="toc-nav">
-            <li><a href="#about" class="toc-link">About</a></li>
-            <li><a href="#story" class="toc-link">タイムライン</a></li>
-            <li><a href="#works" class="toc-link">制作物</a></li>
-            <li><a href="#achievements" class="toc-link">受賞実績</a></li>
-            <li><a href="#activities" class="toc-link">活動実績</a></li>
-            <li><a href="#contact" class="toc-link">Contact</a></li>
-        </ul>
-    </aside>
+<!-- ===== 目次ナビ ===== -->
+<nav class="product-nav">
+    <div class="product-nav-container">
+        <div class="product-logo">目次</div>
+        <div class="product-links">
+            <a href="#about">About</a>
+            <a href="#story">タイムライン</a>
+            <a href="#works">制作物</a>
+            <a href="#achievements">受賞実績</a>
+            <a href="#activities">活動実績</a>
+            <a href="#contact" class="btn-cta">Contact</a>
+        </div>
+    </div>
+</nav>
 
-    <!-- メインコンテンツ -->
-    <main class="main-content">
-        
-        <section id="about">
-            <h1>ポートフォリオ</h1>
-            <div class="last-updated">最終更新：2026年4月25日</div>
-            <div class="lead">
-                好奇心×アソビゴコロ。
-            </div>
-            <p><strong>Shimataiyaki</strong> として活動する高校生。日々の様々な活動からインスピレーションを得て、文章やプロダクトに落とし込んでいます。</p>
-            <p style="margin-top: 0.75rem;"><a href="https://github.com/shimataiyaki" class="github-link" target="_blank">GitHub @shimataiyaki</a></p>
-        </section>
+<!-- ===== メインコンテンツ ===== -->
+<main class="main-content">
 
-        <section id="story">
+    <!-- ヒーロー -->
+    <section class="hero">
+        <div class="hero-badge">高校生クリエイター</div>
+        <h1 class="hero-title">好奇心と<br>アソビゴコロを、<br>カタチに。</h1>
+        <p class="hero-copy">Shimataiyaki のポートフォリオへようこそ。</p>
+    </section>
+
+    <!-- About -->
+    <section class="section-ec" id="about">
+        <div class="section-label">About</div>
+        <h2>自己紹介</h2>
+        <div class="last-updated">最終更新：2026年5月11日</div>
+        <p><strong>Shimataiyaki</strong> として活動する高校生。日々の様々な活動からインスピレーションを得て、文章やプロダクトに落とし込んでいます。</p>
+        <p style="margin-top: 0.75rem;"><a href="https://github.com/shimataiyaki" class="github-link" target="_blank">GitHub @shimataiyaki</a></p>
+    </section>
+
+    <!-- タイムライン -->
+    <section class="section-ec-gray" id="story">
+        <div class="section-ec-inner">
+            <div class="section-label">Story</div>
             <h2>タイムライン</h2>
             <div class="timeline">
                 <div class="timeline-item">
@@ -80,7 +91,7 @@
                     <p>地元・浜松市の魅力を伝えたいという思いから、初めてウェブサイトを公開。デジタルを通じてオフラインの価値を拡張することに興味を持つ。</p>
                 </div>
                 <div class="timeline-item">
-                　　<div class="timeline-year">2024</div>
+                    <div class="timeline-year">2024</div>
                     <p>第25回全国スカウトフォーラムに静岡県連盟代表として参加。ベンチャースカウトの行動の指針提言に議長団の一員として携わる。</p>
                 </div>
                 <div class="timeline-item">
@@ -92,40 +103,85 @@
                     <p>これまでの実績を経て、個人開発を本格化。「体験をデザインする」ことを軸に、複数のプロジェクトを展開中。</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="works">
-            <h2>制作物</h2>
-            <div class="record-list">
-                <article class="record-item">
-                    <div class="record-header">
-                        <span class="record-title">デジタル絵馬</span>
-                        <span class="record-meta">E-MAs</span>
-                    </div>
-                    <p>入力した願い事がモニターに絵馬として表示される、文化祭向け参加型インスタレーション。最大15件まで同時掲示され、定期的に自動更新。</p>
-                    <a href="https://github.com/shimataiyaki/digital-ema" class="github-link" target="_blank">GitHub</a>
-                </article>
-                <article class="record-item">
-                    <div class="record-header">
-                        <span class="record-title">二進数おみくじ</span>
-                        <span class="record-meta">E-LOTs</span>
-                    </div>
-                    <p>画面に二進数のみを表示し、対応する紙のおみくじカードと引き換えることで結果が分かる、アナログ連動型のおみくじWebアプリケーション。</p>
-                    <a href="https://github.com/shimataiyaki/binary-omikuji" class="github-link" target="_blank">GitHub</a>
-                </article>
-                <article class="record-item">
-                    <div class="record-header">
-                        <span class="record-title">Hama-Portal</span>
-                        <span class="record-meta">浜松市紹介サイト</span>
-                        <span class="status-badge">運用終了</span>
-                    </div>
-                    <p>中学3年次の「総合的な学習の時間」で制作した、地元・浜松市の魅力を発信するポータルサイト。観光スポットやグルメ情報をまとめ、一般公開していた。</p>
-                    <span style="color: var(--muted-text); font-size: 0.9rem;">※ 公開アーカイブなし</span>
-                </article>
+    <!-- 制作物（時系列順・交互レイアウト） -->
+    <section class="section-ec" id="works">
+        <div class="section-label">Works</div>
+        <h2>制作物</h2>
+
+        <!-- 1. Hama-Portal（画像右） -->
+        <div class="feature-row fade-in">
+            <div class="feature-text">
+                <div class="section-label">2023</div>
+                <h3 class="feature-title">Hama-Portal</h3>
+                <span class="status-badge">運用終了</span>
+                <p class="feature-desc">中学3年次に制作した、地元・浜松市の魅力を発信するポータルサイト。「自分の好きな街を、自分で紹介したい」という思いから生まれた、初めてのWebサイトです。</p>
+                <p style="color: var(--muted-text); font-size: 0.9rem;">※ 現在は公開アーカイブはありません。</p>
             </div>
-        </section>
+            <div class="feature-image">
+                <img src="images/hama-portal.png" alt="Hama-Portalの画面" class="feature-screenshot">
+            </div>
+        </div>
 
-        <section id="achievements">
+        <!-- 2. 二進数おみくじ（画像左） -->
+        <div class="feature-row feature-row-reverse fade-in">
+            <div class="feature-text">
+                <div class="section-label">E-LOTs</div>
+                <h3 class="feature-title">二進数おみくじ</h3>
+                <p class="feature-desc">二進数だけを画面に表示し、紙のおみくじカードと引き換えるアナログ連動型ジェネレーター。デジタルの無機質さと、紙を手渡す温かみのギャップを楽しんでほしい。</p>
+                <p><a href="https://github.com/shimataiyaki/binary-omikuji" class="github-link" target="_blank">GitHub</a></p>
+            </div>
+            <div class="feature-image">
+                <img src="images/e-lots.png" alt="二進数おみくじの画面" class="feature-screenshot">
+            </div>
+        </div>
+
+        <!-- 3. デジタル絵馬（画像右） -->
+        <div class="feature-row fade-in">
+            <div class="feature-text">
+                <div class="section-label">E-MAs</div>
+                <h3 class="feature-title">デジタル絵馬</h3>
+                <p class="feature-desc">願い事をモニターに絵馬として表示する、文化祭向け参加型インスタレーション。「デジタル神社」で参拝者が思いを共有できる場をつくりたくて生まれました。</p>
+                <p><a href="https://github.com/shimataiyaki/digital-ema" class="github-link" target="_blank">GitHub</a></p>
+            </div>
+            <div class="feature-image">
+                <img src="images/e-mas.png" alt="デジタル絵馬の画面" class="feature-screenshot">
+            </div>
+        </div>
+
+        <!-- 4. Mendako BBS（画像左） -->
+        <div class="feature-row feature-row-reverse fade-in">
+            <div class="feature-text">
+                <div class="section-label">Product 04</div>
+                <h3 class="feature-title">Mendako BBS</h3>
+                <p class="feature-desc">シンプルな掲示板アプリ。余計な機能を削ぎ落とし、「書く・読む・返す」だけに集中できる設計。個人サーバーで動作する軽量さが特長です。</p>
+                <p><a href="https://github.com/shimataiyaki/mendako-bbs" class="github-link" target="_blank">GitHub</a></p>
+            </div>
+            <div class="feature-image">
+                <img src="images/mendakobbs.png" alt="Mendako BBSの画面" class="feature-screenshot">
+            </div>
+        </div>
+
+        <!-- 5. e-colleague（画像右） -->
+        <div class="feature-row fade-in">
+            <div class="feature-text">
+                <div class="section-label">Product 05</div>
+                <h3 class="feature-title">e-colleague</h3>
+                <p class="feature-desc">LINEグループに話しかけるだけでAIがタスクを抽出・管理するBot。口頭の「やっといて」を自動でタスクに変え、チームの「言った言わない」をなくします。</p>
+                <p><a href="https://shimataiyaki.github.io/e-colleague/" class="github-link" target="_blank">プロジェクトページ</a></p>
+            </div>
+            <div class="feature-image">
+                <img src="images/e-colleague.png" alt="e-colleagueの画面" class="feature-screenshot">
+            </div>
+        </div>
+    </section>
+
+    <!-- 受賞実績 -->
+    <section class="section-ec-gray" id="achievements">
+        <div class="section-ec-inner">
+            <div class="section-label">Achievements</div>
             <h2>受賞実績</h2>
             <div class="record-item">
                 <div class="record-header">
@@ -139,27 +195,33 @@
                     <span class="award-badge">銀賞</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="activities">
-            <h2>活動実績</h2>
-            <div class="record-item">
-                <div class="record-header">
-                    <span class="record-title">第25回世界スカウトジャンボリー</span>
-                    <span class="record-meta">韓国／全羅北道セマングム</span>
-                </div>
-                <p>世界各国のスカウトと文化交流。言語や習慣の違いを超えて「共に遊ぶ」ことの普遍性を体感。</p>
+    <!-- 活動実績 -->
+    <section class="section-ec" id="activities">
+        <div class="section-label">Activities</div>
+        <h2>活動実績</h2>
+        <div class="record-item">
+            <div class="record-header">
+                <span class="record-title">第25回世界スカウトジャンボリー</span>
+                <span class="record-meta">韓国／全羅北道セマングム</span>
             </div>
-            <div class="record-item">
-                <div class="record-header">
-                    <span class="record-title">令和7年度 静岡県モンゴル国高校生交流</span>
-                    <span class="record-meta">ドルノゴビ県／フィールドワーク</span>
-                </div>
-                <p>現地の高校生との共同生活、遊牧民のゲル訪問などを通じて、異なる環境での「あたりまえ」に触れる。</p>
+            <p>世界各国のスカウトと文化交流。言語や習慣の違いを超えて「共に遊ぶ」ことの普遍性を体感。</p>
+        </div>
+        <div class="record-item">
+            <div class="record-header">
+                <span class="record-title">令和7年度 静岡県モンゴル国高校生交流</span>
+                <span class="record-meta">ドルノゴビ県／フィールドワーク</span>
             </div>
-        </section>
+            <p>現地の高校生との共同生活、遊牧民のゲル訪問などを通じて、異なる環境での「あたりまえ」に触れる。</p>
+        </div>
+    </section>
 
-        <section id="contact">
+    <!-- Contact -->
+    <section class="section-ec-gray" id="contact">
+        <div class="section-ec-inner">
+            <div class="section-label">Contact</div>
             <h2>お問い合わせ</h2>
             <p>ご連絡はメールまたはGitHubにてお願いします。</p>
             <div class="contact-block">
@@ -170,14 +232,21 @@
                     あるいは <a href="https://github.com/shimataiyaki" class="github-link" style="font-size: 0.9rem;" target="_blank">GitHub Issues</a> でも受け付けています。
                 </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- コピーライト -->
-        <footer class="main-footer">
-            © 2026 Shimataiyaki
-        </footer>
-    </main>
-</div>
+    <!-- フッター -->
+    <footer class="main-footer-ec">
+        <div class="sns-links-ec">
+            <a href="https://x.com/shimataiyaki" target="_blank" rel="noopener">X</a>
+            <a href="https://instagram.com/shimataiyaki" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://note.com/shimataiyaki" target="_blank" rel="noopener">note</a>
+            <a href="https://github.com/shimataiyaki" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <p>© 2026 Shimataiyaki</p>
+    </footer>
+
+</main>
 
 <!-- JavaScript -->
 <script src="script.js"></script>
