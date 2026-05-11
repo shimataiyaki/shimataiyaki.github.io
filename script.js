@@ -4,18 +4,27 @@
     // ---------- ハンバーガーメニュー ----------
     const toggleBtn = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
+    const productNav = document.querySelector('.product-nav');
 
     if (toggleBtn && navMenu) {
         toggleBtn.addEventListener('click', function(e) {
             e.stopPropagation();
-            navMenu.classList.toggle('show');
+            const isOpen = navMenu.classList.toggle('show');
             toggleBtn.classList.toggle('active');
+
+            // メニュー表示時にz-indexを上げて、product-navより前面に
+            if (isOpen) {
+                navMenu.style.zIndex = '1200';
+            } else {
+                navMenu.style.zIndex = '999';
+            }
         });
 
         document.addEventListener('click', function(e) {
             if (!toggleBtn.contains(e.target) && !navMenu.contains(e.target)) {
                 navMenu.classList.remove('show');
                 toggleBtn.classList.remove('active');
+                navMenu.style.zIndex = '999';
             }
         });
 
@@ -23,35 +32,19 @@
             link.addEventListener('click', () => {
                 navMenu.classList.remove('show');
                 toggleBtn.classList.remove('active');
+                navMenu.style.zIndex = '999';
             });
         });
     }
 
-    // ---------- サイドバー目次 アクティブハイライト ----------
-    const sections = document.querySelectorAll('section[id]');
-    const tocLinks = document.querySelectorAll('.toc-link');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-                tocLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-                });
-            }
-        });
-    }, { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' });
-
-    sections.forEach(section => observer.observe(section));
-
-    // ---------- スムーススクロール（目次リンク） ----------
-    tocLinks.forEach(link => {
+    // ---------- product-nav スムーススクロール ----------
+    document.querySelectorAll('.product-links a[href^="#"]').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('href');
             const target = document.querySelector(targetId);
             if (target) {
-                const headerOffset = 80;
+                const headerOffset = 100; // ヘッダー + product-nav の高さ分
                 const elementPosition = target.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
@@ -73,5 +66,17 @@
             }
         });
     });
+
+    // ---------- フェードイン ----------
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(el => observer.observe(el));
 
 })();
