@@ -1,1 +1,3 @@
 # shimataiyaki.github.io
+
+Shimataiyakiのサイトにようこそ。
