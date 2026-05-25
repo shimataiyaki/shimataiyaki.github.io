@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R8年度文化祭ドキュメント類</title>
+    <meta name="description" content="tech-shrine プロジェクトのドキュメント一覧。提供条件、データ方針、プロジェクト概要。">
+    <meta property="og:title" content="tech-shrine ドキュメント">
+    <meta property="og:description" content="文化祭展示のために部活動に提供したデジタルソリューションの公式ドキュメントです。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://shimataiyaki.github.io/tech-shrine/">
+    <!-- ファビコン・共通CSS (メインサイトの絶対パス) -->
+    <link rel="icon" type="image/x-icon" href="https://shimataiyaki.github.io/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://shimataiyaki.github.io/images/favicon.ico">
+    <link rel="apple-touch-icon" href="https://shimataiyaki.github.io/images/favicon.ico">
+    <link rel="stylesheet" href="https://shimataiyaki.github.io/style.css">
+    <!-- M PLUS 1p (メインサイトと同じく) -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Marked.js CDN (Markdown → HTML変換) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        /* マークダウン表示用のスタイル (メインサイトのstyle.cssにないもののみ) */
+        #md-content {
+            max-width: 720px;
+            margin: 0 auto 3rem;
+            text-align: left;
+            line-height: 1.9;
+        }
+        #md-content h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+        }
+        #md-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin: 1.8rem 0 0.5rem;
+        }
+        #md-content p {
+            margin-bottom: 1rem;
+        }
+        #md-content ul,
+        #md-content ol {
+            margin: 0.5rem 0 1rem 1.5rem;
+        }
+        #md-content li {
+            margin-bottom: 0.4rem;
+        }
+        #md-content a {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--accent-color);
+        }
+        #md-content a:hover {
+            border-bottom: 1px solid var(--accent-color);
+        }
+        #md-content code {
+            background: #f1f5f9;
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-family: 'Courier New', monospace;
+        }
+        #md-content pre {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            padding: 1rem 1.2rem;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 1rem 0 1.5rem;
+            border-radius: 0;
+        }
+        #md-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.95rem;
+        }
+        #md-content th,
+        #md-content td {
+            border: 1px solid var(--border-color);
+            padding: 0.7rem 0.8rem;
+            text-align: left;
+        }
+        #md-content th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        #md-content hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 固定ヘッダー（共通） -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="https://shimataiyaki.github.io/" class="site-title">Shimataiyaki</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="メニュー" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <div class="nav-menu-inner">
+                    <li><a href="https://shimataiyaki.github.io/">ポートフォリオ</a></li>
+                    <li><hr></li>
+                    <li><a href="#" class="nav-doc-link" data-file="README.md">概要</a></li>
+                    <li><a href="#" class="nav-doc-link" data-file="提供条件.md">提供条件</a></li>
+                    <li><a href="#" class="nav-doc-link" data-file="データ方針.md">データ方針</a></li>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+    <!-- レイアウト：左サイドバー + メインコンテンツ -->
+    <div class="layout-wrapper">
+        <!-- 左固定サイドバー（文書一覧） -->
+        <aside class="sidebar-toc">
+            <div class="toc-title">ドキュメント</div>
+            <ul class="toc-nav" id="tocNav">
+                <li><a href="#" data-file="README.md" class="toc-link active">概要</a></li>
+                <li><a href="#" data-file="提供条件.md" class="toc-link">提供条件</a></li>
+                <li><a href="#" data-file="データ方針.md" class="toc-link">データ方針</a></li>
+            </ul>
+        </aside>
+
+        <!-- メインコンテンツ（マークダウン表示エリア） -->
+        <main class="main-content">
+            <div id="md-content"></div>
+            <footer class="main-footer">
+                © 2026 Shimataiyaki
+            </footer>
+        </main>
+    </div>
+
+    <!-- 共通スクリプト (メインサイトの絶対パス) -->
+    <script src="https://shimataiyaki.github.io/script.js"></script>
+    <script>
+        (function() {
+            const tocLinks = document.querySelectorAll('.toc-link');
+            const mdContent = document.getElementById('md-content');
+            const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.getElementById('menuToggle');
+
+            // マークダウンファイルを読み込んで表示する関数
+            function loadMarkdown(file) {
+                fetch(file)
+                    .then(response => {
+                        if (!response.ok) throw new Error('ファイルが見つかりません');
+                        return response.text();
+                    })
+                    .then(markdown => {
+                        mdContent.innerHTML = marked.parse(markdown);
+                    })
+                    .catch(error => {
+                        mdContent.innerHTML = '<p style="color:#ad241f;">⚠️ ファイルの読み込みに失敗しました。後ほど再読み込みしてください。</p>';
+                        console.error(error);
+                    });
+            }
+
+            // サイドバーのリンクをクリックした時の処理
+            tocLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // アクティブ表示の切り替え
+                    tocLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                    // ファイル読み込み
+                    const file = link.getAttribute('data-file');
+                    loadMarkdown(file);
+                });
+            });
+
+            // ハンバーガーメニュー内のドキュメントリンクをクリックした時の処理
+            document.querySelectorAll('.nav-doc-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // 読み込むファイルを取得
+                    const file = link.getAttribute('data-file');
+                    // サイドバーのアクティブ表示を切り替え
+                    tocLinks.forEach(l => {
+                        l.classList.remove('active');
+                        if (l.getAttribute('data-file') === file) {
+                            l.classList.add('active');
+                        }
+                    });
+                    // ファイル読み込み
+                    loadMarkdown(file);
+                    // メニューを閉じる
+                    if (navMenu) navMenu.classList.remove('show');
+                    if (menuToggle) menuToggle.classList.remove('active');
+                });
+            });
+
+            // 初回表示：README.md を読み込む
+            loadMarkdown('README.md');
+        })();
+    </script>
+</body>
+</html>
