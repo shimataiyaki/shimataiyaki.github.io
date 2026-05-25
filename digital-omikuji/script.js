@@ -87,36 +87,6 @@
         modal.classList.remove('show');
     }
 
-    // ---------- ハンバーガーメニュー制御 ----------
-    function setupMobileMenu() {
-        const toggleBtn = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-        if (!toggleBtn || !navMenu) return;
-
-        toggleBtn.addEventListener('click', function() {
-            navMenu.classList.toggle('show');
-            this.classList.toggle('active');
-            const expanded = navMenu.classList.contains('show');
-            this.setAttribute('aria-expanded', expanded);
-        });
-
-        document.addEventListener('click', function(e) {
-            if (!toggleBtn.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('show');
-                toggleBtn.classList.remove('active');
-                toggleBtn.setAttribute('aria-expanded', 'false');
-            }
-        });
-
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('show');
-                toggleBtn.classList.remove('active');
-                toggleBtn.setAttribute('aria-expanded', 'false');
-            });
-        });
-    }
-
     // ---------- スムーススクロール ----------
     function setupSmoothScroll() {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -136,7 +106,6 @@
     // ---------- 初期化 ----------
     function init() {
         buildCards();
-        setupMobileMenu();
         setupSmoothScroll();
 
         if (modalClose) {

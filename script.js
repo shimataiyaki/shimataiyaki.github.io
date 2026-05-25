@@ -1,42 +1,6 @@
 (function() {
     'use strict';
 
-    // ---------- ハンバーガーメニュー ----------
-    const toggleBtn = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-    const productNav = document.querySelector('.product-nav');
-
-    if (toggleBtn && navMenu) {
-        toggleBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const isOpen = navMenu.classList.toggle('show');
-            toggleBtn.classList.toggle('active');
-
-            // メニュー表示時にz-indexを上げて、product-navより前面に
-            if (isOpen) {
-                navMenu.style.zIndex = '1200';
-            } else {
-                navMenu.style.zIndex = '999';
-            }
-        });
-
-        document.addEventListener('click', function(e) {
-            if (!toggleBtn.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('show');
-                toggleBtn.classList.remove('active');
-                navMenu.style.zIndex = '999';
-            }
-        });
-
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('show');
-                toggleBtn.classList.remove('active');
-                navMenu.style.zIndex = '999';
-            });
-        });
-    }
-
     // ---------- product-nav スムーススクロール ----------
     document.querySelectorAll('.product-links a[href^="#"]').forEach(link => {
         link.addEventListener('click', (e) => {
