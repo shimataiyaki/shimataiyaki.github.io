@@ -167,3 +167,51 @@ body {
   border-radius: 980px;
   font-weight: 500;
 }
+
+
+/* ===== Reusable skeleton components ===== */
+.ui-container { max-width: 1024px; margin: 0 auto; }
+.ui-section { padding: 100px 1.5rem; }
+.ui-section--muted { background: var(--gray-bg); }
+.ui-grid { display: grid; gap: 1.25rem; }
+.ui-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.ui-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  padding: 1.2rem;
+}
+
+.ui-button {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+.ui-button--primary { background: var(--apple-blue); color: #fff; }
+.ui-button--secondary { color: var(--text-color); border: 1px solid var(--border-color); background: #fff; }
+
+.ui-notice {
+  border-left: 4px solid var(--apple-blue);
+  background: #f8fafc;
+  padding: 0.9rem 1rem;
+  color: var(--text-color);
+}
+
+.ui-faq-item { border-bottom: 1px solid var(--border-color); padding: 1rem 0; }
+.ui-faq-q { font-weight: 600; margin-bottom: .35rem; }
+.ui-faq-a { color: var(--muted-text); }
+
+.ui-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 1.5rem;
+  color: var(--muted-text);
+}
+
+@media (max-width: 900px) {
+  .ui-grid--3 { grid-template-columns: 1fr; }
+}

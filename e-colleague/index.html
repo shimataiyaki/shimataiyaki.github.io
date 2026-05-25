@@ -66,8 +66,8 @@
                 <div class="hero-badge">Open Source Project</div>
                 <h1 class="hero-title">発言が、タスクになる。</h1>
                 <p class="hero-copy">LINEグループの会話から、タスクを自動整理する学生チーム向けBot。</p>
-                <a href="https://github.com/shimataiyaki/e-colleague-bot" class="btn-primary" target="_blank">GitHubで見る</a>
-                <a href="#" class="btn-secondary" target="_blank">OPS-0について（リンク準備中）</a>
+                <a href="https://github.com/shimataiyaki/e-colleague-bot" class="btn-primary ui-button ui-button--primary" target="_blank">GitHubで見る</a>
+                <a href="#" class="btn-secondary ui-button ui-button--secondary" target="_blank">OPS-0について（リンク準備中）</a>
                 <div class="hero-mockup">
                     <img src="/images/taskdemo.png" alt="e-colleagueが動作しているMacBookの画面">
                 </div>
@@ -162,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <a href="portal/" class="btn-secondary" target="_blank">ポータルへログイン</a>
+            <a href="portal/" class="btn-secondary ui-button ui-button--secondary" target="_blank">ポータルへログイン</a>
         </section>
 
         <!-- Use Case -->
@@ -196,24 +196,40 @@
                         オープンソースの問題解決フレームワーク <strong>OPS-0</strong> の公式リファレンス実装です。
                     </p>
                     <p class="inline-note">OPS-0 は順次展開予定。</p>
-                    <a href="#" class="btn-secondary" target="_blank">詳しく見る（リンク準備中）</a>
+                    <a href="#" class="btn-secondary ui-button ui-button--secondary" target="_blank">詳しく見る（リンク準備中）</a>
                 </div>
             </div>
         </section>
 
         <!-- お問い合わせ -->
-        <section class="section-ec-gray" id="contact-section">
+        <section class="section-ec-gray ui-section--muted" id="contact-section">
             <div class="section-ec-inner">
-                <div class="contact-block">
+                <div class="contact-block ui-card">
                     <h2>e-colleagueを導入する</h2>
                     <p class="section-subtitle"><strong>無料</strong>でGitHubからクローンして,ご自身でセットアップできます。</p>
                     <p class="inline-note">サポートが必要な方は、以下のリンクからお問い合わせください。</p>
-                    <a href="https://github.com/shimataiyaki/e-colleague-bot" class="btn-primary" target="_blank">GitHubで見る</a>
+                    <a href="https://github.com/shimataiyaki/e-colleague-bot" class="btn-primary ui-button ui-button--primary" target="_blank">GitHubで見る</a>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcBlT9v2814AodznjW24RU4K6vyULp4osAlogDL-98KlcgfQ/viewform" 
-                       class="btn-secondary" 
+                       class="btn-secondary ui-button ui-button--secondary" 
                        target="_blank">
                         お問い合わせフォーム
                     </a>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="section-ec ui-section" id="faq">
+            <div class="section-ec-inner ui-container">
+                <h2>FAQ</h2>
+                <div class="ui-faq-item">
+                    <p class="ui-faq-q">Q. 本当に無料で使えますか？</p>
+                    <p class="ui-faq-a">A. はい。GitHubで公開しているため、クローンしてご自身の環境で利用できます。</p>
+                </div>
+                <div class="ui-faq-item">
+                    <p class="ui-faq-q">Q. どんなチームに向いていますか？</p>
+                    <p class="ui-faq-a">A. 文化祭実行委員・部活動・学生プロジェクトなど、LINE中心で動く小規模チームに向いています。</p>
                 </div>
             </div>
         </section>
@@ -223,7 +239,7 @@
             <div class="section-ec-inner">
                 <h2>お知らせ</h2>
                 <div class="content-container">
-                    <div class="news-list fade-in">
+                    <div class="news-list fade-in ui-card">
                         <div class="news-row">
                             <span class="news-date">2026.5.25</span>
                             <span class="news-badge badge-release">リリース</span>
@@ -261,7 +277,7 @@
                         </div>
                     </div>
                     <div class="notes-divider"></div>
-                    <p class="note-item"><sup>*1</sup> LINEはLINEヤフー株式会社の商標です。本プロダクトは個人による開発であり、当該会社の公式プロダクトではありません。</p>
+                    <p class="note-item ui-notice"><sup>*1</sup> LINEはLINEヤフー株式会社の商標です。本プロダクトは個人による開発であり、当該会社の公式プロダクトではありません。</p>
                     <p class="note-item"><sup>*2</sup> 本プロダクトはGoogleの提供するGemini APIを利用してメッセージの解析を行っています。</p>
                     <p class="note-item"><sup>*3</sup> 送信されたデータはAES方式で暗号化した上でGoogleスプレッドシートに保存されます。データはグループごとに分離されており、他グループからは閲覧できません。</p>
                     <p class="note-item"><sup>*4</sup> Gemini, GAS(Google Apps Script)およびGoogleスプレッドシートはGoogle LLCの商標です。</p>
@@ -274,7 +290,7 @@
         </section>
 
         <!-- フッター -->
-        <footer class="main-footer-ec">
+        <footer class="main-footer-ec ui-footer">
             <div class="footer-links">
                 <a href="https://github.com/shimataiyaki/e-colleague-bot" target="_blank">GitHub</a>|
                 <a href="portal/">管理者ポータル</a>|
