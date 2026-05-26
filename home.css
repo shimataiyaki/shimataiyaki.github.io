@@ -1,0 +1,197 @@
+/* ============================================
+   ブランドトップ用スタイル
+   共通レイアウトは common-layout.css に依存
+   ============================================ */
+
+body {
+    font-family: 'M PLUS 1p', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.main-content {
+    padding: 0;
+    margin: 0;
+}
+
+/* ----- ヒーロー ----- */
+.hero {
+    padding: 120px 1.5rem 100px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: var(--gray-bg);
+    padding: 6px 18px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--muted-text);
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+.hero-copy {
+    font-size: 1.4rem;
+    color: var(--muted-text);
+    margin-bottom: 36px;
+    font-weight: 400;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--apple-blue);
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: #0055aa;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--apple-blue);
+    padding: 14px 36px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid var(--apple-blue);
+    transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+    background: rgba(0,113,227,0.06);
+}
+
+/* ----- 導線タイル ----- */
+.nav-card {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 36px rgba(0,0,0,0.1);
+}
+
+.nav-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.nav-card p {
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    flex: 1;
+}
+
+.card-arrow {
+    align-self: flex-end;
+    font-size: 1.2rem;
+    color: var(--apple-blue);
+}
+
+/* ----- About ----- */
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--apple-blue);
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: #1d1d1f;
+}
+
+.mail-link {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.mail-link:hover {
+    color: var(--accent-color);
+}
+
+/* ----- フッター ----- */
+.main-footer-ec {
+    padding: 40px 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    border-top: 1px solid var(--border-color);
+    background: var(--gray-bg);
+}
+
+.sns-links-ec {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.sns-links-ec a {
+    color: var(--muted-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.sns-links-ec a:hover {
+    color: #1d1d1f;
+}
+
+/* ----- モバイル ----- */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 1.2rem 60px;
+    }
+    .hero-title {
+        font-size: 2.4rem;
+    }
+    .hero-copy {
+        font-size: 1.1rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
