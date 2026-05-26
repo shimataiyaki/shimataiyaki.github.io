@@ -48,3 +48,14 @@
   border-radius: 980px;
   font-weight: 500;
 }
+
+.product-nav {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.product-nav.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
