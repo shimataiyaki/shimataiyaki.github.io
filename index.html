@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO / OGP -->
-    <title>Shimataiyaki | 個人開発と問題解決の記録</title>
+    <title>Shimataiyaki | 個人開発と問題解決</title>
     <meta name="description" content="Shimataiyakiは、2008年生まれの個人クリエイター。デジタルとフィールドワークの交差点から、遊び心のあるプロダクトを生み出しています。Portfolio、note、GitHubへの入り口です。">
     <meta property="og:title" content="Shimataiyaki | 好奇心とアソビゴコロをカタチに">
     <meta property="og:description" content="デジタルとフィールドワークの交差点から、遊び心のあるプロダクトを生み出す個人クリエイター。">
@@ -72,20 +72,26 @@
 
     <!-- ヒーロー -->
     <section class="hero">
-        <div class="hero-badge">Latest Product</div>
-        
-        <!-- プロダクト表示エリア -->
-        <div class="hero-product">
-            <div class="hero-product-image">
-                <img src="images/e-colleague.png" alt="e-colleague" class="hero-product-img">
+        <!-- 背景ぼかし画像 -->
+        <div class="hero-bg-blur">
+            <img src="images/e-colleague.png" alt="">
+        </div>
+
+        <!-- 前面コンテンツ -->
+        <div class="hero-content">
+            <div class="hero-badge">Latest Product</div>
+            <h1 class="hero-title">e-colleague</h1>
+            <p class="hero-copy">LINEグループに話しかけるだけで、<br>AIがタスクを抽出・管理するBot。</p>
+            
+            <!-- 製品のメイン画像 -->
+            <div class="hero-mockup">
+                <img src="images/taskdemo.png" alt="会話からタスクを自動抽出する画面">
             </div>
-            <div class="hero-product-info">
-                <h1 class="hero-product-name">e-colleague</h1>
-                <p class="hero-product-desc">LINEグループに話しかけるだけで、AIがタスクを抽出・管理するBot。口頭の「やっといて」を自動でタスクに変えます。</p>
-                <div class="hero-actions">
-                    <a href="https://shimataiyaki.github.io/e-colleague/" class="btn-primary" target="_blank">プロダクトページ</a>
-                    <a href="https://github.com/shimataiyaki/e-colleague-bot" class="btn-secondary" target="_blank">GitHub</a>
-                </div>
+
+            <!-- アクションボタン -->
+            <div class="hero-actions" style="margin-top: 36px;">
+                <a href="https://shimataiyaki.github.io/e-colleague/" class="btn-primary" target="_blank">プロダクトページ</a>
+                <a href="https://github.com/shimataiyaki/e-colleague-bot" class="btn-secondary" target="_blank">GitHub</a>
             </div>
         </div>
         
