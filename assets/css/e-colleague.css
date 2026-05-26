@@ -568,3 +568,24 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== ドキュメント用テーブル ===== */
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem;
+  box-sizing: content-box;
+}
+
+.doc-table th,
+.doc-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  text-align: left;
+  box-sizing: content-box;
+}
+
+.doc-table th {
+  background: var(--gray-bg);
+  font-weight: 600;
+}
