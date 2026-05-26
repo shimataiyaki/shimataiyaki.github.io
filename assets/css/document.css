@@ -77,3 +77,9 @@
 .doc-body strong {
   font-weight: 600;
 }
+
+.section-ec {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 100px 1.5rem;
+}
