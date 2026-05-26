@@ -293,8 +293,28 @@
 
     </main>
 </div>
-
+    
 <script src="script.js"></script>
-    <script src="/assets/js/common-nav.js"></script>
+<script src="/assets/js/common-nav.js"></script>
+<script>
+    // e-colleague 用：ハンバーガーメニューを product-nav より前面に
+    (function() {
+        const toggleBtn = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (!toggleBtn || !navMenu) return;
+
+        const observer = new MutationObserver(function() {
+            if (navMenu.classList.contains('show')) {
+                navMenu.style.zIndex = '1200';
+            } else {
+                navMenu.style.zIndex = '';
+            }
+        });
+
+        observer.observe(navMenu, { attributes: true, attributeFilter: ['class'] });
+    })();
+</script>
+    
 </body>
 </html>
