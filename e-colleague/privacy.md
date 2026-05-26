@@ -4,7 +4,7 @@ title: プライバシーポリシー | e-colleague
 description: e-colleague プライバシーポリシー。収集する情報、利用目的、データ保護、ユーザーの権利について定めています。
 og_title: プライバシーポリシー | e-colleague
 og_image: /images/favicon.ico
-css: /assets/css/e-colleague.css
+css: /assets/css/document.css
 product_nav: true
 ---
 
@@ -20,12 +20,14 @@ product_nav: true
 <div class="layout-wrapper">
 <main class="main-content">
 
-<section class="section-ec" markdown="1">
+<section class="section-ec">
+
 <nav class="breadcrumb">
     <a href="{{ '/e-colleague/' | relative_url }}">e-colleague</a>
     <span>›</span>
     <span>プライバシーポリシー</span>
 </nav>
+
 <p class="doc-meta">最終更新日: 2026年5月24日</p>
 
 # e-colleague プライバシーポリシー
