@@ -2,6 +2,110 @@
    e-colleague プロジェクトサイト用スタイルシート
    ============================================ */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --container-bg: #ffffff;
+    --text-color: #1f2937;
+    --border-color: #e2e8f0;
+    --toc-bg: #f1f5f9;
+    --muted-text: #64748b;
+    --accent-color: #4a4a4a;
+    --sidebar-width: 240px;
+    --gray-bg: #F5F5F7;
+    --apple-blue: #0071e3;
+    --card-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    --radius: 20px;
+    --max-width: 1024px;
+}
+
+body {
+    font-family: 'M PLUS 1p', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+    font-weight: 400;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===== プロダクト専用ナビ ===== */
+.product-nav {
+    width: 100%;
+    height: 52px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border-radius: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.product-nav.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.product-nav-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-logo {
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+}
+
+.product-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.product-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: var(--muted-text);
+    transition: color 0.2s;
+}
+
+.product-links a:hover {
+    color: var(--accent-color);
+}
+
+.btn-cta {
+    background-color: var(--apple-blue);
+    color: #fff !important;
+    padding: 5px 16px;
+    border-radius: 980px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-cta:hover {
+    background-color: #005bb5;
+}
+
 /* ===== レイアウト ===== */
 .layout-wrapper {
     display: block;
@@ -96,41 +200,6 @@
     display: block;
     margin: 0 auto;
     filter: drop-shadow(0 12px 32px rgba(0,0,0,0.12));
-}
-
-.btn-primary {
-    display: inline-block;
-    background: var(--apple-blue);
-    color: #fff;
-    padding: 14px 36px;
-    border-radius: 100px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: background 0.2s, transform 0.1s;
-}
-
-.btn-primary:hover {
-    background: #0055aa;
-    transform: scale(1.02);
-}
-
-.btn-secondary {
-    display: inline-block;
-    background: transparent;
-    color: var(--apple-blue);
-    padding: 14px 36px;
-    border-radius: 100px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    border: 2px solid var(--apple-blue);
-    transition: background 0.2s;
-    margin-left: 12px;
-}
-
-.btn-secondary:hover {
-    background: rgba(0,113,227,0.06);
 }
 
 /* ===== セクション共通 ===== */
@@ -368,12 +437,6 @@
     color: var(--apple-blue);
 }
 
-/* ===== 注釈区切り線 ===== */
-.notes-divider {
-    border-top: 1px solid var(--border-color);
-    margin: 24px 0 16px;
-}
-
 /* ===== コンタクト ===== */
 .contact-block {
     background: #fff;
@@ -397,89 +460,23 @@
     margin-right: 2px;
 }
 
-/* ===== 規約・ポリシー文書 ===== */
-.doc-meta {
-    font-size: 0.85rem;
-    color: var(--muted-text);
-    margin-bottom: 16px;
+/* ===== 注釈区切り線 ===== */
+.notes-divider {
+    border-top: 1px solid var(--border-color);
+    margin: 24px 0 16px;
 }
 
-.doc-body h2 {
-    font-size: 1.3rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border-color);
-    color: #1d1d1f;
+/* ===== フェードイン ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.doc-body h2:first-of-type {
-    margin-top: 1rem;
-}
-
-.doc-body ol {
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.doc-body ol li {
-    margin-bottom: 0.4rem;
-    line-height: 1.8;
-}
-
-.doc-body ul {
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.doc-body ul li {
-    margin-bottom: 0.3rem;
-    line-height: 1.8;
-}
-
-.doc-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0 1.5rem;
-}
-
-.doc-table th,
-.doc-table td {
-    padding: 12px 16px;
-    text-align: left;
-    border-bottom: 1px solid var(--border-color);
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-.doc-table th {
-    font-weight: 600;
-    color: var(--text-color);
-    background: var(--gray-bg);
-}
-
-.doc-table td {
-    color: var(--text-color);
-}
-
-/* ===== パンくずリスト ===== */
-.breadcrumb {
-    font-size: 0.85rem;
-    color: var(--muted-text);
-    margin-bottom: 24px;
-}
-
-.breadcrumb a {
-    color: var(--apple-blue);
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.breadcrumb span {
-    margin: 0 4px;
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ===== フッター ===== */
@@ -533,24 +530,28 @@
     color: #1d1d1f;
 }
 
-/* ===== フェードイン ===== */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+/* ===== フッター下部 ===== */
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted-text);
 }
 
-/* 角丸ゼロ統一 */
-.site-header,
-.main-content,
-.product-nav {
-    border-radius: 0 !important;
+.footer-bottom .sns-links-ec {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer-bottom .sns-links-ec a {
+    font-size: 0.8rem;
 }
 
 /* ===== モバイル ===== */
@@ -572,18 +573,6 @@
     }
     .product-links a:not(.btn-cta) {
         display: none;
-    }
-    .btn-secondary {
-        margin-left: 0;
-        margin-top: 12px;
-    }
-    .contact-block {
-        padding: 24px 16px;
-    }
-
-    /* 思想セクション */
-    .philosophy-block {
-        text-align: center;
     }
 
     /* Apple式特徴セクション */
@@ -610,35 +599,4 @@
     .pain-grid {
         grid-template-columns: 1fr;
     }
-
-    /* 規約・ポリシー文書 */
-    .doc-table th,
-    .doc-table td {
-        padding: 10px 12px;
-        font-size: 0.8rem;
-    }
-}
-
-/* ===== フッター下部 ===== */
-.footer-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-}
-
-.footer-bottom p {
-    margin: 0;
-    font-size: 0.85rem;
-    color: var(--muted-text);
-}
-
-.footer-bottom .sns-links-ec {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.footer-bottom .sns-links-ec a {
-    font-size: 0.8rem;
 }
