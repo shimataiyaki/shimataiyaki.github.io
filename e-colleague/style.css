@@ -202,6 +202,42 @@ body {
     filter: drop-shadow(0 12px 32px rgba(0,0,0,0.12));
 }
 
+/* ===== ボタン ===== */
+.btn-primary {
+    display: inline-block;
+    background: var(--apple-blue);
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+    background: #0055aa;
+    transform: scale(1.02);
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--apple-blue);
+    padding: 14px 36px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid var(--apple-blue);
+    transition: background 0.2s;
+    margin-left: 12px;
+}
+
+.btn-secondary:hover {
+    background: rgba(0,113,227,0.06);
+}
+
 /* ===== セクション共通 ===== */
 .section-ec {
     padding: 100px 1.5rem;
@@ -573,6 +609,10 @@ body {
     }
     .product-links a:not(.btn-cta) {
         display: none;
+    }
+    .btn-secondary {
+        margin-left: 0;
+        margin-top: 12px;
     }
 
     /* Apple式特徴セクション */
