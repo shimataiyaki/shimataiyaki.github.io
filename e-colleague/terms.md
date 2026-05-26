@@ -4,7 +4,7 @@ title: 利用規約 | e-colleague
 description: e-colleague 利用規約。本サービスの利用条件、禁止事項、免責事項等を定めています。
 og_title: 利用規約 | e-colleague
 og_image: /images/favicon.ico
-css: /assets/css/e-colleague.css
+css: /assets/css/document.css
 product_nav: true
 ---
 
@@ -20,12 +20,14 @@ product_nav: true
 <div class="layout-wrapper">
 <main class="main-content">
 
-<section class="section-ec" markdown="1">
+<section class="section-ec">
+
 <nav class="breadcrumb">
     <a href="{{ '/e-colleague/' | relative_url }}">e-colleague</a>
     <span>›</span>
     <span>利用規約</span>
 </nav>
+
 <p class="doc-meta">最終更新日: 2026年5月24日</p>
 
 # e-colleague 利用規約
