@@ -1,0 +1,79 @@
+/* e-colleague ドキュメントページ用スタイル */
+
+/* パンくず */
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  margin-bottom: 1rem;
+}
+.breadcrumb a {
+  color: var(--apple-blue);
+  text-decoration: none;
+}
+.breadcrumb span {
+  margin: 0 0.5rem;
+}
+
+/* ドキュメントメタ */
+.doc-meta {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  margin-bottom: 2rem;
+}
+
+/* ドキュメント本文 */
+.doc-body h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.doc-body h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.doc-body p {
+  margin-bottom: 1rem;
+  line-height: 1.9;
+}
+
+.doc-body ol,
+.doc-body ul {
+  margin: 0.5rem 0 1.5rem 1.5rem;
+}
+
+.doc-body li {
+  margin-bottom: 0.4rem;
+  line-height: 1.8;
+}
+
+/* テーブル */
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem;
+  box-sizing: content-box;
+}
+
+.doc-table th,
+.doc-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  text-align: left;
+  box-sizing: content-box;
+}
+
+.doc-table th {
+  background: var(--gray-bg);
+  font-weight: 600;
+}
+
+/* お問い合わせ */
+.doc-body strong {
+  font-weight: 600;
+}
