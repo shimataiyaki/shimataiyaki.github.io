@@ -20,7 +20,7 @@ product_nav: true
 <div class="layout-wrapper">
 <main class="main-content">
 
-<section class="section-ec">
+<div class="section-ec" markdown="1">
 
 <nav class="breadcrumb">
     <a href="{{ '/e-colleague/' | relative_url }}">e-colleague</a>
@@ -113,7 +113,7 @@ product_nav: true
 - **開発者**: Shimataiyaki
 - **プロジェクトサイト**: [https://shimataiyaki.github.io/e-colleague/](https://shimataiyaki.github.io/e-colleague/)
 
-</section>
+</div>
 
 <footer class="main-footer-ec">
     <div class="footer-links">
