@@ -1,6 +1,18 @@
 (function() {
     'use strict';
 
+    // ---------- プロダクトナビ スクロール表示 ----------
+    const productNav = document.querySelector('.product-nav');
+    if (productNav) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 60) {
+                productNav.classList.add('visible');
+            } else {
+                productNav.classList.remove('visible');
+            }
+        });
+    }
+
     // ---------- プロダクトナビ スムーススクロール ----------
     document.querySelectorAll('.product-links a[href^="#"]').forEach(link => {
         link.addEventListener('click', (e) => {
