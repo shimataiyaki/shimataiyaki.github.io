@@ -6,7 +6,7 @@ og_title: Shimataiyaki | 好奇心とアソビゴコロをカタチに
 og_type: website
 og_image: /images/ogp.png
 twitter_title: Shimataiyaki | 好奇心とアソビゴコロをカタチに
-css: /assets/css/home.css
+css: ./assets/css/home.css
 structured_data:
   "@context": "https://schema.org"
   "@type": "Person"
