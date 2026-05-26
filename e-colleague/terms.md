@@ -20,7 +20,7 @@ product_nav: true
 <div class="layout-wrapper">
 <main class="main-content">
 
-<section class="section-ec">
+<section class="section-ec" markdown="1">
 
 <nav class="breadcrumb">
     <a href="{{ '/e-colleague/' | relative_url }}">e-colleague</a>
