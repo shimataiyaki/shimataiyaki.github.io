@@ -14,12 +14,39 @@ body {
     margin: 0;
 }
 
-/* ===== ヒーロー ===== */
+/* ===== HERO ===== */
 .hero {
-    padding: 100px 1.5rem 80px;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 1.5rem 80px;
     text-align: center;
-    max-width: 1024px;
+    max-width: 100%;
     margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.hero-bg-blur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    max-width: 100%;
+    opacity: 0.12;
+    filter: blur(40px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-bg-blur img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-badge {
@@ -30,50 +57,47 @@ body {
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--muted-text);
-    margin-bottom: 40px;
-}
-
-.hero-product {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    margin: 0 0 48px 0;
-    text-align: left;
-}
-
-.hero-product-image {
-    flex: 0 0 280px;
-}
-
-.hero-product-img {
-    width: 280px;
-    height: 280px;
-    object-fit: contain;
-    filter: drop-shadow(0 12px 32px rgba(0,0,0,0.12));
-}
-
-.hero-product-info {
-    flex: 1;
-}
-
-.hero-product-name {
-    font-size: 3.2rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: #0f172a;
-    margin-bottom: 16px;
-}
-
-.hero-product-desc {
-    font-size: 1.1rem;
-    color: var(--muted-text);
-    line-height: 1.8;
     margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #0f172a;
+    border-left: none;
+    padding-left: 0;
+}
+
+.hero-copy {
+    font-size: 1.4rem;
+    color: var(--muted-text);
+    margin-bottom: 36px;
+    font-weight: 400;
+}
+
+.hero-mockup {
+    margin-top: 48px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-mockup img {
+    max-width: 680px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 12px 32px rgba(0,0,0,0.12));
 }
 
 .hero-actions {
     display: flex;
     gap: 12px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -86,11 +110,12 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.1s;
 }
 
 .btn-primary:hover {
     background: #0055aa;
+    transform: scale(1.02);
 }
 
 .btn-secondary {
@@ -110,10 +135,12 @@ body {
     background: rgba(0,113,227,0.06);
 }
 
+/* サブ導線 */
 .hero-subtitle {
     font-size: 1.2rem;
     color: var(--muted-text);
-    margin-bottom: 16px;
+    margin: 48px 0 16px;
+    text-align: center;
 }
 
 .hero-sub-links {
@@ -121,6 +148,7 @@ body {
     gap: 24px;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 24px;
 }
 
 .hero-sub-links a {
@@ -229,25 +257,16 @@ h2 {
 /* ===== モバイル ===== */
 @media (max-width: 768px) {
     .hero {
-        padding: 60px 1.2rem 60px;
+        padding: 80px 1.2rem 60px;
     }
-    .hero-product {
-        flex-direction: column;
-        text-align: center;
-        gap: 32px;
-    }
-    .hero-product-image {
-        flex: 0 0 auto;
-    }
-    .hero-product-img {
-        width: 200px;
-        height: 200px;
-    }
-    .hero-product-name {
+    .hero-title {
         font-size: 2.4rem;
     }
-    .hero-actions {
-        justify-content: center;
+    .hero-copy {
+        font-size: 1.1rem;
+    }
+    .hero-mockup img {
+        max-width: 100%;
     }
     h2 {
         font-size: 2rem;
