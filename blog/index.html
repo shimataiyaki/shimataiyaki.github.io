@@ -1,0 +1,22 @@
+---
+layout: default
+title: ブログ | Shimataiyaki
+description: 個人開発、技術メモ、プロジェクトの舞台裏。
+css: /assets/css/document.css
+---
+
+<main class="main-content">
+    <section class="section-ec">
+        <h1>ブログ</h1>
+        <p class="section-subtitle">プロジェクトの舞台裏や技術メモ。</p>
+
+        <div class="news-list">
+            {% for post in site.posts %}
+            <a href="{{ post.url | relative_url }}" class="news-row">
+                <span class="news-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+                <span class="news-title">{{ post.title }}</span>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+</main>
