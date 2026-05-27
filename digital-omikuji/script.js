@@ -1,11 +1,38 @@
 /* ============================================
-   script.js - デジタルおみくじ（E-LOTs）本番版
-   固定ヘッダー + 16枚札 + ポップアップ統合
+   script.js - デジタルおみくじ本番版
+   固定ヘッダー + ハンバーガーメニュー + 16枚札 + ポップアップ統合
    抽選中横書き + 結果縦書き
    ============================================ */
 
 (function() {
     'use strict';
+
+    // ---------- ハンバーガーメニュー ----------
+    const toggleBtn = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (toggleBtn && navMenu) {
+        toggleBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('show');
+            this.classList.toggle('active');
+            this.setAttribute('aria-expanded', navMenu.classList.contains('show'));
+        });
+        // メニュー外クリックで閉じる
+        document.addEventListener('click', function(e) {
+            if (!toggleBtn.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('show');
+                toggleBtn.classList.remove('active');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+        // メニュー内リンククリックでも閉じる
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+                toggleBtn.classList.remove('active');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
 
     // 抽選データ（四・十四を避け、十七・十八で16種類に）
     const NUMBER_LIST = [
