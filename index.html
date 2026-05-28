@@ -67,6 +67,45 @@ css: /assets/css/home.css
         </div>
     </section>
 
+ <!-- プロダクト一覧 -->
+<section class="ui-section" id="products">
+    <div class="ui-container">
+        <div class="section-label">Products</div>
+        <h2>プロダクト一覧</h2>
+        <div class="ui-grid ui-grid--3">
+            
+            <a href="{{ '/e-colleague/' | relative_url }}" class="ui-card nav-card">
+                <img src="/images/e-colleague.png" alt="e-colleague" style="width:100%; border-radius:12px; margin-bottom:0.5rem;">
+                <h3>e-colleague</h3>
+                <p>LINEでタスク管理。AIが会話から自動抽出。</p>
+                <span class="card-arrow">→</span>
+            </a>
+
+            <a href="{{ '/digital-omikuji/' | relative_url }}" class="ui-card nav-card">
+                <img src="/images/digital-omikuji.png" alt="デジタルおみくじ" style="width:100%; border-radius:12px; margin-bottom:0.5rem;">
+                <h3>デジタルおみくじ</h3>
+                <p>文化祭向けWebおみくじアプリ。</p>
+                <span class="card-arrow">→</span>
+            </a>
+
+            <a href="{{ '/digital-ema/' | relative_url }}" class="ui-card nav-card">
+                <img src="/images/digital-ema.png" alt="デジタル絵馬" style="width:100%; border-radius:12px; margin-bottom:0.5rem;">
+                <h3>デジタル絵馬</h3>
+                <p>願い事を絵馬として表示するインスタレーション。</p>
+                <span class="card-arrow">→</span>
+            </a>
+
+            <a href="https://shimataiyaki.github.io/mendako-bbs/" class="ui-card nav-card">
+                <img src="/images/mendakobbs.png" alt="Mendako BBS" style="width:100%; border-radius:12px; margin-bottom:0.5rem;">
+                <h3>Mendako BBS</h3>
+                <p>「書く・読む・返す」だけのシンプル掲示板。</p>
+                <span class="card-arrow">→</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
     <!-- About -->
     <section class="ui-section ui-section--muted" id="about">
         <div class="ui-container">
