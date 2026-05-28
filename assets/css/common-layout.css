@@ -164,3 +164,33 @@ body {
 @media (max-width: 900px) {
   .ui-grid--3 { grid-template-columns: 1fr; }
 }
+
+/* ===== ダークテーマ ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --container-bg: #1a1a1a;
+    --text-color: #e5e5e5;
+    --border-color: #333333;
+    --muted-text: #999999;
+    --accent-color: #888888;
+    --gray-bg: #222222;
+    --apple-blue: #4da6ff;
+  }
+
+  .ui-card {
+    background: #2a2a2a;
+  }
+
+  .site-title {
+    color: #e5e5e5;
+  }
+
+  .hero-title {
+    color: #e5e5e5;
+  }
+
+  .hero {
+    background-color: #1a1a1a;
+  }
+}
