@@ -181,3 +181,12 @@ body {
 .sns-links-ec a img {
     display: block;
 }
+
+.sns-links-ec iconify-icon {
+    color: var(--muted-text);
+    transition: color 0.2s;
+}
+
+.sns-links-ec a:hover iconify-icon {
+    color: #ffffff;
+}
