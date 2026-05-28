@@ -1,4 +1,21 @@
+<!-- 共通フッター -->
 <footer class="main-footer-ec">
+    {% if page.product_nav %}
+    <!-- e-colleague 専用リンク -->
+    <div class="footer-links">
+        <a href="https://github.com/shimataiyaki/e-colleague-app" target="_blank">GitHubリポジトリ</a>
+        <a href="{{ '/e-colleague/portal/' | relative_url }}">e-colleague管理者ポータル</a>
+        <a href="{{ '/e-colleague/terms/' | relative_url }}">e-colleague利用規約</a>
+        <a href="{{ '/e-colleague/privacy/' | relative_url }}">e-colleagueプライバシーポリシー</a>
+    </div>
+    {% else %}
+    <!-- サイト全体用リンク -->
+    <div class="footer-links">
+        <a href="{{ '/privacy/' | relative_url }}">プライバシーポリシー</a>
+        <a href="{{ '/terms/' | relative_url }}">利用規約</a>
+    </div>
+    {% endif %}
+
     <div class="sns-links-ec">
         <a href="https://x.com/shimataiyaki" target="_blank" rel="noopener" aria-label="X">
             <iconify-icon icon="simple-icons:x" width="20" height="20"></iconify-icon>
