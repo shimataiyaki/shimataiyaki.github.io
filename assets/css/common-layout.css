@@ -165,6 +165,13 @@ body {
   .ui-grid--3 { grid-template-columns: 1fr; }
 }
 
+.sns-links-ec {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+}
+
 .sns-links-ec a {
     display: inline-flex;
     align-items: center;
@@ -178,10 +185,6 @@ body {
     color: #ffffff;
 }
 
-.sns-links-ec a img {
-    display: block;
-}
-
 .sns-links-ec iconify-icon {
     color: var(--muted-text);
     transition: color 0.2s;
@@ -189,4 +192,18 @@ body {
 
 .sns-links-ec a:hover iconify-icon {
     color: #ffffff;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted-text);
 }
