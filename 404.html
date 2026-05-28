@@ -1,0 +1,39 @@
+---
+layout: default
+title: ページが見つかりません
+permalink: /404.html
+---
+
+<main class="main-content">
+<section class="ui-section">
+<div class="ui-container" style="text-align:center;">
+
+<div class="section-label">404 ERROR</div>
+
+<h1>ページが見つかりません</h1>
+
+<p style="color:var(--muted-text);max-width:600px;margin:1rem auto 2rem;">
+指定されたページは存在しないか、移動された可能性があります。<br>
+リンク切れかもしれないし、URLをタイプミスしたかもしれません。<br>
+あるいは、まだ作ってる途中かも。
+</p>
+
+<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+
+<a href="{{ '/' | relative_url }}" class="btn-primary">
+トップへ戻る
+</a>
+
+<a href="{{ '/projects/' | relative_url }}" class="btn-secondary">
+プロジェクトを見る
+</a>
+
+</div>
+
+<p style="margin-top:3rem;color:var(--muted-text);font-size:.9rem;">
+Error 404: Idea not found.
+</p>
+
+</div>
+</section>
+</main>
