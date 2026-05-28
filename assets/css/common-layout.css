@@ -164,3 +164,20 @@ body {
 @media (max-width: 900px) {
   .ui-grid--3 { grid-template-columns: 1fr; }
 }
+
+.sns-links-ec a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted-text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.sns-links-ec a:hover {
+    color: #ffffff;
+}
+
+.sns-links-ec a img {
+    display: block;
+}
