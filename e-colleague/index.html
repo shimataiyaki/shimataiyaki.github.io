@@ -13,7 +13,7 @@ product_nav: true
         <div class="product-logo">e-colleague</div>
         <div class="product-links">
             <a href="#core-experience">機能</a>
-            <a href="#howto">使い方</a>
+            <a href="{{ '/e-colleague/howto.html' | relative_url }}">使い方</a>
             <a href="#philosophy">OPS-0</a>
             <a href="#feature-portal">ポータル</a>
             <a href="#contact-section" class="btn-cta">導入する</a>
@@ -63,77 +63,8 @@ product_nav: true
             </div>
         </section>
 
-        <!-- Core Experience -->
-        <section class="section-ec" id="core-experience">
-            <div class="feature-row">
-                <div class="feature-text">
-                    <h2>「やる」の一言で、<br>記録が残る。</h2>
-                    <p class="feature-desc">「ポスター発注、来週金曜までか…」「それ、俺がやるよ」——「やる」の一言で、直前の会話から文脈を再構成。期限・担当者・完了条件まで、自動でタスク化します。</p>
-                </div>
-                <div class="feature-image">
-                    <img src="{{ '/images/taskdemo.png' | relative_url }}" alt="「やる」の一言でタスクが自動抽出される画面" class="feature-screenshot">
-                </div>
-            </div>
-        </section>
-
-        <!-- Features -->
-        <section class="section-ec-gray" id="feature-list">
-            <div class="section-ec-inner">
-                <div class="feature-row feature-row-reverse">
-                    <div class="feature-text">
-                        <h2>進捗は、ひと目で。</h2>
-                        <p class="feature-desc">「タスク一覧」と打つだけ。Flex Messageカードで、誰が何をしているか即座に把握できます。</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="{{ '/images/ichirandemo.png' | relative_url }}" alt="タスク一覧をFlex Messageで表示する画面" class="feature-screenshot">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-ec" id="feature-calendar">
-            <div class="section-ec-inner">
-                <div class="feature-row">
-                    <div class="feature-text">
-                        <h2>期限は、<br>カレンダーへ。</h2>
-                        <p class="feature-desc">タスクに期限があれば、自動でGoogleカレンダーに登録。グループ別の振り分けにも対応し、予定を見逃しません。</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="{{ '/images/calendardemo.png' | relative_url }}" alt="Googleカレンダーに自動登録される画面" class="feature-screenshot">
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section-ec-gray" id="feature-done">
-            <div class="feature-row feature-row-reverse">
-                <div class="feature-text">
-                    <h2>「終わった」で、<br>完了。</h2>
-                    <p class="feature-desc">完了報告もチャットで完結。ステータスが自動更新され、無駄な報告作業はゼロです。</p>
-                </div>
-                <div class="feature-image">
-                    <img src="{{ '/images/donedemo.png' | relative_url }}" alt="完了報告でタスクが自動更新される画面" class="feature-screenshot">
-                </div>
-            </div>
-        </section>
-
-        <section class="section-ec" id="feature-portal">
-            <div class="section-ec-inner">
-                <div class="feature-row">
-                    <div class="feature-text">
-                        <h2>ポータルで確認。</h2>
-                        <p class="feature-desc">ポータルにログインすれば、タスクの削除、完了登録をスムーズに行えます。</p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="{{ '/images/portaldemo.png' | relative_url }}" alt="管理者ポータルの画面" class="feature-screenshot">
-                    </div>
-                </div>
-            </div>
-            <a href="{{ '/e-colleague/portal/' | relative_url }}" class="btn-secondary ui-button ui-button--secondary">ポータルへログイン</a>
-        </section>
-
         <!-- Use Case -->
-        <section class="section-ec-gray" id="use-case">
+        <section class="section-ec" id="use-case">
             <div class="section-ec-inner">
                 <h2>学生チームのために設計。</h2>
                 <p class="section-subtitle">「それやります」が、記録に残る。</p>
@@ -154,19 +85,77 @@ product_nav: true
             </div>
         </section>
 
-        <!-- 使い方 -->
-        <section class="section-ec" id="howto">
-            <div class="section-ec-inner">
-                <h2>使い方を見る</h2>
-                <p class="section-subtitle">以下のリンクよりご覧いただけます。</p>
-                <p style="text-align:center; margin-top: 16px;">
-                    <a href="{{ '/e-colleague/howto' | relative_url }}" class="btn-primary ui-button ui-button--primary">使い方を見る →</a>
-                </p>
+        <!-- Core Experience -->
+        <section class="section-ec-gray" id="core-experience">
+            <div class="feature-row">
+                <div class="feature-text">
+                    <h2>「やる」の一言で、<br>記録が残る。</h2>
+                    <p class="feature-desc">「ポスター発注、来週金曜までか…」「それ、俺がやるよ」——「やる」の一言で、直前の会話から文脈を再構成。期限・担当者・完了条件まで、自動でタスク化します。</p>
+                </div>
+                <div class="feature-image">
+                    <img src="{{ '/images/taskdemo.png' | relative_url }}" alt="「やる」の一言でタスクが自動抽出される画面" class="feature-screenshot">
+                </div>
             </div>
         </section>
 
+        <!-- Features -->
+        <section class="section-ec" id="feature-list">
+            <div class="section-ec-inner">
+                <div class="feature-row feature-row-reverse">
+                    <div class="feature-text">
+                        <h2>進捗は、ひと目で。</h2>
+                        <p class="feature-desc">「タスク一覧」と打つだけ。Flex Messageカードで、誰が何をしているか即座に把握できます。</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="{{ '/images/ichirandemo.png' | relative_url }}" alt="タスク一覧をFlex Messageで表示する画面" class="feature-screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-ec-gray" id="feature-calendar">
+            <div class="section-ec-inner">
+                <div class="feature-row">
+                    <div class="feature-text">
+                        <h2>期限は、<br>カレンダーへ。</h2>
+                        <p class="feature-desc">タスクに期限があれば、自動でGoogleカレンダーに登録。グループ別の振り分けにも対応し、予定を見逃しません。</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="{{ '/images/calendardemo.png' | relative_url }}" alt="Googleカレンダーに自動登録される画面" class="feature-screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-ec" id="feature-done">
+            <div class="feature-row feature-row-reverse">
+                <div class="feature-text">
+                    <h2>「終わった」で、<br>完了。</h2>
+                    <p class="feature-desc">完了報告もチャットで完結。ステータスが自動更新され、無駄な報告作業はゼロです。</p>
+                </div>
+                <div class="feature-image">
+                    <img src="{{ '/images/donedemo.png' | relative_url }}" alt="完了報告でタスクが自動更新される画面" class="feature-screenshot">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-ec-gray" id="feature-portal">
+            <div class="section-ec-inner">
+                <div class="feature-row">
+                    <div class="feature-text">
+                        <h2>ポータルで確認。</h2>
+                        <p class="feature-desc">ポータルにログインすれば、タスクの削除、完了登録をスムーズに行えます。</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="{{ '/images/portaldemo.png' | relative_url }}" alt="管理者ポータルの画面" class="feature-screenshot">
+                    </div>
+                </div>
+            </div>
+            <a href="{{ '/e-colleague/portal/' | relative_url }}" class="btn-secondary ui-button ui-button--secondary">ポータルへログイン</a>
+        </section>
+
         <!-- 思想 -->
-        <section class="section-ec-gray" id="philosophy">
+        <section class="section-ec" id="philosophy">
             <div class="section-ec-inner">
                 <div class="philosophy-block fade-in">
                     <h2>仕組みが、チームを支える。</h2>
@@ -179,24 +168,49 @@ product_nav: true
             </div>
         </section>
 
-        <!-- お問い合わせ -->
-        <section class="section-ec" id="contact-section">
+        <!-- お問い合わせ（使い方統合） -->
+        <section class="section-ec-gray" id="contact-section">
             <div class="section-ec-inner">
                 <div class="contact-block ui-card">
-                    <h2>e-colleagueを導入</h2>
+                    <h2>e-colleagueを導入する</h2>
                     <p class="section-subtitle">
-                        QRコードから友だち追加して、すぐに使い始められます。
-                        オープンソースのため、GitHubからクローンして自由に利用・改変も可能です。
+                        たった3ステップではじめられます。
                     </p>
+
+                    <div class="steps fade-in" style="margin-bottom: 32px;">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h3 class="step-title">友だち追加</h3>
+                            <p class="step-text">QRコードからLINEで友だち追加。</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h3 class="step-title">認証キーを発行</h3>
+                            <p class="step-text">個人トークのリッチメニューから発行。</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h3 class="step-title">グループに招待してキーを送信</h3>
+                            <p class="step-text">Botを招待し、認証キーを貼り付け。</p>
+                        </div>
+                         <p style="text-align:center; margin-top: 16px;">
+                             <a href="{{ '/e-colleague/howto' | relative_url }}" class="btn-secondary ui-button ui-button--secondary" target="_blank">詳しい使い方を見る</a>
+                   　　　</p>
+                    </div>
+
                     <div class="hero-qr">
                         <img src="{{ '/images/e-colleague-qr.png' | relative_url }}" alt="e-colleague LINE友だち追加QRコード" width="140" height="140">
                         <p class="inline-note">ID: @146baein</p>
                     </div>
+
+                    <p class="section-subtitle" style="margin-top: 24px;">
+                        オープンソースのため、GitHubからクローンして自由に利用・改変も可能です。
+                    </p>
                     <p class="inline-note">サポートが必要な方は、以下のリンクからお問い合わせください。</p>
                     <a href="https://github.com/shimataiyaki/e-colleague-bot" class="btn-primary ui-button ui-button--primary" target="_blank">GitHubで見る</a>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcBlT9v2814AodznjW24RU4K6vyULp4osAlogDL-98KlcgfQ/viewform" 
                        class="btn-secondary ui-button ui-button--secondary" 
-                       target="_blank">
+                      target="_blank">
                         お問い合わせフォーム
                     </a>
                 </div>
@@ -204,7 +218,7 @@ product_nav: true
         </section>
 
         <!-- お知らせ・注釈 -->
-        <section class="section-ec-gray" id="news">
+        <section class="section-ec" id="news">
             <div class="section-ec-inner">
                 <h2>お知らせ</h2>
                 <div class="content-container">
