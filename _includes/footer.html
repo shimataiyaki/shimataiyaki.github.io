@@ -1,6 +1,7 @@
 <footer class="main-footer-ec">
     {% if page.product_nav %}
     <div class="footer-links">
+        <a href="{{ '/about/' | relative_url }}">運営者情報</a>
         <a href="https://github.com/shimataiyaki/e-colleague-bot" target="_blank">GitHub repo</a>
         <a href="{{ '/e-colleague/portal/' | relative_url }}">管理者ポータル</a>
         <a href="{{ '/e-colleague/terms/' | relative_url }}">利用規約</a>
@@ -8,6 +9,7 @@
     </div>
     {% else %}
     <div class="footer-links">
+        <a href="{{ '/about/' | relative_url }}">運営者情報</a>
         <a href="{{ '/privacy/' | relative_url }}">プライバシーポリシー</a>
         <a href="{{ '/terms/' | relative_url }}">利用規約</a>
     </div>
