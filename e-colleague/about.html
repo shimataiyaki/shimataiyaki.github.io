@@ -1,0 +1,94 @@
+---
+layout: default
+title: 使い方 | e-colleague
+description: e-colleague の使い方。友だち追加から認証、タスク管理までのステップを解説します。
+og_title: 使い方 | e-colleague
+og_image: /images/favicon.ico
+css: /assets/css/document.css
+product_nav: true
+---
+
+<nav class="product-nav">
+    <div class="product-nav-container">
+        <div class="product-logo"><a href="{{ '/e-colleague/' | relative_url }}" style="text-decoration:none;color:inherit;">e-colleague | documentation</a></div>
+        <div class="product-links">
+            <a href="{{ '/e-colleague/' | relative_url }}" class="btn-cta">LPへ戻る</a>
+        </div>
+    </div>
+</nav>
+
+<div class="layout-wrapper">
+    <main class="main-content">
+
+        <section class="section-ec">
+            <nav class="breadcrumb">
+                <a href="{{ '/e-colleague/' | relative_url }}">e-colleague</a>
+                <span>›</span>
+                <span>使い方</span>
+            </nav>
+            <p class="doc-meta">最終更新日: 2026年5月31日</p>
+            <h1>e-colleague の使い方</h1>
+
+            <div class="doc-body">
+                <h2>1. 友だち追加</h2>
+                <p>まずは、下のQRコードを読み取ってLINEで友だち追加してください。</p>
+                <div class="hero-qr">
+                    <img src="{{ '/images/e-colleague-qr.png' | relative_url }}" alt="e-colleague LINE友だち追加QRコード" width="140" height="140">
+                    <p class="inline-note">ID: @146baein</p>
+                </div>
+                <p>友だち追加後、個人トーク画面が開きます。</p>
+
+                <h2>2. 認証キーを発行</h2>
+                <p>個人トーク画面の下部にあるリッチメニューから、<strong>「認証キーを発行」</strong>ボタンをタップしてください。</p>
+                <p>認証キーが発行され、トーク内に表示されます。このキーはグループごとに必要です。</p>
+
+                <h2>3. グループに招待</h2>
+                <p>使いたいグループLINEに、e-colleague を招待してください。</p>
+                <ol>
+                    <li>グループLINEの「招待」から e-colleague を選択</li>
+                </ol>
+                <p>Botがグループに参加したら、準備完了です。</p>
+
+                <h2>4. 認証キーを送信</h2>
+                <p>グループトークに、手順2で発行した認証キーを貼り付けて送信してください。</p>
+                <p>認証が成功すると、Botから確認メッセージが返信されます。これでグループ内での利用が可能になります。</p>
+
+                <h2>5. あとは普通に会話</h2>
+                <p>認証が完了したら、あとは普段どおり会話するだけです。</p>
+                <p>「やる」「お願い」「任せて」などのキーワードをBotが検出すると、自動でタスクとして記録されます。</p>
+
+                <div class="doc-table-wrapper">
+                    <table class="doc-table">
+                        <tr><th>発言例</th><th>動作</th></tr>
+                        <tr><td>「ポスター発注、来週金曜まで。それ、俺がやるよ」</td><td>「やる」を検出し、タスクとして記録。期限・担当者も自動抽出。</td></tr>
+                        <tr><td>「誰かパンフレットの準備してくれない？」</td><td>「お願い」系の発言として検出。不足情報があればBotが質問。</td></tr>
+                        <tr><td>「タスク一覧」</td><td>未完了のタスクをFlex Messageカードで表示。</td></tr>
+                        <tr><td>「ポスター発注終わった」</td><td>「終わった」を検出し、該当タスクを完了に。</td></tr>
+                    </table>
+                </div>
+
+                <h2>よくある質問</h2>
+
+                <h3>Q. どんな発言がタスクとして認識されますか？</h3>
+                <p>「やる」「お願い」「任せて」「担当します」などのトリガーキーワードを含む発言が対象です。その直前に「何を・いつまでに」に関する会話があると、より正確にタスク化されます。</p>
+
+                <h3>Q. タスクがうまく認識されないときは？</h3>
+                <p>トリガーキーワード（「やる」「お願い」など）が含まれているか確認してください。具体的な期限や担当者を添えると、認識精度が上がります。</p>
+
+                <h3>Q. 間違って登録されたタスクはどうすれば？</h3>
+                <p>管理者ポータルから削除できます。ポータルへのログインは運営者までお問い合わせください。</p>
+
+                <h2>自分でセットアップする場合</h2>
+                <p>e-colleague はオープンソースです。ご自身のGoogleアカウントで動作させることもできます。</p>
+                <ol>
+                    <li><a href="https://github.com/shimataiyaki/e-colleague-bot" target="_blank">GitHubリポジトリ</a> からクローン</li>
+                    <li>Google Apps Script にコードをデプロイ</li>
+                    <li>LINE Developers で Messaging API チャネルを作成</li>
+                    <li>スプレッドシートと各種APIキーを設定</li>
+                </ol>
+                <p>詳しくは <a href="{{ '/e-colleague/docs/導入ガイド.pdf' | relative_url }}">導入ガイド（PDF）</a> をご参照ください。</p>
+            </div>
+        </section>
+
+    </main>
+</div>
