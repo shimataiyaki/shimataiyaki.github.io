@@ -1,19 +1,13 @@
 ---
 layout: default
-
 title: Shimataiyaki | アイデアから、プロダクトまで。
-
 description: アイデアから、プロダクトまで。個人開発、プロジェクト、発信活動への入り口。
-
 og_title: Shimataiyaki | アイデアから、プロダクトまで。
 og_description: 個人開発、プロジェクト、発信活動への入り口。
-
 og_type: website
 og_image: /images/ogp.png
-
 twitter_title: Shimataiyaki | アイデアから、プロダクトまで。
 twitter_description: 個人開発、プロジェクト、発信活動への入り口。
-
 css: /assets/css/home.css
 ---
 
@@ -38,7 +32,7 @@ css: /assets/css/home.css
         </div>
         <div class="hero-subtitle">Shimataiyaki のサイトへようこそ。</div>
         <div class="hero-sub-links">
-            <a href="#products"></a>
+            <a href="#products">プロダクト</a>
             <a href="{{ '/about' | relative_url }}">運営者情報</a>
             <a href="https://github.com/shimataiyaki" target="_blank">GitHub</a>
         </div>
@@ -62,49 +56,83 @@ css: /assets/css/home.css
         </div>
     </section>
 
- <!-- プロダクト一覧 -->
-<section class="ui-section" id="products">
-    <div class="ui-container">
-        <h2>プロダクト一覧</h2>
-        <div class="ui-grid ui-grid--3">
-            
-            <a href="{{ '/e-colleague/' | relative_url }}" class="ui-card nav-card">
-                <img src="/images/e-colleague.png" alt="e-colleague" style="width:100%; border-radius:12px; margin-bottom:0.5rem;">
-                <h3>e-colleague</h3>
-                <p>LINEでタスク管理。AIが会話から自動抽出。</p>
-                <span class="card-arrow">→</span>
-            </a>
+    <!-- プロダクト一覧（Apple風 2カラム） -->
+    <section class="ui-section ui-section--muted" id="products">
+        <div class="ui-container">
+            <h2>Products</h2>
+            <p class="section-subtitle">「ちょっと便利」をオープンソースで。</p>
 
-            <a href="{{ '/digital-omikuji/' | relative_url }}" class="ui-card nav-card">
-                <img src="/images/digital-omikuji.png" alt="デジタルおみくじ" style="width:100%; border-radius:12px; margin-bottom:0.5rem;">
-                <h3>デジタルおみくじ</h3>
-                <p>文化祭向けWebおみくじアプリ。</p>
-                <span class="card-arrow">→</span>
-            </a>
+            <div class="products-grid">
 
-            <a href="{{ '/digital-ema/' | relative_url }}" class="ui-card nav-card">
-                <img src="/images/digital-ema.png" alt="デジタル絵馬" style="width:100%; border-radius:12px; margin-bottom:0.5rem;">
-                <h3>デジタル絵馬</h3>
-                <p>願い事を絵馬として表示するインスタレーション。</p>
-                <span class="card-arrow">→</span>
-            </a>
+                <!-- e-colleague -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/images/e-colleague.png" alt="e-colleague">
+                    </div>
+                    <div class="product-text">
+                        <h3>e-colleague</h3>
+                        <p>LINEグループの会話から、AIがタスクを自動抽出・管理するBot。</p>
+                        <div class="product-actions">
+                            <a href="{{ '/e-colleague/' | relative_url }}" class="btn-primary">プロダクトページ</a>
+                            <a href="https://github.com/shimataiyaki/e-colleague-bot" class="btn-secondary" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
 
-            <a href="https://shimataiyaki.github.io/mendako-bbs/" class="ui-card nav-card">
-                <img src="/images/mendakobbs.png" alt="Mendako BBS" style="width:100%; border-radius:12px; margin-bottom:0.5rem;">
-                <h3>Mendako BBS</h3>
-                <p>「書く・読む・返す」だけのシンプル掲示板。</p>
-                <span class="card-arrow">→</span>
-            </a>
+                <!-- デジタルおみくじ -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/images/digital-omikuji.png" alt="デジタルおみくじ">
+                    </div>
+                    <div class="product-text">
+                        <h3>デジタルおみくじ</h3>
+                        <p>漢数字の結果をポップアップで表示する文化祭向けWebおみくじ。</p>
+                        <div class="product-actions">
+                            <a href="{{ '/digital-omikuji/' | relative_url }}" class="btn-primary">プロダクトページ</a>
+                            <a href="https://github.com/shimataiyaki/digital-omikuji" class="btn-secondary" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- デジタル絵馬 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/images/digital-ema.png" alt="デジタル絵馬">
+                    </div>
+                    <div class="product-text">
+                        <h3>デジタル絵馬</h3>
+                        <p>願い事をモニターに絵馬として表示する文化祭向けインスタレーション。</p>
+                        <div class="product-actions">
+                            <a href="{{ '/digital-ema/' | relative_url }}" class="btn-primary">プロダクトページ</a>
+                            <a href="https://github.com/shimataiyaki/digital-ema-app" class="btn-secondary" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mendako BBS -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/images/mendakobbs.png" alt="Mendako BBS">
+                    </div>
+                    <div class="product-text">
+                        <h3>Mendako BBS</h3>
+                        <p>「書く・読む・返す」だけに集中できるシンプルな掲示板。</p>
+                        <div class="product-actions">
+                            <a href="https://shimataiyaki.github.io/mendako-bbs/" class="btn-primary" target="_blank">プロダクトページ</a>
+                            <a href="https://github.com/shimataiyaki/mendako-bbs-app" class="btn-secondary" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- About -->
-    <section class="ui-section ui-section--muted" id="about">
+    <section class="ui-section" id="about">
         <div class="ui-container">
             <h2>Shimataiyaki</h2>
-            <p>2008年生まれ。中学でWebサイトを公開したのをきっかけに個人開発を始めました。</p>
+            <p>2008年生まれ。中学生の時にWebサイトを公開したのをきっかけに個人開発を始めました。</p>
             <p style="margin-top: 1rem;">「ちょっと便利、をオープンソースで。」が開発のモットーです。</p>
             <p style="margin-top: 1.5rem;">
                 <a href="mailto:shimataiyaki.dev@gmail.com" class="mail-link">shimataiyaki.dev@gmail.com</a>
