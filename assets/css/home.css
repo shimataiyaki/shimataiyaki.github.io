@@ -165,83 +165,90 @@ body {
 }
 
 /* ===== 全幅導線タイル ===== */
-.ui-grid--2 {
-    grid-template-columns: repeat(2, 1fr);
+.wide-links-section {
+    background-color: #ffffff;
+    padding: 60px 1.5rem;
 }
 
-.nav-card-full {
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-    border-bottom: 1px solid var(--border-color);
-    padding: 2rem 1.5rem;
-}
-
-.nav-card-full:first-child {
-    border-right: 1px solid var(--border-color);
-}
-
-/* ===== 導線タイル（共通） ===== */
-.nav-card {
+.wide-link-card {
+    display: block;
+    background-color: #f5f5f7;
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 20px;
     text-decoration: none;
     color: var(--text-color);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.nav-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 36px rgba(0,0,0,0.1);
+.wide-link-card:last-child {
+    margin-bottom: 0;
 }
 
-.nav-card h3 {
-    font-size: 1.2rem;
+.wide-link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.wide-link-card h3 {
+    font-size: 1.4rem;
     font-weight: 700;
+    margin-bottom: 6px;
 }
 
-.nav-card p {
-    font-size: 0.9rem;
+.wide-link-card p {
+    font-size: 0.95rem;
     color: var(--muted-text);
-    flex: 1;
+    margin-bottom: 12px;
 }
 
-.card-arrow {
-    align-self: flex-end;
+.wide-link-card .card-arrow {
+    display: inline-block;
     font-size: 1.2rem;
     color: var(--apple-blue);
 }
 
-/* ===== プロダクト一覧（Apple風 2カラム） ===== */
+/* ===== プロダクト一覧（Apple風 2カラムカード） ===== */
+.products-section {
+    background-color: #ffffff;
+    padding: 80px 1.5rem;
+}
+
 .products-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
     margin-top: 48px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-card {
+    background-color: #f5f5f7;
+    border-radius: 20px;
+    padding: 32px;
     display: flex;
-    align-items: center;
-    gap: 80px;
-    max-width: 1024px;
-    margin: 0 auto;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.product-card:nth-child(even) {
-    flex-direction: row-reverse;
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
 }
 
 .product-image {
-    flex: 1;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .product-image img {
     width: 100%;
     height: auto;
-    border-radius: 16px;
-    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.1));
+    display: block;
+    border-radius: 12px;
 }
 
 .product-text {
@@ -249,22 +256,22 @@ body {
 }
 
 .product-text h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     color: #1d1d1f;
 }
 
 .product-text p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--muted-text);
     line-height: 1.7;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .product-actions {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
@@ -306,36 +313,6 @@ h2 {
     color: var(--accent-color);
 }
 
-/* ===== フッター（念のため） ===== */
-.main-footer-ec {
-    padding: 40px 1.5rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--muted-text);
-    border-top: 1px solid var(--border-color);
-    background: var(--gray-bg);
-}
-
-.sns-links-ec {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
-}
-
-.sns-links-ec a {
-    color: var(--muted-text);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: color 0.2s;
-}
-
-.sns-links-ec a:hover {
-    color: #1d1d1f;
-}
-
 /* ===== モバイル ===== */
 @media (max-width: 768px) {
     .hero {
@@ -354,25 +331,23 @@ h2 {
         font-size: 2rem;
     }
 
-    .product-card,
-    .product-card:nth-child(even) {
-        flex-direction: column;
+    /* 全幅導線カード */
+    .wide-links-section {
+        padding: 40px 1.2rem;
+    }
+    .wide-link-card {
+        padding: 24px;
+    }
+
+    /* プロダクト一覧：1カラムに */
+    .products-grid {
+        grid-template-columns: 1fr;
         gap: 24px;
     }
-
-    .product-text h3 {
-        font-size: 1.4rem;
+    .product-card {
+        padding: 24px;
     }
-
-    .products-grid {
-        gap: 48px;
-    }
-
-    .ui-grid--2 {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-card-full:first-child {
-        border-right: none;
+    .products-section {
+        padding: 60px 1.2rem;
     }
 }
