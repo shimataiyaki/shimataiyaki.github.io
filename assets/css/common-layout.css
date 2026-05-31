@@ -4,12 +4,12 @@
 :root {
   --bg-color: #ffffff;
   --container-bg: #ffffff;
-  --text-color: #1f2937;
-  --border-color: #e2e8f0;
-  --muted-text: #64748b;
-  --accent-color: #4a4a4a;
-  --gray-bg: #F5F5F7;
-  --apple-blue: #0071e3;
+  --text-color: #1d1d1f;
+  --border-color: #e0e0e3;
+  --muted-text: #6e6e73;
+  --accent-color: #3a3a3f;
+  --gray-bg: #f3f3f5;
+  --apple-blue: #3a3a3f;
 }
 
 body {
@@ -40,7 +40,7 @@ body {
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: -0.01em;
-  color: #0f172a;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -141,12 +141,13 @@ body {
   font-weight: 500;
   transition: background-color .2s, color .2s, border-color .2s;
 }
-.ui-button--primary { background: var(--apple-blue); color: #fff; }
+.ui-button--primary { background: #1d1d1f; color: #fff; }
+.ui-button--primary:hover { background: #3a3a3f; }
 .ui-button--secondary { color: var(--text-color); border: 1px solid var(--border-color); background: #fff; }
 
 .ui-notice {
-  border-left: 4px solid var(--apple-blue);
-  background: #f8fafc;
+  border-left: 4px solid var(--accent-color);
+  background: var(--gray-bg);
   padding: 0.9rem 1rem;
   color: var(--text-color);
 }
@@ -182,7 +183,7 @@ body {
 }
 
 .sns-links-ec a:hover {
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 .sns-links-ec iconify-icon {
@@ -191,7 +192,7 @@ body {
 }
 
 .sns-links-ec a:hover iconify-icon {
-    color: #1d1d1f;
+    color: var(--accent-color);
 }
 
 .footer-bottom {
@@ -224,5 +225,5 @@ body {
 }
 
 .footer-links a:hover {
-    color: #1d1d1f;
+    color: var(--text-color);
 }
