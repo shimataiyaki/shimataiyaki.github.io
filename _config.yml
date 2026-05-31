@@ -4,3 +4,12 @@ baseurl: ""
 url: "https://shimataiyaki.github.io"
 
 permalink: /blog/:year/:month/:day/:title/
+
+# 生成されるブログ記事に記事用レイアウトとCSSを適用する
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      css: /assets/css/blog.css
