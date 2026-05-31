@@ -1,10 +1,53 @@
 /* ============================================
-   Mendako BBS - 専用スタイルシート
+   Mendako BBS - 完全独立型スタイルシート
    ============================================ */
 
+/* ----- リセット & ベース ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --container-bg: #ffffff;
+  --text-color: #1f2937;
+  --border-color: #e2e8f0;
+  --toc-bg: #f1f5f9;
+  --muted-text: #64748b;
+  --accent-color: #4a4a4a;
+}
+
 body {
+  font-family: 'M PLUS 1p', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.8;
+  font-weight: 400;
   padding-top: 2rem;
   padding-bottom: 160px;
+  margin: 0;
+}
+
+/* ----- ヘッダー ----- */
+.site-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--container-bg);
+  border-bottom: 3px solid var(--accent-color);
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .site-title {
@@ -14,6 +57,11 @@ body {
   text-decoration: none;
 }
 
+.site-title:hover {
+  color: var(--accent-color);
+}
+
+/* ----- メインコンテンツ ----- */
 .container {
   max-width: 720px;
   margin: 0 auto;
@@ -21,9 +69,23 @@ body {
   margin-top: 3rem;
 }
 
+.info-text {
+  color: var(--muted-text);
+  font-size: 0.85rem;
+  margin: 1rem 0 0.5rem;
+}
+
+/* ----- 投稿カード ----- */
 .post {
   border-bottom: 1px solid var(--border-color);
   padding: 1.2rem 0;
+}
+
+.post-number {
+  font-size: 0.8rem;
+  color: var(--muted-text);
+  margin-right: 0.5rem;
+  user-select: none;
 }
 
 .post-name {
@@ -42,13 +104,6 @@ body {
   color: var(--text-color);
   white-space: pre-wrap;
   word-break: break-word;
-}
-
-.post-number {
-  font-size: 0.8rem;
-  color: var(--muted-text);
-  margin-right: 0.5rem;
-  user-select: none;
 }
 
 /* ----- 固定フッター ----- */
@@ -192,4 +247,23 @@ textarea {
 .modal-close-btn {
   display: inline-block;
   margin-top: 1rem;
+}
+
+/* ----- レスポンシブ ----- */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.75rem 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .fixed-footer {
+    padding: 1rem 1rem 0.8rem;
+  }
+
+  .site-title {
+    font-size: 1.5rem;
+  }
 }
