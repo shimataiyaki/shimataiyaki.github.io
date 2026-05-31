@@ -128,13 +128,13 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    border: 2px solid #d0d0d5;
+    border: 2px solid #1d1d1f;
     transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 
 .btn-secondary:hover {
     background: rgba(0,0,0,0.04);
-    border-color: #1d1d1f;
+    border-color: #3a3a3f;
 }
 
 /* ===== サブ導線カルーセル ===== */
