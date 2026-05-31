@@ -158,7 +158,7 @@ body {
 
 .ui-footer {
   border-top: 1px solid var(--border-color);
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 1.5rem 2rem;
   color: var(--muted-text);
 }
 
