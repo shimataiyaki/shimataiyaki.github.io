@@ -136,222 +136,6 @@ body {
     background: rgba(0,113,227,0.06);
 }
 
-/* ===== サブ導線 ===== */
-.hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--muted-text);
-    margin: 48px 0 16px;
-    text-align: center;
-}
-
-.hero-sub-links {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-}
-
-.hero-sub-links a {
-    color: var(--muted-text);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-.hero-sub-links a:hover {
-    color: var(--accent-color);
-}
-
-/* ===== 全幅導線タイル ===== */
-.wide-links-section {
-    background-color: #ffffff;
-    padding: 60px 1.5rem;
-}
-
-.wide-link-card {
-    display: block;
-    background-color: #f5f5f7;
-    border-radius: 20px;
-    padding: 32px;
-    margin-bottom: 20px;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.wide-link-card:last-child {
-    margin-bottom: 0;
-}
-
-.wide-link-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-}
-
-.wide-link-card h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 6px;
-}
-
-.wide-link-card p {
-    font-size: 0.95rem;
-    color: var(--muted-text);
-    margin-bottom: 12px;
-}
-
-.wide-link-card .card-arrow {
-    display: inline-block;
-    font-size: 1.2rem;
-    color: var(--apple-blue);
-}
-
-/* ===== プロダクト一覧（Apple風 2カラムカード） ===== */
-.products-section {
-    background-color: #ffffff;
-    padding: 80px 1.5rem;
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    margin-top: 48px;
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.product-card {
-    background-color: #f5f5f7;
-    border-radius: 20px;
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-}
-
-.product-image {
-    margin-bottom: 24px;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
-}
-
-.product-text {
-    flex: 1;
-}
-
-.product-text h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #1d1d1f;
-}
-
-.product-text p {
-    font-size: 0.95rem;
-    color: var(--muted-text);
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.product-actions {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-/* ===== セクション共通 ===== */
-.section-subtitle {
-    font-size: 1.1rem;
-    color: var(--muted-text);
-    text-align: center;
-    margin-top: 8px;
-}
-
-.section-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--apple-blue);
-    margin-bottom: 12px;
-}
-
-h2 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.15;
-    margin-bottom: 16px;
-    color: #1d1d1f;
-    text-align: center;
-}
-
-/* ===== About ===== */
-.mail-link {
-    color: var(--text-color);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border-color);
-}
-
-.mail-link:hover {
-    color: var(--accent-color);
-}
-
-/* ===== モバイル ===== */
-@media (max-width: 768px) {
-    .hero {
-        padding: 80px 1.2rem 60px;
-    }
-    .hero-title {
-        font-size: 2.4rem;
-    }
-    .hero-copy {
-        font-size: 1.1rem;
-    }
-    .hero-mockup img {
-        max-width: 100%;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-
-    /* 全幅導線カード */
-    .wide-links-section {
-        padding: 40px 1.2rem;
-    }
-    .wide-link-card {
-        padding: 24px;
-    }
-
-    /* プロダクト一覧：1カラムに */
-    .products-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-    .product-card {
-        padding: 24px;
-    }
-    .products-section {
-        padding: 60px 1.2rem;
-    }
-}
-
 /* ===== サブ導線カルーセル ===== */
 .hero-subtitle {
     font-size: 1.2rem;
@@ -411,4 +195,166 @@ h2 {
 
 .carousel-label {
     font-size: 0.95rem;
+}
+
+/* ===== Vision ===== */
+.vision-section {
+    background-color: #ffffff;
+    padding: 80px 1.5rem;
+}
+
+.vision-heading {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--apple-blue);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.vision-lead {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    text-align: center;
+    color: #1d1d1f;
+    margin-bottom: 56px;
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vision-card {
+    text-align: center;
+    padding: 0 8px;
+}
+
+.vision-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1d1d1f;
+}
+
+.vision-card p {
+    font-size: 0.95rem;
+    color: var(--muted-text);
+    line-height: 1.7;
+}
+
+/* ===== News ===== */
+.news-section {
+    background-color: #f5f5f7;
+    padding: 80px 1.5rem;
+}
+
+.section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #1d1d1f;
+    margin-bottom: 40px;
+}
+
+.news-list {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border-color);
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.2s;
+}
+
+.news-item:hover {
+    color: var(--apple-blue);
+}
+
+.news-item time {
+    font-size: 0.85rem;
+    color: var(--muted-text);
+    white-space: nowrap;
+    min-width: 100px;
+}
+
+.news-title {
+    flex: 1;
+    font-weight: 500;
+}
+
+.news-arrow {
+    color: var(--apple-blue);
+    font-size: 1rem;
+}
+
+.news-more {
+    text-align: center;
+    margin-top: 36px;
+}
+
+/* ===== About ===== */
+.mail-link {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.mail-link:hover {
+    color: var(--accent-color);
+}
+
+/* ===== モバイル ===== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 1.2rem 60px;
+    }
+    .hero-title {
+        font-size: 2.4rem;
+    }
+    .hero-copy {
+        font-size: 1.1rem;
+    }
+    .hero-mockup img {
+        max-width: 100%;
+    }
+
+    .vision-section {
+        padding: 60px 1.2rem;
+    }
+    .vision-lead {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    .vision-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .news-section {
+        padding: 60px 1.2rem;
+    }
+    .news-item {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .news-item time {
+        min-width: auto;
+    }
 }
