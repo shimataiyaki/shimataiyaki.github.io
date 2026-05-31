@@ -18,7 +18,7 @@ body {
 .hero {
     position: relative;
     overflow: hidden;
-    padding: 60px 1.5rem 80px;
+    padding: 120px 1.5rem 80px;
     text-align: center;
     max-width: 100%;
     margin: 0 auto;
@@ -101,6 +101,7 @@ body {
     flex-wrap: wrap;
 }
 
+/* ===== ボタン ===== */
 .btn-primary {
     display: inline-block;
     background: var(--apple-blue);
@@ -135,7 +136,7 @@ body {
     background: rgba(0,113,227,0.06);
 }
 
-/* サブ導線 */
+/* ===== サブ導線 ===== */
 .hero-subtitle {
     font-size: 1.2rem;
     color: var(--muted-text);
@@ -163,7 +164,24 @@ body {
     color: var(--accent-color);
 }
 
-/* ===== 導線タイル ===== */
+/* ===== 全幅導線タイル ===== */
+.ui-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.nav-card-full {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 2rem 1.5rem;
+}
+
+.nav-card-full:first-child {
+    border-right: 1px solid var(--border-color);
+}
+
+/* ===== 導線タイル（共通） ===== */
 .nav-card {
     text-decoration: none;
     color: var(--text-color);
@@ -195,7 +213,69 @@ body {
     color: var(--apple-blue);
 }
 
-/* ===== About ===== */
+/* ===== プロダクト一覧（Apple風 2カラム） ===== */
+.products-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 48px;
+}
+
+.product-card {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.product-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.1));
+}
+
+.product-text {
+    flex: 1;
+}
+
+.product-text h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1d1d1f;
+}
+
+.product-text p {
+    font-size: 1rem;
+    color: var(--muted-text);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ===== セクション共通 ===== */
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--muted-text);
+    text-align: center;
+    margin-top: 8px;
+}
+
 .section-label {
     font-size: 0.75rem;
     font-weight: 600;
@@ -212,8 +292,10 @@ h2 {
     line-height: 1.15;
     margin-bottom: 16px;
     color: #1d1d1f;
+    text-align: center;
 }
 
+/* ===== About ===== */
 .mail-link {
     color: var(--text-color);
     text-decoration: none;
@@ -224,7 +306,7 @@ h2 {
     color: var(--accent-color);
 }
 
-/* ===== フッター ===== */
+/* ===== フッター（念のため） ===== */
 .main-footer-ec {
     padding: 40px 1.5rem;
     text-align: center;
@@ -270,5 +352,27 @@ h2 {
     }
     h2 {
         font-size: 2rem;
+    }
+
+    .product-card,
+    .product-card:nth-child(even) {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .product-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .products-grid {
+        gap: 48px;
+    }
+
+    .ui-grid--2 {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-card-full:first-child {
+        border-right: none;
     }
 }
