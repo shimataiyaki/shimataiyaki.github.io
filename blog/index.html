@@ -1,22 +1,26 @@
 ---
 layout: default
 title: ブログ | Shimataiyaki
-description: 。個人開発の備忘録。
-css: /assets/css/document.css
+description: 個人開発の備忘録。
+css: /assets/css/home.css
 ---
 
 <main class="main-content">
-    <section class="section-ec">
-        <h1>ブログ</h1>
-        <p class="section-subtitle">記事一覧</p>
 
-        <div class="news-list">
-            {% for post in site.posts %}
-            <a href="{{ post.url | relative_url }}" class="news-row">
-                <span class="news-date">{{ post.date | date: "%Y.%m.%d" }}</span>
-                <span class="news-title">{{ post.title }}</span>
-            </a>
-            {% endfor %}
+    <section class="news-section">
+        <div class="ui-container">
+            <h2 class="section-heading">Blog</h2>
+
+            <div class="news-list">
+                {% for post in site.posts %}
+                <a href="{{ post.url | relative_url }}" class="news-item">
+                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+                    <span class="news-title">{{ post.title }}</span>
+                    <span class="news-arrow">→</span>
+                </a>
+                {% endfor %}
+            </div>
         </div>
     </section>
+
 </main>
