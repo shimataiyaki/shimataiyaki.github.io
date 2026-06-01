@@ -1,0 +1,179 @@
+/* ============================================
+   Shinkai プロジェクトサイト用スタイルシート
+   common-layout.css + e-colleague.css を継承
+   ============================================ */
+
+/* ===== Vision Planner フォーム ===== */
+.shinkai-form {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.shinkai-form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.shinkai-form input[type="text"],
+.shinkai-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text-color);
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.shinkai-form input[type="text"]:focus,
+.shinkai-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.shinkai-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.shinkai-required {
+  color: #e04a4a;
+  margin-left: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* ===== Shinkai ID 表示カード ===== */
+.shinkai-id-card {
+  background: var(--gray-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shinkai-id-card .id-label {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  margin-bottom: 0.5rem;
+}
+
+.shinkai-id-card .id-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: monospace;
+  color: var(--accent-color);
+  letter-spacing: 0.02em;
+  word-break: break-all;
+  background: #fff;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.shinkai-id-card .id-note {
+  color: var(--muted-text);
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+/* ===== プロジェクトカード（Dashboard用・将来） ===== */
+.shinkai-project-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.shinkai-project-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.shinkai-project-card .proj-id {
+  font-size: 0.8rem;
+  color: var(--muted-text);
+  font-family: monospace;
+}
+
+.shinkai-project-card .proj-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
+.shinkai-project-card .proj-meta {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ===== プログレスバー（Dashboard用・将来） ===== */
+.shinkai-progress {
+  background: var(--gray-bg);
+  border-radius: 100px;
+  height: 8px;
+  overflow: hidden;
+  margin: 0.75rem 0;
+}
+
+.shinkai-progress-bar {
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 100px;
+  transition: width 0.3s;
+}
+
+/* ===== 評価フォーム（Reflector用・将来） ===== */
+.shinkai-eval-axis {
+  margin-bottom: 1.5rem;
+}
+
+.shinkai-eval-axis label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.shinkai-eval-axis .eval-desc {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  margin-bottom: 0.5rem;
+}
+
+/* ===== 共通テキスト ===== */
+.shinkai-text-muted {
+  color: var(--muted-text);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+  .shinkai-form {
+    padding: 0 0.5rem;
+  }
+  
+  .shinkai-id-card {
+    padding: 1.5rem;
+  }
+  
+  .shinkai-id-card .id-value {
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+  }
+}
