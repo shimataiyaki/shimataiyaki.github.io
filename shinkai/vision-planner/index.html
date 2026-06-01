@@ -1,1 +1,79 @@
+---
+layout: default
+title: Shinkai Vision Planner
+css: shinkai
+---
 
+<div class="section-hero">
+  <div class="hero-content">
+    <span class="hero-badge">Shinkai</span>
+    <h1 class="hero-title">Vision Planner</h1>
+    <p class="hero-copy">プロジェクトの「なぜ」と「どこまで」を、最初に決める。</p>
+  </div>
+</div>
+
+<div class="section-ec">
+  <div class="section-ec-inner">
+    
+    <div class="ui-notice" style="max-width:640px; margin: 0 auto 2rem;">
+      <strong>Vision Planner とは</strong><br>
+      プロジェクトを始める前に、ビジョン・及第点・スコープ外を定義します。
+      入力が完了すると <strong>Shinkai ID</strong> が発行され、LINE Bot と連携できるようになります。
+    </div>
+
+    <form class="shinkai-form" id="vision-form">
+      
+      <label for="team">チーム識別子 <span class="shinkai-required">*</span></label>
+      <input type="text" id="team" name="team" 
+             placeholder="例：udc, bscout, culture-fest" 
+             maxlength="20" required>
+      <p class="shinkai-text-muted" style="font-size:0.8rem; margin-top:0.25rem;">
+        Shinkai ID の一部になります（proj-2026-<strong>team</strong>-001）
+      </p>
+
+      <label for="proj-name">プロジェクト名 <span class="shinkai-required">*</span></label>
+      <input type="text" id="proj-name" name="proj-name" 
+             placeholder="例：文化祭模擬店、防災啓発イベント" 
+             maxlength="50" required>
+
+      <label for="vision">ビジョン <span class="shinkai-required">*</span></label>
+      <textarea id="vision" name="vision" 
+                placeholder="誰の、どんな課題を、どう解決するのか。&#10;例：来場者が気軽に交流できる場が少ない課題を、飲食ブースの出店で解決する。" 
+                required></textarea>
+
+      <label for="min-success">及第点（最低限の成功条件） <span class="shinkai-required">*</span></label>
+      <textarea id="min-success" name="min-success" 
+                placeholder="どこまで達成すれば「成功」と言えるか。&#10;例：黒字を達成し、来場者アンケートの満足度が80%以上。" 
+                required></textarea>
+      <p class="shinkai-text-muted" style="font-size:0.8rem; margin-top:0.25rem;">
+        理想ではなく「最低限ここまで」を定義してください。これが Shinkai の最も重要な設定です。
+      </p>
+
+      <label for="out-of-scope">明確にやらないこと</label>
+      <textarea id="out-of-scope" name="out-of-scope" 
+                placeholder="スコープから外すことを明示してください。&#10;例：集客のためのSNS広告は行わない。当日の人員追加はしない。"></textarea>
+
+      <div style="text-align:center; margin-top:2rem;">
+        <button type="submit" class="btn-primary" id="submit-btn">
+          プロジェクトを作成する
+        </button>
+      </div>
+    </form>
+
+    <div class="shinkai-id-card" id="result-card" style="display:none;">
+      <p class="id-label">プロジェクトが作成されました</p>
+      <p>あなたの Shinkai ID</p>
+      <p class="id-value" id="shinkai-id-display"></p>
+      <p class="id-note">
+        この ID を LINE Bot に伝えてください。<br>
+        ID はプロジェクトの全データを紐づけるキーになります。
+      </p>
+    </div>
+
+    <div class="shinkai-id-card" id="error-card" style="display:none; border-color:#e04a4a;">
+      <p style="color:#e04a4a; font-weight:600;">エラーが発生しました</p>
+      <p class="id-note" id="error-message"></p>
+    </div>
+
+  </div>
+</div>
