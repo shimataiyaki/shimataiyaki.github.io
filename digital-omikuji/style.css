@@ -348,7 +348,7 @@ body {
     width: 100%;
 }
 
-/* レスポンシブ */
+/* ===== レスポンシブ ===== */
 @media (max-width: 800px) {
     .omikuji-card {
         width: 70px;
@@ -361,6 +361,11 @@ body {
 }
 
 @media (max-width: 600px) {
+    /* モバイル時はサブタイトル（E-LOTs）を非表示 */
+    .site-subtitle {
+        display: none;
+    }
+
     .modal-content {
         padding: 1.5rem 1rem;
         border-radius: 30px;
