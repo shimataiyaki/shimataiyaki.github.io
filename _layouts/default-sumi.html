@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ '/assets/css/common-layout-sumi.css' | relative_url }}">
+  {% if page.css %}
+  <link rel="stylesheet" href="{{ page.css | relative_url }}">
+  {% endif %}
+</head>
+<body>
+  {% include header-sumi.html %}
+  {{ content }}
+  {% include footer-sumi.html %}
+  <script src="{{ '/assets/js/common-nav.js' | relative_url }}"></script>
+</body>
+</html>
