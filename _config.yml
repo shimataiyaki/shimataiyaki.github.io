@@ -13,3 +13,8 @@ defaults:
     values:
       layout: post
       css: /assets/css/blog.css
+
+shinkai:
+  title: Shinkai
+  subtitle: Make Your Team More Systematic
+  github: https://github.com/shimataiyaki/shinkai
