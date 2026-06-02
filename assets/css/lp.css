@@ -117,8 +117,8 @@ body {
 
 .btn-primary:hover,
 .ui-button--primary:hover {
-  background: #3a3a3f;
-  border-color: #3a3a3f;
+  background: #0077ed;
+  border-color: #0077ed;
   color: #fff;
   transform: scale(1.02);
 }
@@ -133,8 +133,8 @@ body {
 
 .btn-secondary:hover,
 .ui-button--secondary:hover {
-  background: #3a3a3f;
-  border-color: #3a3a3f;
+  background: #0077ed;
+  border-color: #0077ed;
   color: #fff;
 }
 
