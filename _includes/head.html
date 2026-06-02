@@ -47,9 +47,13 @@
 <link rel="stylesheet" href="{{ page.css | relative_url }}">
 {% endif %}
 
-<!-- 製品ナビCSS（e-colleagueなど） -->
+<!-- 製品ナビCSS -->
 {% if page.product_nav %}
-<link rel="stylesheet" href="{{ '/assets/css/product-nav.css' | relative_url }}">
+  {% if page.layout == "default-sumi" %}
+  <link rel="stylesheet" href="{{ '/assets/css/product-nav-sumi.css' | relative_url }}">
+  {% else %}
+  <link rel="stylesheet" href="{{ '/assets/css/product-nav.css' | relative_url }}">
+  {% endif %}
 {% endif %}
 
 <!-- 構造化データ -->
