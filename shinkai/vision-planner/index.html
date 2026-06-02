@@ -9,12 +9,35 @@ css: /assets/css/shinkai.css
 
 <main class="main-content">
 
-    <!-- Hero -->
-    <section class="section-hero">
+    <!-- Hero セクション（トップページと同じスタイル） -->
+    <section class="hero">
         <div class="hero-content">
             <span class="hero-badge">Shinkai</span>
             <h1 class="hero-title">Vision Planner</h1>
             <p class="hero-copy">プロジェクトの「なぜ」と「どこまで」を、最初に決める。</p>
+        </div>
+    </section>
+
+    <!-- ChatGPTヒントエリア -->
+    <section class="section-ec">
+        <div class="section-ec-inner">
+            <div class="shinkai-advice-area">
+                <div class="advice-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        <path d="M8 10h.01"/>
+                        <path d="M12 10h.01"/>
+                        <path d="M16 10h.01"/>
+                    </svg>
+                </div>
+                <div class="advice-content">
+                    <h3>ビジョン・及第点の書き方に迷ったら</h3>
+                    <p>ChatGPTにヒントをもらうことができます。入力内容を引き継いで相談できます。</p>
+                </div>
+                <button type="button" id="chatgpt-advice-btn" class="ui-button ui-button--secondary">
+                    ヒントをもらう
+                </button>
+            </div>
         </div>
     </section>
 
@@ -37,16 +60,16 @@ css: /assets/css/shinkai.css
                 <label for="proj-type">プロジェクトタイプ <span class="shinkai-required">*</span></label>
                 <select id="proj-type" name="proj-type" required>
                     <option value="">-- 選択してください --</option>
-                    <option value="school">学校・授業（sch）</option>
-                    <option value="club">部活動・サークル（clb）</option>
-                    <option value="event">文化祭・イベント（evt）</option>
-                    <option value="contest">コンテスト・大会（cnt）</option>
-                    <option value="volunteer">ボランティア・地域活動（vol）</option>
-                    <option value="startup">起業・プロジェクト（stp）</option>
-                    <option value="other">その他（oth）</option>
+                    <option value="school">学校・授業</option>
+                    <option value="club">部活動・サークル</option>
+                    <option value="event">文化祭・イベント</option>
+                    <option value="contest">コンテスト・大会</option>
+                    <option value="volunteer">ボランティア・地域活動</option>
+                    <option value="startup">起業・プロジェクト</option>
+                    <option value="other">その他</option>
                 </select>
                 <p class="shinkai-text-muted" style="font-size:0.8rem; margin-top:0.25rem;">
-                    Shinkai ID の一部になります（例：proj-2026-<strong>sch</strong>-001）
+                    Shinkai ID の一部になります（例：proj-2026-sch-001）
                 </p>
 
                 <label for="proj-name">プロジェクト名 <span class="shinkai-required">*</span></label>
@@ -72,16 +95,7 @@ css: /assets/css/shinkai.css
                           placeholder="スコープから外すことを明示してください。&#10;例：集客のためのSNS広告は行わない。当日の人員追加はしない。"></textarea>
 
                 <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
-                    <button type="button" id="chatgpt-advice-btn" class="ui-button ui-button--primary">
-                        ChatGPTに相談する
-                    </button>
                     <button type="submit" id="submit-btn" class="ui-button ui-button--primary">
-                        プロジェクトを作成する
-                    </button>
-                </div>
-                
-                <div style="text-align:center; margin-top:2rem;">
-                    <button type="submit" class="btn-primary" id="submit-btn">
                         プロジェクトを作成する
                     </button>
                 </div>
