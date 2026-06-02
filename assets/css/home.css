@@ -488,3 +488,41 @@ body {
         padding: 24px;
     }
 }
+/* ===== Use Case グリッド（Shinkai LP用・e-colleague.cssより移植） ===== */
+.usecase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.usecase-item {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+}
+
+.usecase-item h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.usecase-item p {
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .usecase-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
