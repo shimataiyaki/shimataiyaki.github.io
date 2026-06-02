@@ -8,13 +8,13 @@ og_type: website
 og_image: /images/ogp.png
 twitter_title: Shimataiyaki | アイデアから、プロダクトまで。
 twitter_description: 個人開発、プロジェクト、発信活動への入り口。
-css: /assets/css/home.css
+css: /assets/css/lp.css
 ---
 
 <main class="main-content">
 
     <!-- メインビジュアル -->
-    <section class="hero">
+    <section class="section-hero">
         <div class="hero-bg-blur">
             <img src="/images/e-colleague.png" alt="">
         </div>
@@ -60,20 +60,20 @@ css: /assets/css/home.css
     </section>
 
     <!-- Vision -->
-    <section class="vision-section">
-        <div class="ui-container">
-            <h2 class="vision-heading">Vision</h2>
-            <p class="vision-lead">「ちょっと便利」を、オープンソースで。</p>
-            <div class="vision-grid">
-                <div class="vision-card">
+    <section class="section-ec">
+        <div class="section-ec-inner">
+            <h2>Vision</h2>
+            <p class="section-subtitle">「ちょっと便利」を、オープンソースで。</p>
+            <div class="usecase-grid" style="margin-top: 40px;">
+                <div class="usecase-item">
                     <h3>1. Open Source</h3>
                     <p>すべてのプロダクトはGitHubで公開。コードを共有し、誰もが改良に参加できる形を目指しています。</p>
                 </div>
-                <div class="vision-card">
+                <div class="usecase-item">
                     <h3>2. For Small Teams</h3>
                     <p>学校、サークル、少人数チーム。大きな組織のためではなく、身近な人が抱える課題から生まれるプロダクトを。</p>
                 </div>
-                <div class="vision-card">
+                <div class="usecase-item">
                     <h3>3. Quick & Useful</h3>
                     <p>大規模開発より、小さく素早く。必要なものを、必要なときに、すぐ届ける。それが「ちょっと便利」の原点です。</p>
                 </div>
@@ -82,9 +82,9 @@ css: /assets/css/home.css
     </section>
 
     <!-- News -->
-    <section class="news-section">
-        <div class="ui-container">
-            <h2 class="section-heading">News</h2>
+    <section class="section-ec">
+        <div class="section-ec-inner">
+            <h2>News</h2>
             <div class="news-list">
                 {% for post in site.posts limit:2 %}
                 <a href="{{ post.url | relative_url }}" class="news-item">
@@ -94,19 +94,19 @@ css: /assets/css/home.css
                 </a>
                 {% endfor %}
             </div>
-            <div class="news-more">
+            <div class="news-more" style="text-align:center; margin-top: 24px;">
                 <a href="{{ '/blog/' | relative_url }}" class="btn-secondary">記事一覧を見る</a>
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <section class="ui-section" id="about">
-        <div class="ui-container">
+    <section class="section-ec" id="about">
+        <div class="section-ec-inner">
             <h2>Shimataiyaki</h2>
-            <p>2008年生まれ。中学生の時にWebサイトを公開したのをきっかけに個人開発を始めました。</p>
-            <p style="margin-top: 1rem;">「ちょっと便利、をオープンソースで。」が開発のモットーです。</p>
-            <p style="margin-top: 1.5rem;">
+            <p style="text-align:center;">2008年生まれ。中学生の時にWebサイトを公開したのをきっかけに個人開発を始めました。</p>
+            <p style="text-align:center; margin-top: 1rem;">「ちょっと便利、をオープンソースで。」が開発のモットーです。</p>
+            <p style="text-align:center; margin-top: 1.5rem;">
                 <a href="mailto:shimataiyaki.dev@gmail.com" class="mail-link">shimataiyaki.dev@gmail.com</a>
             </p>
         </div>
