@@ -1,0 +1,777 @@
+/* ============================================
+   lp-sumi.css - 墨（sumi）テーマ LP共通スタイル
+   common-layout-sumi.css の変数を継承
+   ============================================ */
+
+body {
+    font-family: 'M PLUS 1p', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #000000;
+    color: #cccccc;
+    line-height: 1.8;
+    font-weight: 400;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===== レイアウト ===== */
+.main-content {
+    padding: 0;
+    margin: 0;
+}
+
+/* ===== HERO ===== */
+.section-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 8px 1.5rem 80px;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #000000;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.hero-bg-blur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    max-width: 100%;
+    opacity: 0.08;
+    filter: blur(40px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-bg-blur img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: #111111;
+    padding: 6px 18px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #999999;
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-copy {
+    font-size: 1.4rem;
+    color: #cccccc;
+    margin-bottom: 36px;
+    font-weight: 400;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+
+.hero-mockup {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-mockup img {
+    max-width: 680px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 12px 32px rgba(255, 255, 255, 0.06));
+}
+
+/* ===== ボタン（白基準） ===== */
+.btn-primary,
+.ui-button--primary {
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
+}
+
+.btn-primary:hover,
+.ui-button--primary:hover {
+  background: #e5e5e5;
+  border-color: #e5e5e5;
+  color: #000000;
+  transform: scale(1.02);
+}
+
+.btn-secondary,
+.ui-button--secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover,
+.ui-button--secondary:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+}
+
+/* ===== セクション共通 ===== */
+.section-ec {
+    padding: 80px 1.5rem;
+    max-width: 1024px;
+    margin: 0 auto;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.section-ec:last-of-type {
+    border-bottom: none;
+}
+
+.section-ec-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.section-subtitle {
+    font-size: 1.15rem;
+    color: #999999;
+    font-weight: 400;
+    max-width: 600px;
+    margin-bottom: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-content h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* ===== お悩みグリッド ===== */
+.pain-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.pain-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 20px;
+    background: #111111;
+    border: 1px solid #1a1a1a;
+    border-radius: 16px;
+}
+
+.pain-item p {
+    font-size: 0.95rem;
+    color: #cccccc;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+
+/* ===== Use Case グリッド ===== */
+.usecase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.usecase-item {
+    background: #111111;
+    border: 1px solid #1a1a1a;
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+}
+
+.usecase-item h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.usecase-item p {
+    font-size: 0.9rem;
+    color: #999999;
+    line-height: 1.7;
+}
+
+/* ===== Apple式 画像＋テキスト 交互セクション ===== */
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.feature-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.feature-text h2 {
+    font-size: 2.4rem;
+    text-align: left;
+    color: #ffffff;
+}
+
+.feature-desc {
+    font-size: 1.05rem;
+    color: #cccccc;
+    line-height: 1.8;
+    margin-top: 12px;
+    text-align: left;
+}
+
+.feature-text .btn-secondary {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.feature-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-screenshot {
+    max-width: 560px;
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 8px 24px rgba(255, 255, 255, 0.06));
+}
+
+/* ===== 思想セクション ===== */
+.philosophy-block {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.philosophy-body {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+/* ===== お問い合わせ ===== */
+.contact-block {
+    background: #111111;
+    border: 1px solid #1a1a1a;
+    border-radius: 16px;
+    padding: 40px 32px;
+    max-width: 640px;
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.hero-qr {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.hero-qr img {
+    display: block;
+    margin: 0 auto 8px;
+    border-radius: 12px;
+}
+
+/* ===== ステップ ===== */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 auto 12px;
+}
+
+.step-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+.step-text {
+    font-size: 0.9rem;
+    color: #999999;
+}
+
+/* ===== お知らせ ===== */
+.news-list {
+    max-width: 640px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #1a1a1a;
+}
+
+.news-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #1a1a1a;
+    text-decoration: none;
+    transition: color 0.2s;
+    color: #cccccc;
+}
+
+.news-date {
+    font-size: 0.85rem;
+    color: #999999;
+    white-space: nowrap;
+    min-width: 100px;
+}
+
+.news-badge {
+    flex: 0 0 auto;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+.badge-release {
+    background: #1a1a1a;
+    color: #999999;
+}
+
+.badge-article {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.news-title {
+    flex: 1;
+    color: #cccccc;
+    font-weight: 500;
+}
+
+.news-row:hover .news-title,
+.news-row:hover {
+    color: #ffffff;
+}
+
+/* ===== 注釈 ===== */
+.note-item {
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+    color: #999999;
+    line-height: 1.8;
+}
+
+.note-item sup {
+    color: #ffffff;
+    margin-right: 2px;
+}
+
+.notes-divider {
+    border-top: 1px solid #1a1a1a;
+    margin: 24px 0 16px;
+}
+
+/* ===== インライン注釈 ===== */
+.inline-note {
+    font-size: 0.8rem;
+    color: #999999;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* ===== ドキュメント用テーブル ===== */
+.doc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 2rem;
+}
+
+.doc-table th,
+.doc-table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #1a1a1a;
+    text-align: left;
+    color: #cccccc;
+}
+
+.doc-table th {
+    background: #111111;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* ===== Shinkai フォーム ===== */
+.shinkai-form {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.shinkai-form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.shinkai-form input[type="text"],
+.shinkai-form select,
+.shinkai-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #1a1a1a;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #ffffff;
+    background: #111111;
+    transition: border-color 0.2s;
+}
+
+.shinkai-form input[type="text"]:focus,
+.shinkai-form select:focus,
+.shinkai-form textarea:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+.shinkai-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.shinkai-required {
+    color: #e04a4a;
+    margin-left: 0.25rem;
+    font-size: 0.85rem;
+}
+
+/* ===== Shinkai ID 表示カード ===== */
+.shinkai-id-card {
+    background: #111111;
+    border: 1px solid #1a1a1a;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shinkai-id-card .id-label {
+    font-size: 0.9rem;
+    color: #999999;
+    margin-bottom: 0.5rem;
+}
+
+.shinkai-id-card .id-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: monospace;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    word-break: break-all;
+    background: #000000;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #1a1a1a;
+}
+
+.shinkai-id-card .id-note {
+    color: #999999;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.shinkai-text-muted {
+    color: #999999;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* ===== Vision セクション ===== */
+.vision-section {
+    background-color: #000000;
+    padding: 80px 1.5rem;
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.vision-heading {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #999999;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.vision-lead {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 56px;
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vision-card {
+    text-align: center;
+    padding: 0 8px;
+}
+
+.vision-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.vision-card p {
+    font-size: 0.95rem;
+    color: #999999;
+    line-height: 1.7;
+}
+
+/* ===== 汎用セクション ===== */
+.ui-container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.ui-section {
+    padding: 100px 1.5rem;
+}
+
+.ui-notice {
+    border-left: 4px solid #ffffff;
+    background: #0a0a0a;
+    padding: 0.9rem 1rem;
+    color: #cccccc;
+}
+
+/* ===== ニュース関連（共通） ===== */
+.news-more {
+    text-align: center;
+    margin-top: 36px;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #1a1a1a;
+    text-decoration: none;
+    color: #cccccc;
+    transition: color 0.2s;
+}
+
+.news-item:hover {
+    color: #ffffff;
+}
+
+.news-item time {
+    font-size: 0.85rem;
+    color: #999999;
+    white-space: nowrap;
+    min-width: 100px;
+}
+
+.news-arrow {
+    color: #999999;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.news-item:hover .news-arrow {
+    color: #ffffff;
+}
+
+.mail-link {
+    color: #cccccc;
+    text-decoration: none;
+    border-bottom: 1px dashed #333333;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.mail-link:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+/* ===== モバイル ===== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.4rem;
+    }
+    .hero-copy {
+        font-size: 1.1rem;
+    }
+    .hero-mockup img {
+        max-width: 100%;
+    }
+    .hero-bg-blur {
+        width: 100%;
+    }
+    .main-content h2 {
+        font-size: 2rem;
+    }
+
+    .feature-row,
+    .feature-row-reverse {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+    .feature-text h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .feature-desc {
+        text-align: center;
+    }
+    .feature-screenshot {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .usecase-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pain-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .section-ec {
+        padding: 60px 1.2rem;
+    }
+
+    .news-row {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .news-date {
+        min-width: auto;
+    }
+
+    .vision-section {
+        padding: 60px 1.2rem;
+    }
+    .vision-lead {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    .vision-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .shinkai-form {
+        padding: 0 0.5rem;
+    }
+
+    .shinkai-id-card {
+        padding: 1.5rem;
+    }
+
+    .shinkai-id-card .id-value {
+        font-size: 1.2rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .hero-sub-carousel {
+        max-width: 100%;
+    }
+
+    .news-item {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .news-item time {
+        min-width: auto;
+    }
+}
