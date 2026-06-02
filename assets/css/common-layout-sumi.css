@@ -47,7 +47,7 @@ body {
 .site-header {
   width: 100%;
   background-color: var(--container-bg);
-  border-bottom: 3px solid #1a1a1a;
+  border-bottom: 3px solid #ffffff;
   z-index: 1000;
   position: relative;
 }
