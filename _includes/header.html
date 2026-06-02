@@ -1,11 +1,11 @@
 <header class="site-header">
     <div class="header-container">
         <a href="{{ '/' | relative_url }}" class="site-title">Shimataiyaki</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
+        <button class="menu-toggle" id="menuToggle" aria-label="メニュー" aria-controls="navMenu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
-        <ul class="nav-menu" id="navMenu">
-            <div class="nav-menu-inner">
+        <nav class="nav-menu" id="navMenu" aria-label="サイトナビゲーション">
+            <ul class="nav-menu-inner">
                 <li><a href="{{ '/' | relative_url }}">Home</a></li>
                 <li><a href="{{ '/about' | relative_url }}">About</a></li>
                 <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
@@ -14,7 +14,7 @@
                 <li><a href="{{ '/mendako-bbs' | relative_url }}">Mendako BBS</a></li>
                 <li><a href="{{ '/e-colleague' | relative_url }}">e-colleague</a></li>
                 <li><a href="{{ '/shinkai' | relative_url }}">Shinkai</a></li>
-            </div>
-        </ul>
+            </ul>
+        </nav>
     </div>
 </header>
