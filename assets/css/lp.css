@@ -107,39 +107,35 @@ body {
 }
 
 /* ===== ボタン ===== */
-.btn-primary {
-    display: inline-block;
-    background: #1d1d1f;
-    color: #fff;
-    padding: 14px 36px;
-    border-radius: 100px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: background 0.2s, transform 0.1s;
+/* プライマリ：塗りつぶし */
+.btn-primary,
+.ui-button--primary {
+  background: var(--apple-blue);
+  color: #fff;
+  border: 2px solid var(--apple-blue);
 }
 
-.btn-primary:hover {
-    background: #3a3a3f;
-    transform: scale(1.02);
+.btn-primary:hover,
+.ui-button--primary:hover {
+  background: #3a3a3f;
+  border-color: #3a3a3f;
+  color: #fff;
+  transform: scale(1.02);
 }
 
-.btn-secondary {
-    display: inline-block;
-    background: transparent;
-    color: #1d1d1f;
-    padding: 14px 36px;
-    border-radius: 100px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    border: 2px solid #1d1d1f;
-    transition: background 0.2s, color 0.2s;
+/* セカンダリ：アウトライン */
+.btn-secondary,
+.ui-button--secondary {
+  background: transparent;
+  color: var(--apple-blue);
+  border: 2px solid var(--apple-blue);
 }
 
-.btn-secondary:hover {
-    background: #1d1d1f;
-    color: #fff;
+.btn-secondary:hover,
+.ui-button--secondary:hover {
+  background: #3a3a3f;
+  border-color: #3a3a3f;
+  color: #fff;
 }
 
 /* ===== セクション共通（e-colleague 式） ===== */
