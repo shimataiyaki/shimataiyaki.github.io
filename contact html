@@ -1,0 +1,39 @@
+---
+layout: default
+title: お問い合わせ | Shimataiyaki
+description: Shimataiyakiへのお問い合わせはこちらから。
+og_title: お問い合わせ | Shimataiyaki
+og_image: /images/favicon.ico
+css: /assets/css/document.css
+---
+
+<div class="layout-wrapper">
+<main class="main-content">
+
+<section class="section-ec">
+
+<nav class="breadcrumb">
+    <a href="{{ '/' | relative_url }}">トップ</a>
+    <span>›</span>
+    <span>お問い合わせ</span>
+</nav>
+
+<h1>お問い合わせ</h1>
+
+<div class="doc-body">
+
+<p>ご質問・ご相談などは、以下のメールアドレスまでご連絡ください。</p>
+
+<p style="margin-top: 1.5rem;">
+    <a href="mailto:shimataiyaki.dev@gmail.com" class="mail-link" style="font-size: 1.1rem;">shimataiyaki.dev@gmail.com</a>
+</p>
+
+<p style="margin-top: 2rem; color: var(--muted-text); font-size: 0.9rem;">
+    通常2〜3営業日以内に返信いたします。
+</p>
+
+</div>
+</section>
+
+</main>
+</div>
