@@ -1,9 +1,9 @@
 // Shinkai Vision Planner - メインスクリプト
-// GAS API URLはデプロイ後に差し替え（開発中はコメントアウト推奨）
-const GAS_API_URL = 'https://script.google.com/macros/s/xxxxxxxxx/exec'; // TODO: デプロイ後に差し替え
+// GAS API URLは実際のものに変更済み
+const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbzmJ-Z4yz2VHpotiSijbjFuaBzRl8ZbQQPn17SiyHcDDWf0sfzMKpmsY8vgAIvHG0v5/exec'; 
 
 // 開発中はモックモードで動作させるフラグ
-const USE_MOCK = true; // 本番環境ではfalseに変更
+const USE_MOCK = false; // 本番環境ではfalseに変更
 
 // モック用のID生成関数
 function generateMockShinkaiId(projType, projName) {
