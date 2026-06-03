@@ -64,3 +64,7 @@
 {% endif %}
 
 <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.3.0/dist/iconify-icon.min.js"></script>
+
+{% if page.js %}
+  <script src="{{ page.js | relative_url }}" defer></script>
+{% endif %}
