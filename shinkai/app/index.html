@@ -1,0 +1,26 @@
+---
+layout: shinkai-app
+title: Shinkai Web
+js: /assets/js/shinkai-app.js
+---
+
+<div class="auth-card">
+  <h2>Shinkai</h2>
+  <p class="auth-description">チーム運営を、もっとシステマチックに。</p>
+  
+  <div class="form-group">
+    <label for="shinkaiId">Shinkai ID</label>
+    <input type="text" id="shinkaiId" placeholder="proj2026sch001">
+    <div class="id-memory">
+      <input type="checkbox" id="rememberId">
+      <label for="rememberId">IDを記憶する</label>
+    </div>
+  </div>
+  
+  <div class="auth-actions">
+    <button id="login-btn" class="btn-primary">ログイン</button>
+    <a href="/shinkai/app/planner/" class="btn-secondary">新しくプロジェクトを登録する</a>
+  </div>
+  
+  <p id="error" class="error-message"></p>
+</div>
