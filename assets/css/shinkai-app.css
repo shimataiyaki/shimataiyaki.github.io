@@ -306,3 +306,34 @@ body {
     text-align: center;
   }
 }
+
+/* ----- タブ切り替え ----- */
+.tab-switch {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border-radius: 100px;
+  overflow: hidden;
+  border: 1px solid var(--shinkai-border);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab-btn.active {
+  background: var(--shinkai-accent);
+  color: #0b192c;
+}
+
+.tab-btn:not(.active) {
+  background: transparent;
+  color: var(--shinkai-text-muted);
+}
