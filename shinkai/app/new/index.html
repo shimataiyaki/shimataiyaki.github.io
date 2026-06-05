@@ -1,0 +1,106 @@
+---
+layout: shinkai-app
+title: 新規プロジェクト
+css: /assets/css/shinkai-app.css
+js: /assets/js/shinkai-vision-planner.js
+---
+
+<div class="auth-card">
+  <h2>新規プロジェクト</h2>
+  <p class="auth-description">プロジェクトを始めて、<strong>Shinkai ID</strong>を発行します。</p>
+
+  <!-- 簡易作成 / 詳細作成 タブ -->
+  <div class="tab-switch">
+    <button id="tab-simple" class="tab-btn active">簡易登録</button>
+    <button id="tab-detail" class="tab-btn">通常登録</button>
+  </div>
+
+  <!-- 簡易作成フォーム -->
+  <form id="simple-form">
+    <div class="form-group">
+      <label for="simple-proj-type">プロジェクトタイプ <span class="shinkai-required">*</span></label>
+      <select id="simple-proj-type" required>
+        <option value="">-- 選択してください --</option>
+        <option value="school">学校・授業</option>
+        <option value="club">部活動・サークル</option>
+        <option value="event">文化祭・イベント</option>
+        <option value="contest">コンテスト・大会</option>
+        <option value="volunteer">ボランティア・地域活動</option>
+        <option value="startup">起業・プロジェクト</option>
+        <option value="other">その他</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="simple-proj-name">プロジェクト名（任意）</label>
+      <input type="text" id="simple-proj-name" placeholder="例：文化祭模擬店" maxlength="50">
+    </div>
+
+    <div class="auth-actions">
+      <button type="submit" id="simple-submit-btn" class="btn-primary">プロジェクトを作成</button>
+    </div>
+  </form>
+
+  <!-- 詳細作成フォーム（初期非表示） -->
+  <form id="detail-form" style="display:none;">
+    <div class="form-group">
+      <label for="proj-type">プロジェクトタイプ <span class="shinkai-required">*</span></label>
+      <select id="proj-type" name="proj-type" required>
+        <option value="">-- 選択してください --</option>
+        <option value="school">学校・授業</option>
+        <option value="club">部活動・サークル</option>
+        <option value="event">文化祭・イベント</option>
+        <option value="contest">コンテスト・大会</option>
+        <option value="volunteer">ボランティア・地域活動</option>
+        <option value="startup">起業・プロジェクト</option>
+        <option value="other">その他</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="proj-name">プロジェクト名 <span class="shinkai-required">*</span></label>
+      <input type="text" id="proj-name" name="proj-name" 
+             placeholder="例：文化祭模擬店" maxlength="50" required>
+    </div>
+
+    <div class="form-group">
+      <label for="vision">ビジョン <span class="shinkai-required">*</span></label>
+      <textarea id="vision" name="vision" 
+                placeholder="誰の、どんな課題を、どう解決するのか。" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="min-success">及第点（最低限の成功条件） <span class="shinkai-required">*</span></label>
+      <textarea id="min-success" name="min-success" 
+                placeholder="どこまで達成すれば「成功」と言えるか。" required></textarea>
+      <p class="shinkai-text-muted" style="font-size:0.8rem; margin-top:0.25rem;">
+        理想ではなく「最低限ここまで」を定義してください。
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label for="out-of-scope">明確にやらないこと</label>
+      <textarea id="out-of-scope" name="out-of-scope" 
+                placeholder="スコープから外すことを明示してください。"></textarea>
+    </div>
+
+    <div class="auth-actions">
+      <button type="submit" id="detail-submit-btn" class="btn-primary">プロジェクトを作成</button>
+    </div>
+  </form>
+</div>
+
+<div class="id-card" id="result-section" style="display:none;">
+  <p class="id-label">プロジェクトが作成されました</p>
+  <p>あなたの Shinkai ID</p>
+  <p class="id-value" id="shinkai-id-display"></p>
+  <p class="id-note">Shinkai IDは<strong>必ず記録をお願いします</strong>。</p>
+  <div class="auth-actions" style="margin-top:1rem;">
+    <a href="/shinkai/app/" class="btn-primary">Shinkai Webにログイン</a>
+  </div>
+</div>
+
+<div class="id-card" id="error-section" style="display:none; border-color: var(--shinkai-danger);">
+  <p style="color: var(--shinkai-danger); font-weight: 600;">エラーが発生しました</p>
+  <p class="id-note" id="error-message"></p>
+</div>
