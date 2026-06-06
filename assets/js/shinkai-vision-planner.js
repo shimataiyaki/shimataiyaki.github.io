@@ -1,5 +1,5 @@
 // Shinkai Vision Planner - 簡易/詳細 両対応
-const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbzmJ-Z4yz2VHpotiSijbjFuaBzRl8ZbQQPn17SiyHcDDWf0sfzMKpmsY8vgAIvHG0v5/exec';
+const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbyXOBT9gkXfjOPI5iR1N4G-THAnan496Y10lWx0LtxhqCnYNIQcF0zn_86e_irrYks/exec';
 
 // ==============================================
 // タブ切り替え
