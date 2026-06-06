@@ -1,66 +1,48 @@
 ---
-layout: default
+layout: shinkai-app
 title: Shinkai | チーム運営を、もっとシステマチックに。
 description: チームの情報を見える化し、チーフの「確認疲れ」をなくすプロダクト群。
 og_title: Shinkai | チーム運営を、もっとシステマチックに。
 og_description: チームの情報を見える化し、チーフの「確認疲れ」をなくすプロダクト群。
-og_type: website
-css: /assets/css/lp.css
-product_nav: true
+css: assets/css/shinkai-app.css
 ---
 
-<nav class="product-nav">
-    <div class="product-nav-container">
-        <div class="product-logo">Shinkai</div>
-        <div class="product-links">
-            <a href="/shinkai/app/" class="btn-cta">アプリを開く</a>
-        </div>
+<div class="lp-hero">
+  <span class="hero-badge">Shinkai Series</span>
+  <h1 class="lp-hero-title">チーム運営を、もっとシステマチックに。</h1>
+  <p class="lp-hero-copy">
+    チームの情報を見える化し、<br>
+    チーフの「確認疲れ」をなくすプロダクト群。
+  </p>
+  <div class="lp-hero-actions">
+    <a href="/shinkai/app/" class="btn-primary">Web アプリを開く</a>
+    <a href="/e-colleague/" class="btn-secondary">LINE Bot を見る</a>
+  </div>
+</div>
+
+<div class="lp-section">
+  <div class="lp-container">
+    <div class="lp-grid">
+      <div class="lp-card">
+        <span class="lp-card-icon">Web</span>
+        <h3>Web アプリ</h3>
+        <p>プロジェクトの計画・進捗管理・振り返りを、ブラウザで完結。チームの状態をひと目で把握。</p>
+        <a href="/shinkai/app/" class="btn-secondary">アプリを開く</a>
+      </div>
+      <div class="lp-card">
+        <span class="lp-card-icon">LINE</span>
+        <h3>LINE Bot</h3>
+        <p>普段のLINEグループに話しかけるだけで、AIがタスクを抽出・管理。「状況」と聞けば状態を返す。</p>
+        <a href="/e-colleague/" class="btn-secondary">e-colleague を見る</a>
+      </div>
     </div>
-</nav>
+  </div>
+</div>
 
-<main class="main-content">
-
-    <!-- メインビジュアル -->
-    <section class="section-hero">
-        <div class="hero-content">
-            <div class="hero-badge">Shinkai Series</div>
-            <h1 class="hero-title">チーム運営を、もっとシステマチックに。</h1>
-            <p class="hero-copy">
-                チームの情報を見える化し、<br>
-                チーフの「確認疲れ」をなくすプロダクト群。
-            </p>
-            <div class="hero-actions" style="margin-top: 36px;">
-                <a href="/shinkai/app/" class="btn-primary">Webアプリを開く</a>
-                <a href="/e-colleague/" class="btn-secondary">LINE Bot を見る</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2つの入り口 -->
-    <section class="section-ec">
-        <div class="section-ec-inner">
-            <div class="usecase-grid">
-                <div class="usecase-item">
-                    <h3>Webアプリ</h3>
-                    <p>プロジェクトの計画・進捗管理・振り返りを、ブラウザで完結。チームの状態をひと目で把握。</p>
-                    <a href="/shinkai/app/" class="btn-secondary" style="margin-top:12px;">Webに移動</a>
-                </div>
-                <div class="usecase-item">
-                    <h3>LINE Bot</h3>
-                    <p>普段のLINEグループに話しかけるだけで、AIがタスクを抽出・管理。</p>
-                    <a href="/e-colleague/" class="btn-secondary" style="margin-top:12px;">詳細を見る</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- e-colleague ユーザー向け -->
-    <section class="section-ec">
-        <div class="section-ec-inner" style="text-align:center;">
-            <p class="inline-note">
-                ※ e-colleague を既にご利用の方は<a href="/e-colleague/portal">こちら</a>
-            </p>
-        </div>
-    </section>
-
-</main>
+<div class="lp-section">
+  <div class="lp-container" style="text-align:center;">
+    <p style="font-size:0.8rem; color:var(--shinkai-text-muted);">
+      e-colleague を既にご利用の方は<a href="/e-colleague/portal" style="color:var(--shinkai-accent);">こちら</a>
+    </p>
+  </div>
+</div>
