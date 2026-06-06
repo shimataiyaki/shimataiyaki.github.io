@@ -1,20 +1,17 @@
 /* ============================================
    shinkai-app.css
-   Shinkai アプリ専用・独立型スタイルシート
-   common-layout.css には依存しない
+   Shinkai アプリ + LP 専用スタイルシート
+   共通CSS（common-layout.css）のデザイン言語を継承
    ============================================ */
 
-/* ----- リセット ----- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-/* ----- カスタムプロパティ（A案：深海ネイビー） ----- */
+/* ----- カスタムプロパティ（共通CSSと統一） ----- */
 :root {
-  --shinkai-bg: #0b192c;
-  --shinkai-surface: #162744;
-  --shinkai-border: #253a5c;
-  --shinkai-text: #e1e8f0;
-  --shinkai-text-muted: #7b8ea8;
-  --shinkai-accent: #4da8da;
+  --shinkai-bg: #ffffff;
+  --shinkai-surface: #ffffff;
+  --shinkai-border: #e0e0e3;
+  --shinkai-text: #1d1d1f;
+  --shinkai-text-muted: #6e6e73;
+  --shinkai-accent: #0071e3;
   --shinkai-danger: #ef4444;
   --shinkai-success: #10b981;
   --shinkai-warning: #f59e0b;
@@ -35,7 +32,7 @@ body {
 /* ----- アプリヘッダー ----- */
 .app-header {
   background: var(--shinkai-surface);
-  border-bottom: 1px solid var(--shinkai-border);
+  border-bottom: 3px solid var(--shinkai-accent);
   padding: 0.75rem 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -48,13 +45,72 @@ body {
 .app-logo a {
   color: var(--shinkai-text);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.app-logo a:hover {
+  color: var(--shinkai-accent);
 }
 
 .app-version {
   font-size: 0.75rem;
   color: var(--shinkai-text-muted);
+}
+
+/* ----- ハンバーガーメニュー ----- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle span {
+  width: 100%;
+  height: 3px;
+  background: var(--shinkai-accent);
+  transition: all 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -7px);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu-inner {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  color: var(--shinkai-text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+  color: var(--shinkai-accent);
 }
 
 /* ----- アプリメイン ----- */
@@ -77,6 +133,7 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: var(--shinkai-text);
 }
 
 .auth-description {
@@ -96,6 +153,7 @@ body {
   font-weight: 600;
   font-size: 0.9rem;
   margin-bottom: 0.4rem;
+  color: var(--shinkai-text);
 }
 
 .form-group input,
@@ -103,7 +161,7 @@ body {
 .form-group textarea {
   width: 100%;
   padding: 0.75rem 1rem;
-  background: var(--shinkai-bg);
+  background: #fff;
   border: 1px solid var(--shinkai-border);
   border-radius: var(--shinkai-radius);
   color: var(--shinkai-text);
@@ -127,37 +185,44 @@ body {
 .btn-primary {
   display: inline-block;
   background: var(--shinkai-accent);
-  color: #0b192c;
-  padding: 0.75rem 2rem;
+  color: #fff;
+  padding: 14px 36px;
   border-radius: 100px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
-  border: none;
+  border: 2px solid var(--shinkai-accent);
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: background 0.2s, transform 0.1s;
 }
 
-.btn-primary:hover { opacity: 0.9; }
+.btn-primary:hover {
+  background: #005bb5;
+  border-color: #005bb5;
+  transform: scale(1.02);
+}
 
 .btn-secondary {
   display: inline-block;
   background: transparent;
   color: var(--shinkai-accent);
-  padding: 0.75rem 2rem;
+  padding: 14px 36px;
   border-radius: 100px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
-  border: 1px solid var(--shinkai-accent);
-  transition: background 0.2s;
+  border: 2px solid var(--shinkai-accent);
+  transition: background 0.2s, color 0.2s;
 }
 
-.btn-secondary:hover { background: rgba(77,168,218,0.1); }
+.btn-secondary:hover {
+  background: var(--shinkai-accent);
+  color: #fff;
+}
 
 /* ----- IDカード（結果表示） ----- */
 .id-card {
-  background: var(--shinkai-surface);
+  background: #fff;
   border: 1px solid var(--shinkai-border);
   border-radius: var(--shinkai-radius);
   padding: 2rem;
@@ -178,7 +243,7 @@ body {
   color: var(--shinkai-accent);
   letter-spacing: 0.02em;
   word-break: break-all;
-  background: var(--shinkai-bg);
+  background: #f3f3f5;
   display: inline-block;
   padding: 0.5rem 1.5rem;
   border-radius: 8px;
@@ -236,77 +301,6 @@ body {
   margin-top: 1.5rem;
 }
 
-/* ----- アプリフッター ----- */
-.app-footer {
-  text-align: center;
-  padding: 2rem 1.5rem;
-  border-top: 1px solid var(--shinkai-border);
-  margin-top: 3rem;
-}
-
-.app-footer .footer-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 0.75rem;
-}
-
-.app-footer .footer-links a {
-  color: var(--shinkai-text-muted);
-  text-decoration: none;
-  font-size: 0.85rem;
-  transition: color 0.2s;
-}
-
-.app-footer .footer-links a:hover {
-  color: var(--shinkai-accent);
-}
-
-.app-footer .footer-sns {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 0.75rem;
-}
-
-.app-footer .footer-sns a {
-  color: var(--shinkai-text-muted);
-  transition: color 0.2s;
-}
-
-.app-footer .footer-sns a:hover {
-  color: var(--shinkai-accent);
-}
-
-.app-footer .footer-copy {
-  color: var(--shinkai-text-muted);
-  font-size: 0.75rem;
-  margin: 0;
-}
-
-/* ----- レスポンシブ ----- */
-@media (max-width: 768px) {
-  .app-main {
-    padding: 1.5rem 1rem;
-  }
-
-  .auth-card {
-    padding: 2rem 1.5rem;
-  }
-
-  .auth-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    text-align: center;
-  }
-}
-
 /* ----- タブ切り替え ----- */
 .tab-switch {
   display: flex;
@@ -330,10 +324,270 @@ body {
 
 .tab-btn.active {
   background: var(--shinkai-accent);
-  color: #0b192c;
+  color: #fff;
 }
 
 .tab-btn:not(.active) {
   background: transparent;
   color: var(--shinkai-text-muted);
+}
+
+/* ----- 機能タイル ----- */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.tile {
+  background: #fff;
+  border: 1px solid var(--shinkai-border);
+  border-radius: var(--shinkai-radius);
+  padding: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--shinkai-text);
+  transition: border-color 0.2s, transform 0.1s;
+}
+
+.tile:hover {
+  border-color: var(--shinkai-accent);
+  transform: translateY(-2px);
+}
+
+.tile--disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.tile-icon {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--shinkai-accent);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.tile-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.tile-desc {
+  font-size: 0.8rem;
+  color: var(--shinkai-text-muted);
+}
+
+/* ----- アプリフッター ----- */
+.app-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--shinkai-border);
+  margin-top: 3rem;
+  background: var(--shinkai-bg);
+}
+
+.app-footer .footer-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.app-footer .footer-links a {
+  color: var(--shinkai-text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.app-footer .footer-links a:hover {
+  color: var(--shinkai-text);
+}
+
+.app-footer .footer-sns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.app-footer .footer-sns a {
+  color: var(--shinkai-text-muted);
+  transition: color 0.2s;
+}
+
+.app-footer .footer-sns a:hover {
+  color: var(--shinkai-text);
+}
+
+.app-footer .footer-copy {
+  color: var(--shinkai-text-muted);
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+/* ============================================
+   LP 専用スタイル
+   ============================================ */
+
+/* ----- LP ヒーロー ----- */
+.lp-hero {
+  text-align: center;
+  padding: 80px 1.5rem 60px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lp-hero .hero-badge {
+  display: inline-block;
+  background: #f3f3f5;
+  padding: 6px 18px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--shinkai-text-muted);
+  margin-bottom: 24px;
+}
+
+.lp-hero-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: var(--shinkai-text);
+}
+
+.lp-hero-copy {
+  font-size: 1.4rem;
+  color: var(--shinkai-text-muted);
+  margin-bottom: 36px;
+  font-weight: 400;
+}
+
+.lp-hero-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ----- LP セクション ----- */
+.lp-section {
+  padding: 60px 1.5rem;
+}
+
+.lp-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.lp-card {
+  background: #fff;
+  border: 1px solid var(--shinkai-border);
+  border-radius: var(--shinkai-radius);
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.lp-card-icon {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--shinkai-accent);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.lp-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--shinkai-text);
+}
+
+.lp-card p {
+  font-size: 0.9rem;
+  color: var(--shinkai-text-muted);
+  line-height: 1.7;
+}
+
+/* ----- レスポンシブ ----- */
+@media (max-width: 768px) {
+  .app-main {
+    padding: 1.5rem 1rem;
+  }
+
+  .auth-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .auth-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lp-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .lp-hero-copy {
+    font-size: 1.1rem;
+  }
+
+  .lp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ハンバーガーメニュー（モバイルのみ表示） */
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid var(--shinkai-border);
+    padding: 1.5rem;
+  }
+
+  .nav-menu.show {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nav-menu-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 }
