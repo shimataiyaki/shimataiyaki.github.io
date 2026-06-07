@@ -55,8 +55,8 @@ title: R8年度文化祭展示プロジェクト
 
 ## 関連ドキュメント
 
-- [提供条件（利用範囲・運用方針）](/terms)
-- [データと倫理に関する基本方針（データ取り扱い）](./privacy)
+- [提供条件（利用範囲・運用方針）](https://shimataiyaki.github.io/bunkasai/terms)
+- [データと倫理に関する基本方針（データ取り扱い）](https://shimataiyaki.github.io/bunkasai/privacy)
 
 ## 注意事項
 
