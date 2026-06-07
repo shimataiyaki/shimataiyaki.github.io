@@ -87,7 +87,7 @@ title: データ方針
 
 ## 関連ドキュメント
 
-- [プロジェクトページ](./index)
-- [提供条件（利用範囲・運用方針）](./terms)
+- [プロジェクトページ](https://shimataiayki.github.io/bunkasai/)
+- [提供条件（利用範囲・運用方針）](https://shimataiyaki.github.io/bunkasai/terms)
 
 © 2026 Shimataiyaki
