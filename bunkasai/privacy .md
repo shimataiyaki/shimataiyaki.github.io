@@ -1,7 +1,6 @@
 ---
 layout: default
 title: データ方針
-css: assets/css/document.css
 ---
 
 # データと倫理に関する基本方針
