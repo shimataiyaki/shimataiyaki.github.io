@@ -71,7 +71,7 @@ title: 文化祭向けプロダクト提供条件
 
 ## 関連ドキュメント
 
-- [プロジェクトページ](../index)
-- [データと倫理に関する基本方針（データ取り扱い）](../privacy)
+- [プロジェクトページ](https://shimataiyaki.github.io/bunkasai/index)
+- [データと倫理に関する基本方針（データ取り扱い）](https://shimataiyaki.github.io/bunkasai/privacy)
 
 © 2026 Shimataiyaki
