@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: articles
 title: 文化祭向けプロダクト提供条件
 ---
 
