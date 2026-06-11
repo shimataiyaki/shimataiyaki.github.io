@@ -1,57 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-
+<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
 <url>
   <loc>https://shimataiyaki.github.io/</loc>
-  <lastmod>2026-05-25T14:09:14+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>1.0</priority>
+  <lastmod>2026-06-11T11:24:05+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://shimataiyaki.github.io/index.html</loc>
-  <lastmod>2026-05-25T14:09:14+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://shimataiyaki.github.io/about</loc>
+  <priority>0.8</priority>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://shimataiyaki.github.io/blog</loc>
+  <priority>0.8</priority>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://shimataiyaki.github.io/projects/bunkasai</loc>
+  <priority>0.8</priority>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://shimataiyaki.github.io/projects/e-colleague</loc>
+  <priority>0.8</priority>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://shimataiyaki.github.io/projects/shinkai</loc>
+  <priority>0.8</priority>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://shimataiyaki.github.io/apps/digital-ema</loc>
+  <priority>0.8</priority>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://shimataiyaki.github.io/apps/digital-omikuji</loc>
+  <priority>0.8</priority>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>https://shimataiyaki.github.io/apps/mendako-bbs</loc>
+  <priority>0.8</priority>
+  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://shimataiyaki.github.io/e-colleague/</loc>
-  <lastmod>2026-05-25T14:09:14+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.8</priority>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://shimataiyaki.github.io/bunkasai-tenji/</loc>
-  <lastmod>2026-05-25T14:09:14+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://shimataiyaki.github.io/blog/2026/06/01/HBD/</loc>
+  <priority>0.8</priority>
+  <lastmod>2026-06-11T11:24:05+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://shimataiyaki.github.io/mendako-bbs/</loc>
-  <lastmod>2026-05-25T14:09:14+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://shimataiyaki.github.io/blog/2026/05/31/first-post/</loc>
+  <priority>0.8</priority>
+  <lastmod>2026-06-11T11:24:05+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://shimataiyaki.github.io/e-colleague/portal/</loc>
-  <lastmod>2026-05-25T14:09:14+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://shimataiyaki.github.io/blog/</loc>
+  <priority>0.8</priority>
+  <lastmod>2026-06-11T11:24:05+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://shimataiyaki.github.io/bunkasai-tenji/%E6%8F%90%E4%BE%9B%E6%9D%A1%E4%BB%B6.html</loc>
-  <lastmod>2026-05-25T14:09:14+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://shimataiyaki.github.io/about/</loc>
+  <priority>0.8</priority>
+  <lastmod>2026-06-11T11:24:05+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://shimataiyaki.github.io/bunkasai-tenji/%E3%83%87%E3%83%BC%E3%82%BF%E6%96%B9%E9%87%9D.html</loc>
-  <lastmod>2026-05-25T14:09:14+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://shimataiyaki.github.io/privacy/</loc>
+  <priority>0.8</priority>
+  <lastmod>2026-06-11T11:24:05+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://shimataiyaki.github.io/e-colleague/portal/index.html</loc>
-  <lastmod>2026-05-25T14:09:14+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>https://shimataiyaki.github.io/terms/</loc>
+  <priority>0.8</priority>
+  <lastmod>2026-06-11T11:24:05+09:00</lastmod>
+  <changefreq>always</changefreq>
 </url>
-
+<url>
+  <loc>https://shimataiyaki.github.io/projects</loc>
+  <priority>0.7</priority>
+  <changefreq>always</changefreq>
+</url>
 
 </urlset>
