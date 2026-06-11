@@ -4,11 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | Shinkai</title>
+  
+  <!-- Pico.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  
+  <!-- Shinkai 固有スタイル -->
   <link rel="stylesheet" href="{{ '/assets/css/shinkai-app.css' | relative_url }}">
+  
   {% if page.css %}
   <link rel="stylesheet" href="{{ page.css | relative_url }}">
   {% endif %}
+  
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.3.0/dist/iconify-icon.min.js"></script>
+  <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 <body>
   <header class="app-header">
