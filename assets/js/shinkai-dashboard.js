@@ -1,5 +1,5 @@
 // Shinkai Dashboard - LIFF 認証 + GAS API 連携
-const LIFF_ID = 'YOUR_LIFF_ID';
+const LIFF_ID = 'https://liff.line.me/2010370545-5zIqsJh2';
 const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbxdbu1Jbuj_yA8qNrSBl9j_qi4PCv6s5dZcNIAF6KeSxXyueozrXogWxC7IyxRpp3K5bA/exec';
 
 document.addEventListener('DOMContentLoaded', async function() {
