@@ -1,38 +1,25 @@
 /* ============================================
    shinkai-app.css
-   Shinkai アプリ + LP 専用スタイルシート
-   共通CSS（common-layout.css）のデザイン言語を継承
+   Pico.css 統合版
+   Shinkai 固有のスタイルのみを定義
    ============================================ */
 
-/* ----- カスタムプロパティ（共通CSSと統一） ----- */
+/* ----- Pico.css 変数の上書き ----- */
 :root {
-  --shinkai-bg: #ffffff;
-  --shinkai-surface: #ffffff;
-  --shinkai-border: #e0e0e3;
-  --shinkai-text: #1d1d1f;
-  --shinkai-text-muted: #6e6e73;
-  --shinkai-accent: #0071e3;
-  --shinkai-danger: #ef4444;
-  --shinkai-success: #10b981;
-  --shinkai-warning: #f59e0b;
-  --shinkai-radius: 12px;
-  --shinkai-font: 'M PLUS 1p', sans-serif;
-}
-
-/* ----- ベース ----- */
-body {
-  font-family: var(--shinkai-font);
-  background: var(--shinkai-bg);
-  color: var(--shinkai-text);
-  line-height: 1.6;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
+  --pico-font-family: 'M PLUS 1p', sans-serif;
+  --pico-border-radius: 12px;
+  --pico-primary: #0071e3;
+  --pico-primary-background: #0071e3;
+  --pico-primary-hover: #005bb5;
+  --pico-form-element-active-border-color: #0071e3;
+  --pico-progress-color: #0071e3;
+  --pico-progress-background-color: #e0e0e3;
 }
 
 /* ----- アプリヘッダー ----- */
 .app-header {
-  background: var(--shinkai-surface);
-  border-bottom: 3px solid var(--shinkai-accent);
+  background: #fff;
+  border-bottom: 3px solid var(--pico-primary);
   padding: 0.75rem 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -43,52 +30,21 @@ body {
 }
 
 .app-logo a {
-  color: var(--shinkai-text);
+  color: #1d1d1f;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.5rem;
   letter-spacing: -0.01em;
 }
 
-.app-logo a:hover {
-  color: var(--shinkai-accent);
-}
-
 .app-version {
   font-size: 0.75rem;
-  color: var(--shinkai-text-muted);
+  color: #6e6e73;
 }
 
 /* ----- ハンバーガーメニュー ----- */
 .menu-toggle {
   display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 32px;
-  height: 28px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.menu-toggle span {
-  width: 100%;
-  height: 3px;
-  background: var(--shinkai-accent);
-  transition: all 0.3s;
-}
-
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -7px);
 }
 
 .nav-menu {
@@ -101,16 +57,10 @@ body {
   gap: 1.5rem;
 }
 
-.nav-menu a {
-  color: var(--shinkai-text);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: color 0.2s;
-}
-
-.nav-menu a:hover {
-  color: var(--shinkai-accent);
+@media (max-width: 768px) {
+  .menu-toggle { display: flex; }
+  .nav-menu { display: none; }
+  .nav-menu.show { display: flex; flex-direction: column; }
 }
 
 /* ----- アプリメイン ----- */
@@ -120,195 +70,86 @@ body {
   padding: 2rem 1.5rem;
 }
 
-/* ----- 認証カード ----- */
-.auth-card {
-  background: var(--shinkai-surface);
-  border: 1px solid var(--shinkai-border);
-  border-radius: var(--shinkai-radius);
-  padding: 2.5rem 2rem;
-  text-align: center;
-}
-
-.auth-card h2 {
-  font-size: 1.5rem;
+/* ----- タスク状態ラベル ----- */
+.task-status {
+  font-size: 0.7rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--shinkai-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
 }
 
-.auth-description {
-  color: var(--shinkai-text-muted);
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+.task-status--overdue { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+.task-status--in-progress { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+.task-status--done { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+.task-status--todo { background: #f9fafb; color: #6b7280; border: 1px solid #e5e7eb; }
+
+/* ----- 機能タイル ----- */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-/* ----- フォーム ----- */
-.form-group {
-  text-align: left;
-  margin-bottom: 1.25rem;
-}
-
-.form-group label {
-  display: block;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 0.4rem;
-  color: var(--shinkai-text);
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
+.tile {
   background: #fff;
-  border: 1px solid var(--shinkai-border);
-  border-radius: var(--shinkai-radius);
-  color: var(--shinkai-text);
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--shinkai-accent);
-}
-
-.form-group textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-/* ----- ボタン ----- */
-.btn-primary {
-  display: inline-block;
-  background: var(--shinkai-accent);
-  color: #fff;
-  padding: 14px 36px;
-  border-radius: 100px;
+  border: 1px solid #e0e0e3;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  border: 2px solid var(--shinkai-accent);
-  cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
+  color: #1d1d1f;
+  transition: border-color 0.2s, transform 0.1s;
 }
 
-.btn-primary:hover {
-  background: #005bb5;
-  border-color: #005bb5;
-  transform: scale(1.02);
+.tile:hover { border-color: var(--pico-primary); transform: translateY(-2px); }
+.tile--disabled { opacity: 0.4; pointer-events: none; }
+
+.tile-icon {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--pico-primary);
+  display: block;
+  margin-bottom: 0.75rem;
 }
 
-.btn-secondary {
-  display: inline-block;
-  background: transparent;
-  color: var(--shinkai-accent);
-  padding: 14px 36px;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  border: 2px solid var(--shinkai-accent);
-  transition: background 0.2s, color 0.2s;
-}
+.tile-title { font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 0.25rem; }
+.tile-desc { font-size: 0.8rem; color: #6e6e73; }
 
-.btn-secondary:hover {
-  background: var(--shinkai-accent);
-  color: #fff;
-}
-
-/* ----- IDカード（結果表示） ----- */
+/* ----- IDカード ----- */
 .id-card {
   background: #fff;
-  border: 1px solid var(--shinkai-border);
-  border-radius: var(--shinkai-radius);
+  border: 1px solid #e0e0e3;
+  border-radius: 12px;
   padding: 2rem;
   text-align: center;
   margin-top: 2rem;
 }
 
-.id-card .id-label {
-  font-size: 0.9rem;
-  color: var(--shinkai-text-muted);
-  margin-bottom: 0.5rem;
-}
-
-.id-card .id-value {
+.id-value {
   font-size: 1.5rem;
   font-weight: 700;
   font-family: monospace;
-  color: var(--shinkai-accent);
-  letter-spacing: 0.02em;
-  word-break: break-all;
+  color: var(--pico-primary);
   background: #f3f3f5;
   display: inline-block;
   padding: 0.5rem 1.5rem;
   border-radius: 8px;
-  border: 1px solid var(--shinkai-border);
-}
-
-.id-card .id-note {
-  color: var(--shinkai-text-muted);
-  margin-top: 1rem;
-  font-size: 0.85rem;
-}
-
-/* ----- エラーメッセージ ----- */
-.error-message {
-  color: var(--shinkai-danger);
-  font-size: 0.85rem;
-  margin-top: 0.75rem;
-}
-
-/* ----- ID記憶チェックボックス ----- */
-.id-memory {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  color: var(--shinkai-text-muted);
-}
-
-.id-memory input[type="checkbox"] {
-  width: auto;
-  accent-color: var(--shinkai-accent);
-}
-
-/* ----- 必須マーク ----- */
-.shinkai-required {
-  color: var(--shinkai-danger);
-  margin-left: 0.25rem;
-  font-size: 0.85rem;
-}
-
-/* ----- 補足テキスト ----- */
-.shinkai-text-muted {
-  color: var(--shinkai-text-muted);
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-
-/* ----- ボタンアクションエリア ----- */
-.auth-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
+  border: 1px solid #e0e0e3;
 }
 
 /* ----- タブ切り替え ----- */
 .tab-switch {
   display: flex;
-  gap: 0;
   margin-bottom: 1.5rem;
   border-radius: 100px;
   overflow: hidden;
-  border: 1px solid var(--shinkai-border);
+  border: 1px solid #e0e0e3;
 }
 
 .tab-btn {
@@ -322,272 +163,68 @@ body {
   transition: background 0.2s, color 0.2s;
 }
 
-.tab-btn.active {
-  background: var(--shinkai-accent);
-  color: #fff;
-}
+.tab-btn.active { background: var(--pico-primary); color: #fff; }
+.tab-btn:not(.active) { background: transparent; color: #6e6e73; }
 
-.tab-btn:not(.active) {
-  background: transparent;
-  color: var(--shinkai-text-muted);
-}
-
-/* ----- 機能タイル ----- */
-.tile-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.tile {
-  background: #fff;
-  border: 1px solid var(--shinkai-border);
-  border-radius: var(--shinkai-radius);
-  padding: 1.5rem;
-  text-align: center;
-  text-decoration: none;
-  color: var(--shinkai-text);
-  transition: border-color 0.2s, transform 0.1s;
-}
-
-.tile:hover {
-  border-color: var(--shinkai-accent);
-  transform: translateY(-2px);
-}
-
-.tile--disabled {
-  opacity: 0.4;
-  pointer-events: none;
-}
-
-.tile-icon {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--shinkai-accent);
-  display: block;
-  margin-bottom: 0.75rem;
-}
-
-.tile-title {
-  font-weight: 700;
-  font-size: 0.95rem;
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-.tile-desc {
-  font-size: 0.8rem;
-  color: var(--shinkai-text-muted);
+/* ----- ID記憶チェックボックス ----- */
+.id-memory {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #6e6e73;
 }
 
 /* ----- アプリフッター ----- */
 .app-footer {
   text-align: center;
   padding: 2rem 1.5rem;
-  border-top: 1px solid var(--shinkai-border);
+  border-top: 1px solid #e0e0e3;
   margin-top: 3rem;
-  background: var(--shinkai-bg);
 }
 
-.app-footer .footer-links {
+.app-footer .footer-links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.app-footer .footer-links a { color: #6e6e73; text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+.app-footer .footer-links a:hover { color: #1d1d1f; }
+.app-footer .footer-sns { display: flex; gap: 1rem; justify-content: center; margin-bottom: 0.75rem; }
+.app-footer .footer-sns a { color: #6e6e73; }
+.app-footer .footer-sns a:hover { color: #1d1d1f; }
+.app-footer .footer-copy { color: #6e6e73; font-size: 0.75rem; margin: 0; }
+
+/* ----- タスクリスト ----- */
+.task-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.task-item {
   display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 0.75rem;
-}
-
-.app-footer .footer-links a {
-  color: var(--shinkai-text-muted);
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.app-footer .footer-links a:hover {
-  color: var(--shinkai-text);
-}
-
-.app-footer .footer-sns {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 0.75rem;
-}
-
-.app-footer .footer-sns a {
-  color: var(--shinkai-text-muted);
-  transition: color 0.2s;
-}
-
-.app-footer .footer-sns a:hover {
-  color: var(--shinkai-text);
-}
-
-.app-footer .footer-copy {
-  color: var(--shinkai-text-muted);
-  font-size: 0.75rem;
-  margin: 0;
-}
-
-/* ============================================
-   LP 専用スタイル
-   ============================================ */
-
-/* ----- LP ヒーロー ----- */
-.lp-hero {
-  text-align: center;
-  padding: 80px 1.5rem 60px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.lp-hero .hero-badge {
-  display: inline-block;
-  background: #f3f3f5;
-  padding: 6px 18px;
-  border-radius: 100px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--shinkai-text-muted);
-  margin-bottom: 24px;
-}
-
-.lp-hero-title {
-  font-size: 3.2rem;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.15;
-  margin-bottom: 20px;
-  color: var(--shinkai-text);
-}
-
-.lp-hero-copy {
-  font-size: 1.4rem;
-  color: var(--shinkai-text-muted);
-  margin-bottom: 36px;
-  font-weight: 400;
-}
-
-.lp-hero-actions {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* ----- LP セクション ----- */
-.lp-section {
-  padding: 60px 1.5rem;
-}
-
-.lp-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.lp-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.lp-card {
+  align-items: flex-start;
+  gap: 0.75rem;
   background: #fff;
-  border: 1px solid var(--shinkai-border);
-  border-radius: var(--shinkai-radius);
-  padding: 28px 24px;
-  text-align: center;
+  border: 1px solid #e0e0e3;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: opacity 0.3s;
 }
+.task-item--overdue { border-left: 3px solid #dc2626; }
+.task-item--completed { opacity: 0.5; }
+.task-body { flex: 1; min-width: 0; }
+.task-title { font-weight: 600; font-size: 0.95rem; }
+.task-meta { font-size: 0.8rem; color: #6e6e73; margin-top: 0.25rem; }
 
-.lp-card-icon {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--shinkai-accent);
-  display: block;
-  margin-bottom: 0.75rem;
+/* ----- スケルトンスクリーン ----- */
+.skeleton-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.skeleton-item {
+  height: 60px;
+  background: linear-gradient(90deg, #e0e0e3 25%, transparent 50%, #e0e0e3 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 12px;
 }
-
-.lp-card h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--shinkai-text);
-}
-
-.lp-card p {
-  font-size: 0.9rem;
-  color: var(--shinkai-text-muted);
-  line-height: 1.7;
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 /* ----- レスポンシブ ----- */
 @media (max-width: 768px) {
-  .app-main {
-    padding: 1.5rem 1rem;
-  }
-
-  .auth-card {
-    padding: 2rem 1.5rem;
-  }
-
-  .auth-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    text-align: center;
-  }
-
-  .tile-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .lp-hero-title {
-    font-size: 2.2rem;
-  }
-
-  .lp-hero-copy {
-    font-size: 1.1rem;
-  }
-
-  .lp-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* ハンバーガーメニュー（モバイルのみ表示） */
-  .menu-toggle {
-    display: flex;
-  }
-
-  .nav-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    border-bottom: 1px solid var(--shinkai-border);
-    padding: 1.5rem;
-  }
-
-  .nav-menu.show {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .nav-menu-inner {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
+  .tile-grid { grid-template-columns: 1fr; }
 }
