@@ -56,25 +56,6 @@ css: /assets/css/lp.css
         </div>
     </section>
 
-    <!-- News -->
-    <section class="section-ec">
-        <div class="section-ec-inner">
-            <h2>News</h2>
-            <div class="news-list">
-                {% for post in site.posts limit:2 %}
-                <a href="{{ post.url | relative_url }}" class="news-item">
-                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%Y.%m.%d" }}</time>
-                    <span class="news-title">{{ post.title }}</span>
-                    <span class="news-arrow">→</span>
-                </a>
-                {% endfor %}
-            </div>
-            <div class="news-more" style="text-align:center; margin-top: 24px;">
-                <a href="{{ '/blog/' | relative_url }}" class="btn-secondary">記事一覧を見る</a>
-            </div>
-        </div>
-    </section>
-
     <!-- About -->
     <section class="section-ec" id="about">
         <div class="section-ec-inner">
