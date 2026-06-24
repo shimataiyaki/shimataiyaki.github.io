@@ -13,6 +13,77 @@ css:
   - /assets/css/document.css
 ---
 
+<style>
+  /* アコーディオン用追加スタイル */
+  details {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  summary {
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fafafa;
+    transition: background 0.2s;
+  }
+  summary:hover { background: #f0f0f0; }
+  summary::after {
+    content: "▸";
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    transition: transform 0.2s;
+  }
+  details[open] summary::after { transform: rotate(90deg); }
+  details .content {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--border-color);
+    line-height: 1.8;
+  }
+
+  /* 固定ナビ */
+  .page-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .page-nav a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .page-nav a:hover { color: var(--accent-color); }
+</style>
+
+<!-- 固定ナビ -->
+<nav class="page-nav">
+  <a href="#top">TOP</a>
+  <a href="#vision">Vision</a>
+  <a href="#projects">Projects</a>
+  <a href="#about">About</a>
+  <a href="#contact">お問い合わせ</a>
+  <a href="#terms">利用規約</a>
+  <a href="#privacy">プライバシーポリシー</a>
+</nav>
+
 <main class="main-content">
 
   <!-- ===== 1. Hero (TOP) ===== -->
@@ -33,15 +104,6 @@ css:
       </div>
     </div>
     <div class="hero-subtitle">Shimataiyaki のサイトへようこそ。</div>
-    <!-- ハブ用クイックリンク（追加） -->
-    <div style="text-align:center; margin-top: 2rem;">
-      <a href="#vision" style="margin: 0 1rem;">Vision</a>
-      <a href="#projects" style="margin: 0 1rem;">Projects</a>
-      <a href="#about" style="margin: 0 1rem;">About</a>
-      <a href="#contact" style="margin: 0 1rem;">Contact</a>
-      <a href="#terms" style="margin: 0 1rem;">利用規約</a>
-      <a href="#privacy" style="margin: 0 1rem;">プライバシーポリシー</a>
-    </div>
   </section>
 
   <!-- ===== 2. Vision ===== -->
@@ -78,11 +140,9 @@ css:
       </details>
       <details>
         <summary>デジタルおみくじ</summary>
-        <div class="content">
-          <p>説明文...</p>
-        </div>
+        <div class="content"><p>説明文...</p></div>
       </details>
-      <!-- 他プロダクトも同様に -->
+      <!-- 他のプロダクトも同様に追加 -->
     </div>
   </section>
 
@@ -96,9 +156,8 @@ css:
         <a href="mailto:shimataiyaki.dev@gmail.com" class="mail-link">shimataiyaki.dev@gmail.com</a>
       </p>
 
-      <!-- 運営者情報の詳細（アコーディオン） -->
       <details style="margin-top: 2rem;">
-        <summary>運営者情報</summary>
+        <summary>運営者情報（詳細）</summary>
         <div class="content">
           <p class="doc-meta">最終更新日: 2026年5月30日</p>
           <h2>運営者</h2>
@@ -130,11 +189,11 @@ css:
   <section class="section-ec" id="contact">
     <div class="section-ec-inner">
       <h2>お問い合わせ</h2>
-      <p>ご質問・ご相談などは、以下のメールアドレスまでご連絡ください。</p>
-      <p style="margin-top: 1.5rem;">
+      <p style="text-align:center;">ご質問・ご相談などは、以下のメールアドレスまでご連絡ください。</p>
+      <p style="margin-top: 1.5rem; text-align:center;">
         <a href="mailto:shimataiyaki.dev@gmail.com" class="mail-link" style="font-size: 1.1rem;">shimataiyaki.dev@gmail.com</a>
       </p>
-      <p style="margin-top: 2rem; color: var(--muted-text); font-size: 0.9rem;">通常2〜3営業日以内に返信いたします。</p>
+      <p style="margin-top: 2rem; color: var(--muted-text); font-size: 0.9rem; text-align:center;">通常2〜3営業日以内に返信いたします。</p>
     </div>
   </section>
 
@@ -202,3 +261,19 @@ css:
   </section>
 
 </main>
+
+<!-- 1つだけ開くアコーディオンにする場合 -->
+<script>
+  (function() {
+    const allDetails = document.querySelectorAll('details');
+    allDetails.forEach(detail => {
+      detail.addEventListener('toggle', function() {
+        if (this.open) {
+          allDetails.forEach(other => {
+            if (other !== this) other.open = false;
+          });
+        }
+      });
+    });
+  })();
+</script>
