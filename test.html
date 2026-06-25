@@ -1,199 +1,124 @@
 ---
 layout: default
-title: Shimataiyaki | アイデアから、プロダクトまで。
-description: アイデアから、プロダクトまで。個人開発、プロジェクト、発信活動への入り口。
-og_title: Shimataiyaki | アイデアから、プロダクトまで。
-og_description: 個人開発、プロジェクト、発信活動への入り口。
+title: "Shimataiyaki | Website"
+title_suffix: false
+description: "つくる・かく・のこす・でかける。好奇心のままに、かたちにして残していく。"
+og_title: "Shimataiyaki | Website"
+og_description: "つくる・かく・のこす・でかける。好奇心のままに、かたちにして残していく。"
 og_type: website
 og_image: /images/ogp.png
-twitter_title: Shimataiyaki | アイデアから、プロダクトまで。
-twitter_description: 個人開発、プロジェクト、発信活動への入り口。
-css:
-  - /assets/css/lp.css
-  - /assets/css/document.css
+twitter_title: "Shimataiyaki | Website"
+twitter_description: "つくる・かく・のこす・でかける。好奇心のままに、かたちにして残していく。"
+css: /assets/css/home.css
 ---
-
-<style>
-  /* アコーディオン用追加スタイル */
-  details {
-    background: #fff;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    margin-bottom: 16px;
-    overflow: hidden;
-  }
-  summary {
-    padding: 1rem 1.25rem;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fafafa;
-    transition: background 0.2s;
-  }
-  summary:hover { background: #f0f0f0; }
-  summary::after {
-    content: "▸";
-    font-size: 0.9rem;
-    color: var(--muted-text);
-    transition: transform 0.2s;
-  }
-  details[open] summary::after { transform: rotate(90deg); }
-  details .content {
-    padding: 1rem 1.25rem;
-    border-top: 1px solid var(--border-color);
-    line-height: 1.8;
-  }
-
-  /* 固定ナビ */
-  .page-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
-    padding: 0.75rem 1.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-  .page-nav a {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .page-nav a:hover { color: var(--accent-color); }
-</style>
 
 <!-- 固定ナビ -->
 <nav class="page-nav">
   <a href="#top">TOP</a>
+  <a href="#what-i-do">What I Do</a>
+  <a href="#work">Work</a>
   <a href="#vision">Vision</a>
-  <a href="#projects">Projects</a>
   <a href="#about">About</a>
-  <a href="#contact">お問い合わせ</a>
   <a href="#terms">利用規約</a>
   <a href="#privacy">プライバシーポリシー</a>
 </nav>
 
 <main class="main-content">
 
-  <!-- ===== 1. Hero (TOP) ===== -->
+  <!-- ===== 1. Hero ===== -->
   <section class="section-hero" id="top">
-    <div class="hero-bg-blur">
-      <img src="/images/e-colleague.png" alt="">
-    </div>
     <div class="hero-content">
-      <div class="hero-badge">Latest Product</div>
-      <h1 class="hero-title">e-colleague</h1>
-      <p class="hero-copy">LINEグループに話しかけるだけで、<br>AIがタスクを抽出・管理するBot。</p>
-      <div class="hero-mockup">
-        <img src="/images/taskdemo.png" alt="会話からタスクを自動抽出する画面">
-      </div>
-      <div class="hero-actions" style="margin-top: 36px;">
-        <a href="{{ '/e-colleague/' | relative_url }}" class="btn-primary">プロダクトページ</a>
-        <a href="https://github.com/shimataiyaki/e-colleague-bot" class="btn-secondary" target="_blank">GitHub</a>
-      </div>
+      <h1 class="hero-title">つくる・かく・のこす・でかける。</h1>
+      <p class="hero-copy">好奇心のままに、かたちにして残していく。</p>
     </div>
-    <div class="hero-subtitle">Shimataiyaki のサイトへようこそ。</div>
   </section>
 
-  <!-- ===== 2. Vision ===== -->
+  <!-- ===== 2. What I Do ===== -->
+  <section class="section-ec" id="what-i-do">
+    <div class="section-ec-inner">
+      <h2>What I Do</h2>
+      <ul class="whatido-list">
+        <li><a href="#work"><strong>つくる</strong> —— プロダクト開発</a></li>
+        <li><a href="https://note.com/shimataiyaki" target="_blank"><strong>かく</strong> —— note</a></li>
+        <li><a href="#work"><strong>のこす</strong> —— 活動の記録</a></li>
+        <li><a href="#work"><strong>でかける</strong> —— 海外・国際交流</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 3. Work ===== -->
+  <section class="section-ec" id="work">
+    <div class="section-ec-inner">
+      <h2>Work</h2>
+
+      <!-- Products（カルーセル） -->
+      <h3 class="work-subheading">Products</h3>
+      <div class="carousel">
+        <div class="carousel-track">
+          <a href="/products/e-colleague/" class="carousel-card">
+            <img src="/images/carousel/e-colleague.png" alt="e-colleague">
+          </a>
+          <a href="https://shimataiyaki.github.io/digital-omikuji/" class="carousel-card">
+            <img src="/images/carousel/omikuji.png" alt="デジタルおみくじ">
+          </a>
+          <a href="https://shimataiyaki.github.io/digital-ema/" class="carousel-card">
+            <img src="/images/carousel/ema.png" alt="デジタル絵馬">
+          </a>
+          <a href="https://shimataiyaki.github.io/mendako-bbs/" class="carousel-card">
+            <img src="/images/carousel/mendako.png" alt="Mendako BBS">
+          </a>
+        </div>
+      </div>
+
+      <!-- Awards & Recognition -->
+      <h3 class="work-subheading">Awards &amp; Recognition</h3>
+      <ul class="log-list">
+        <li>
+          <time>2026.XX.XX</time>
+          <span class="log-title">〇〇コンテスト 優秀賞</span>
+          <span class="log-desc">（受賞内容の説明が入ります）</span>
+        </li>
+        <li>
+          <time>2025.XX.XX</time>
+          <span class="log-title">〇〇ハッカソン アイデア賞</span>
+          <span class="log-desc">（受賞内容の説明が入ります）</span>
+        </li>
+      </ul>
+
+      <!-- International Exchange -->
+      <h3 class="work-subheading">International Exchange</h3>
+      <ul class="log-list">
+        <li>
+          <time>202X.XX</time>
+          <span class="log-title">ボーイスカウト韓国派遣</span>
+          <span class="log-desc">現地のスカウトとの交流や奉仕活動に参加。</span>
+        </li>
+        <li>
+          <time>202X.XX</time>
+          <span class="log-title">県事業 モンゴル訪問</span>
+          <span class="log-desc">異文化体験とフィールドワークを通じて、地域課題を学ぶ。</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 4. Vision ===== -->
   <section class="section-ec" id="vision">
     <div class="section-ec-inner">
       <h2>Vision</h2>
-      <p class="section-subtitle">「ちょっと便利」を、オープンソースで。</p>
-      <div class="usecase-grid" style="margin-top: 40px;">
-        <div class="usecase-item">
-          <h3>1. Open Source</h3>
-          <p>すべてのプロダクトはGitHubで公開。コードを共有し、誰もが改良に参加できる形を目指しています。</p>
-        </div>
-        <div class="usecase-item">
-          <h3>2. For Small Teams</h3>
-          <p>学校、サークル、少人数チーム。大きな組織のためではなく、身近な人が抱える課題から生まれるプロダクトを。</p>
-        </div>
-        <div class="usecase-item">
-          <h3>3. Quick & Useful</h3>
-          <p>大規模開発より、小さく素早く。必要なものを、必要なときに、すぐ届ける。それが「ちょっと便利」の原点です。</p>
-        </div>
-      </div>
+      <p class="vision-statement">思考回路を、ひらく。</p>
+      <p class="vision-body">考えたこと、つくったもの、選んだこと。そのプロセスを隠さずに残すのは、未来の自分と、たまたま通りかかった誰かのため。</p>
     </div>
   </section>
 
-  <!-- ===== 3. Projects (アコーディオン) ===== -->
-  <section class="section-ec" id="projects">
-    <div class="section-ec-inner">
-      <h2>Projects</h2>
-      <details>
-        <summary>e-colleague</summary>
-        <div class="content">
-          <p>LINEグループで会話しているだけで、AIがタスクを抽出・管理するBotです。詳しくは<a href="{{ '/e-colleague/' | relative_url }}">プロダクトページ</a>をご覧ください。</p>
-        </div>
-      </details>
-      <details>
-        <summary>デジタルおみくじ</summary>
-        <div class="content"><p>説明文...</p></div>
-      </details>
-      <!-- 他のプロダクトも同様に追加 -->
-    </div>
-  </section>
-
-  <!-- ===== 4. About + 運営者情報 (一部アコーディオン) ===== -->
+  <!-- ===== 5. About ===== -->
   <section class="section-ec" id="about">
     <div class="section-ec-inner">
-      <h2>Shimataiyaki</h2>
-      <p style="text-align:center;">2008年生まれ。中学生の時にWebサイトを公開したのをきっかけに個人開発を始めました。</p>
-      <p style="text-align:center; margin-top: 1rem;">「ちょっと便利、をオープンソースで。」が開発のモットーです。</p>
-      <p style="text-align:center; margin-top: 1.5rem;">
-        <a href="mailto:shimataiyaki.dev@gmail.com" class="mail-link">shimataiyaki.dev@gmail.com</a>
-      </p>
-
-      <details style="margin-top: 2rem;">
-        <summary>運営者情報（詳細）</summary>
-        <div class="content">
-          <p class="doc-meta">最終更新日: 2026年5月30日</p>
-          <h2>運営者</h2>
-          <p>Shimataiyaki</p>
-          <h2>概要</h2>
-          <p>Shimataiyakiは、教育・小規模チーム向けサービスを中心とした個人開発プロジェクトです。</p>
-          <h2>活動内容</h2>
-          <ul>
-            <li>LINE Bot開発</li>
-            <li>Webアプリケーション開発</li>
-            <li>学校・小規模チーム向けツール開発</li>
-          </ul>
-          <h2>運営サービス</h2>
-          <ul>
-            <li>e-colleague</li>
-            <li>デジタルおみくじ</li>
-            <li>デジタル絵馬</li>
-            <li>Mendako BBS</li>
-          </ul>
-          <h2>お問い合わせ</h2>
-          <p>メール: <a href="mailto:shimataiyaki.dev@gmail.com">shimataiyaki.dev@gmail.com</a></p>
-          <p class="inline-note">本ページに記載の運営者情報は、各サービス共通の運営情報として利用されます。</p>
-        </div>
-      </details>
-    </div>
-  </section>
-
-  <!-- ===== 5. お問い合わせ ===== -->
-  <section class="section-ec" id="contact">
-    <div class="section-ec-inner">
-      <h2>お問い合わせ</h2>
-      <p style="text-align:center;">ご質問・ご相談などは、以下のメールアドレスまでご連絡ください。</p>
-      <p style="margin-top: 1.5rem; text-align:center;">
-        <a href="mailto:shimataiyaki.dev@gmail.com" class="mail-link" style="font-size: 1.1rem;">shimataiyaki.dev@gmail.com</a>
-      </p>
-      <p style="margin-top: 2rem; color: var(--muted-text); font-size: 0.9rem; text-align:center;">通常2〜3営業日以内に返信いたします。</p>
+      <h2>About</h2>
+      <p>Shimataiyaki（シマタイヤキ）。2008年生まれ。高校生。</p>
+      <p>中学生でWebサイトを公開してから、気づけば色々つくってきた。コードを書くだけでなく、noteで文章を書いたり、カメラを持って歩いたり、気が向いたら海外に行ったりもする。</p>
+      <p>「ちょっと便利」をオープンソースで。でも、肩書きは一つに絞らない。つくる・かく・のこす・でかける。その全部が、自分を形づくっている。</p>
+      <p class="inline-note">A rolling stone gathers no moss.</p>
     </div>
   </section>
 
@@ -262,7 +187,7 @@ css:
 
 </main>
 
-<!-- 1つだけ開くアコーディオンにする場合 -->
+<!-- アコーディオン：1つだけ開く -->
 <script>
   (function() {
     const allDetails = document.querySelectorAll('details');
