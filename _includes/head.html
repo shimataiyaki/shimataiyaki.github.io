@@ -68,3 +68,12 @@
 {% if page.js %}
   <script src="{{ page.js | relative_url }}" defer></script>
 {% endif %}
+
+<title>
+{% if page.title %}
+  {{ page.title }}
+  {% unless page.title_suffix == false %} | {{ site.title }}{% endunless %}
+{% else %}
+  {{ site.title }}
+{% endif %}
+</title>
