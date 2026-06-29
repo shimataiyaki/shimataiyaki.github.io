@@ -1,5 +1,5 @@
 ---
-layout: articles
+layout: article
 title: 文化祭向けプロダクト提供条件
 ---
 
