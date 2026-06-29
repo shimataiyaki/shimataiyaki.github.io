@@ -2,71 +2,254 @@
 layout: default
 title: "Shimataiyaki | Website"
 title_suffix: false
-description: "アイデアから、プロダクトまで。個人開発、プロジェクト、発信活動への入り口。"
+description: "つくる・かく・のこす・でかける。好奇心のままに、かたちにして残していく。"
 og_title: "Shimataiyaki | Website"
-og_description: "個人開発、プロジェクト、発信活動への入り口。"
+og_description: "つくる・かく・のこす・でかける。好奇心のままに、かたちにして残していく。"
 og_type: website
 og_image: /images/ogp.png
 twitter_title: "Shimataiyaki | Website"
-twitter_description: "個人開発、プロジェクト、発信活動への入り口。"
-css: /assets/css/lp.css
+twitter_description: "つくる・かく・のこす・でかける。好奇心のままに、かたちにして残していく。"
+css: /assets/css/home.css
 ---
 
-<main class="main-content">
+<!-- 電光掲示板風（推奨環境） -->
+<div class="led-banner">
+  <marquee behavior="scroll" direction="left" scrollamount="3">
+    ★★ 推奨環境: Netscape Navigator 4.7 / Internet Explorer 5.0 ★★ このサイトはテーブルレイアウトで作成されています ★★
+  </marquee>
+</div>
 
-    <!-- メインビジュアル -->
-    <section class="section-hero">
-        <div class="hero-bg-blur">
-            <img src="/images/e-colleague.png" alt="">
-        </div>
-        <div class="hero-content">
-            <div class="hero-badge">Latest Product</div>
-            <h1 class="hero-title">e-colleague</h1>
-            <p class="hero-copy">LINEグループに話しかけるだけで、<br>AIがタスクを抽出・管理するBot。</p>
-            <div class="hero-mockup">
-                <img src="/images/taskdemo.png" alt="会話からタスクを自動抽出する画面">
-            </div>
-            <div class="hero-actions" style="margin-top: 36px;">
-                <a href="{{ '/e-colleague/' | relative_url }}" class="btn-primary">プロダクトページ</a>
-                <a href="https://github.com/shimataiyaki/e-colleague-bot" class="btn-secondary" target="_blank">GitHub</a>
-            </div>
-        </div>
-        <div class="hero-subtitle">Shimataiyaki のサイトへようこそ。</div>
-        
-    </section>
+<center>
+<table border="5" bordercolor="#000080" width="760" cellpadding="10" cellspacing="0" bgcolor="#ffffff">
+  <!-- ヘッダー -->
+  <tr>
+    <td colspan="2" bgcolor="#000080" align="center">
+      <font color="#ffff00" size="5"><b>◆ Shimataiyaki's Website ◆</b></font><br>
+      <font color="#ffffff" size="2">つくる・かく・のこす・でかける。</font>
+    </td>
+  </tr>
 
-    <!-- Vision -->
-    <section class="section-ec">
-        <div class="section-ec-inner">
-            <h2>Vision</h2>
-            <p class="section-subtitle">「ちょっと便利」を、オープンソースで。</p>
-            <div class="usecase-grid" style="margin-top: 40px;">
-                <div class="usecase-item">
-                    <h3>1. Open Source</h3>
-                    <p>すべてのプロダクトはGitHubで公開。コードを共有し、誰もが改良に参加できる形を目指しています。</p>
-                </div>
-                <div class="usecase-item">
-                    <h3>2. For Small Teams</h3>
-                    <p>学校、サークル、少人数チーム。大きな組織のためではなく、身近な人が抱える課題から生まれるプロダクトを。</p>
-                </div>
-                <div class="usecase-item">
-                    <h3>3. Quick & Useful</h3>
-                    <p>大規模開発より、小さく素早く。必要なものを、必要なときに、すぐ届ける。それが「ちょっと便利」の原点です。</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- メニュー -->
+  <tr>
+    <td width="160" bgcolor="#f0f0f0" valign="top" align="center">
+      <font size="2"><b>▼ メニュー</b></font>
+      <hr size="1" color="#c0c0c0" width="80%">
+      <table border="2" bordercolor="#808080" cellpadding="5" cellspacing="2" width="140">
+        <tr><td bgcolor="#ffffff" align="center"><font size="2"><a href="#what-i-do">What I Do</a></font></td></tr>
+        <tr><td bgcolor="#ffffff" align="center"><font size="2"><a href="#work">Work</a></font></td></tr>
+        <tr><td bgcolor="#ffffff" align="center"><font size="2"><a href="#vision">Vision</a></font></td></tr>
+        <tr><td bgcolor="#ffffff" align="center"><font size="2"><a href="#about">About</a></font></td></tr>
+        <tr><td bgcolor="#ffffff" align="center"><font size="2"><a href="#terms">利用規約</a></font></td></tr>
+        <tr><td bgcolor="#ffffff" align="center"><font size="2"><a href="#privacy">プライバシー</a></font></td></tr>
+      </table>
+      <br>
+      <img src="/images/new.gif" alt="NEW!" width="30" height="12"><br>
+      <font size="2" color="#000080"><b>更新情報</b></font><br>
+      <font size="1">2026.06.29<br>サイト改装！</font>
+    </td>
 
-    <!-- About -->
-    <section class="section-ec" id="about">
-        <div class="section-ec-inner">
-            <h2>Shimataiyaki</h2>
-            <p style="text-align:center;">2008年生まれ。中学生の時にWebサイトを公開したのをきっかけに個人開発を始めました。</p>
-            <p style="text-align:center; margin-top: 1rem;">「ちょっと便利、をオープンソースで。」が開発のモットーです。</p>
-            <p style="text-align:center; margin-top: 1.5rem;">
-                <a href="mailto:shimataiyaki.dev@gmail.com" class="mail-link">shimataiyaki.dev@gmail.com</a>
-            </p>
-        </div>
-    </section>
+    <!-- メインコンテンツ -->
+    <td width="600" valign="top">
+      <!-- 電光掲示板（サイト内BGM風） -->
+      <table border="2" bordercolor="#808080" cellpadding="5" cellspacing="0" width="100%">
+        <tr>
+          <td bgcolor="#000000" align="center">
+            <font color="#00ff00" size="3" face="Courier New">◆ NOW LOADING... ◆</font>
+          </td>
+        </tr>
+      </table>
 
-</main>
+      <br>
+
+      <!-- Hero -->
+      <table border="4" bordercolor="#000080" cellpadding="8" cellspacing="0" width="100%">
+        <tr>
+          <td bgcolor="#fffff0" align="center">
+            <font size="4" color="#000080"><b>つくる・かく・のこす・でかける。</b></font><br>
+            <font size="2">好奇心のままに、かたちにして残していく。</font>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+
+      <!-- What I Do -->
+      <a id="what-i-do"></a>
+      <table border="4" bordercolor="#000080" cellpadding="8" cellspacing="0" width="100%">
+        <tr>
+          <td bgcolor="#000080" align="center">
+            <font color="#ffffff" size="3"><b>■ What I Do</b></font>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff">
+            <ul>
+              <li><font size="2"><b>つくる</b> —— プロダクト開発</font></li>
+              <li><font size="2"><b>かく</b> —— <a href="https://note.com/shimataiyaki" target="_blank">note</a></font></li>
+              <li><font size="2"><b>のこす</b> —— 活動の記録</font></li>
+              <li><font size="2"><b>でかける</b> —— 海外・国際交流</font></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+
+      <!-- Work -->
+      <a id="work"></a>
+      <table border="4" bordercolor="#000080" cellpadding="8" cellspacing="0" width="100%">
+        <tr>
+          <td bgcolor="#000080" align="center">
+            <font color="#ffffff" size="3"><b>■ Work</b></font>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff">
+            <font size="2"><b>▼ Products</b></font>
+            <marquee behavior="scroll" direction="left" scrollamount="2">
+              <table border="0" cellpadding="5" cellspacing="0">
+                <tr>
+                  <td><img src="/images/carousel/e-colleague.png" width="160" height="100" alt="e-colleague"></td>
+                  <td><img src="/images/carousel/omikuji.png" width="160" height="100" alt="おみくじ"></td>
+                  <td><img src="/images/carousel/ema.png" width="160" height="100" alt="絵馬"></td>
+                  <td><img src="/images/carousel/mendako.png" width="160" height="100" alt="BBS"></td>
+                </tr>
+              </table>
+            </marquee>
+            <br>
+
+            <font size="2"><b>▼ Awards &amp; Recognition</b></font>
+            <ul>
+              <li><font size="2">2026.XX.XX - 〇〇コンテスト 優秀賞（説明）</font></li>
+              <li><font size="2">2025.XX.XX - 〇〇ハッカソン アイデア賞（説明）</font></li>
+            </ul>
+
+            <font size="2"><b>▼ International Exchange</b></font>
+            <ul>
+              <li><font size="2">202X.XX - ボーイスカウト韓国派遣</font></li>
+              <li><font size="2">202X.XX - 県事業 モンゴル訪問</font></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+
+      <!-- Vision -->
+      <a id="vision"></a>
+      <table border="4" bordercolor="#000080" cellpadding="8" cellspacing="0" width="100%">
+        <tr>
+          <td bgcolor="#000080" align="center">
+            <font color="#ffffff" size="3"><b>■ Vision</b></font>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#fffff0" align="center">
+            <font size="3" color="#800000"><b>思考回路を、ひらく。</b></font><br>
+            <font size="2">考えたこと、つくったもの、選んだこと。<br>そのプロセスを隠さずに残すのは、<br>未来の自分と、たまたま通りかかった誰かのため。</font>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+
+      <!-- About -->
+      <a id="about"></a>
+      <table border="4" bordercolor="#000080" cellpadding="8" cellspacing="0" width="100%">
+        <tr>
+          <td bgcolor="#000080" align="center">
+            <font color="#ffffff" size="3"><b>■ About</b></font>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff">
+            <font size="2">Shimataiyaki（シマタイヤキ）。2008年生まれ。</font><br>
+            <font size="2">中学生でWebサイトを公開してから、気づけば色々つくってきた。</font><br>
+            <font size="2">コードを書くだけでなく、noteで文章を書いたり、カメラを持って歩いたり。</font><br>
+            <font size="2">「ちょっと便利」をオープンソースで。</font><br>
+            <font size="2">肩書きは一つに絞らない。つくる・かく・のこす・でかける。</font>
+            <hr size="1" color="#c0c0c0">
+            <font size="1" color="#808080"><i>A rolling stone gathers no moss.</i></font>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+
+      <!-- 利用規約・プライバシー -->
+      <table border="4" bordercolor="#000080" cellpadding="8" cellspacing="0" width="100%">
+        <tr>
+          <td bgcolor="#000080" align="center">
+            <font color="#ffffff" size="3"><b>■ 利用規約 / プライバシーポリシー</b></font>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff">
+            <details>
+              <summary><font size="2"><a id="terms">利用規約（全文表示）</a></font></summary>
+              <div class="content doc-body">
+                <p class="doc-meta"><font size="1">最終更新日: 2026年5月28日</font></p>
+                <h2><font size="2">1. 適用範囲</font></h2>
+                <p><font size="2">本規約は、Shimataiyaki（以下「運営者」）が提供するウェブサイト（以下「当サイト」）の利用に関し、すべての利用者に適用されます。</font></p>
+                <h2><font size="2">2. 著作権</font></h2>
+                <p><font size="2">当サイトに掲載されている文章、画像、コード等のコンテンツに関する著作権は、特に明記のない限り運営者に帰属します。無断転載・複製を禁じます。</font></p>
+                <h2><font size="2">3. 禁止事項</font></h2>
+                <ol>
+                  <li><font size="2">法令または公序良俗に違反する行為</font></li>
+                  <li><font size="2">運営者または第三者の権利を侵害する行為</font></li>
+                  <li><font size="2">当サイトの運営を妨害する行為</font></li>
+                  <li><font size="2">その他、運営者が不適切と判断する行為</font></li>
+                </ol>
+                <h2><font size="2">4. 免責事項</font></h2>
+                <p><font size="2">当サイトの利用により生じたいかなる損害についても、運営者は一切の責任を負いません。また、掲載情報の正確性・完全性について保証するものではありません。</font></p>
+                <h2><font size="2">5. 規約の変更</font></h2>
+                <p><font size="2">運営者は、事前の通知なく本規約を変更することがあります。変更後は当サイト上に掲載された時点で効力を生じます。</font></p>
+                <h2><font size="2">6. お問い合わせ</font></h2>
+                <p><font size="2">本規約に関するお問い合わせは、以下の連絡先までお願いします。</font></p>
+                <ul>
+                  <li><font size="2"><strong>運営者</strong>: Shimataiyaki</font></li>
+                  <li><font size="2"><strong>メール</strong>: shimataiyaki.dev@gmail.com</font></li>
+                </ul>
+              </div>
+            </details>
+            <hr size="1" color="#c0c0c0">
+            <details>
+              <summary><font size="2"><a id="privacy">プライバシーポリシー（全文表示）</a></font></summary>
+              <div class="content doc-body">
+                <p class="doc-meta"><font size="1">最終更新日: 2026年5月28日</font></p>
+                <h2><font size="2">1. アクセス解析について</font></h2>
+                <p><font size="2">当サイトでは、Google Analytics を使用してアクセスログを収集しています。収集されるデータは匿名であり、個人を特定するものではありません。データの収集にはCookieを使用しています。</font></p>
+                <h2><font size="2">2. お問い合わせについて</font></h2>
+                <p><font size="2">お問い合わせフォームまたはメールアドレスにご連絡いただいた際、送信者のメールアドレスおよびお問い合わせ内容を、返信およびサービス改善の目的でのみ利用します。</font></p>
+                <h2><font size="2">3. Cookieについて</font></h2>
+                <p><font size="2">当サイトでは、アクセス解析および広告配信のためにCookieを使用する場合があります。ブラウザの設定によりCookieを無効にすることができます。</font></p>
+                <h2><font size="2">4. 広告について</font></h2>
+                <p><font size="2">当サイトでは、Google AdSense などの第三者配信事業者による広告を掲載する場合があります。これらの広告配信事業者は、ユーザーの興味に応じた広告を表示するためにCookieを使用することがあります。</font></p>
+                <h2><font size="2">5. 免責事項</font></h2>
+                <p><font size="2">当サイトに掲載されている情報の正確性については万全を期しておりますが、その内容を保証するものではありません。当サイトの利用により生じたいかなる損害についても、運営者は一切の責任を負いません。</font></p>
+                <h2><font size="2">6. お問い合わせ</font></h2>
+                <p><font size="2">本ポリシーに関するお問い合わせは、以下の連絡先までお願いします。</font></p>
+                <ul>
+                  <li><font size="2"><strong>運営者</strong>: Shimataiyaki</font></li>
+                  <li><font size="2"><strong>メール</strong>: shimataiyaki.dev@gmail.com</font></li>
+                </ul>
+              </div>
+            </details>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- フッター -->
+  <tr>
+    <td colspan="2" bgcolor="#000080" align="center">
+      <font color="#ffff00" size="1"><b>Copyright (c) 2026 Shimataiyaki. All rights reserved.</b></font><br>
+      <font color="#ffffff" size="1">Since 2021</font>
+      <br>
+      <img src="/images/counter.gif" alt="アクセスカウンター" width="80" height="20"><br>
+      <font color="#ffffff" size="1">You are visitor No. 00012345</font>
+    </td>
+  </tr>
+</table>
+</center>
