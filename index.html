@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: terminal
 title: "Shimataiyaki | Website"
 title_suffix: false
 description: "つくる・かく・のこす・でかける。好奇心のままに、かたちにして残していく。"
@@ -23,9 +23,11 @@ css: /assets/css/home.css
       whatido &nbsp;- What I Do<br>
       work &nbsp;&nbsp;&nbsp;&nbsp;- Work (Products, Awards, Exchange)<br>
       vision &nbsp;&nbsp;- Vision<br>
+      nav &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show navigation<br>
+      contact &nbsp;- Contact &amp; links<br>
+      sitemap &nbsp;- Site map &amp; directory<br>
       terms &nbsp;&nbsp;&nbsp;- Terms of Service<br>
       privacy &nbsp;- Privacy Policy<br>
-      sitemap &nbsp;- Site map &amp; directory<br>
       help &nbsp;&nbsp;&nbsp;&nbsp;- Show this help<br>
       clear &nbsp;&nbsp;&nbsp;- Clear the terminal<br>
       hello &nbsp;&nbsp;&nbsp;- ???
@@ -46,9 +48,11 @@ css: /assets/css/home.css
     whatido &nbsp;- What I Do<br>
     work &nbsp;&nbsp;&nbsp;&nbsp;- Work (Products, Awards, Exchange)<br>
     vision &nbsp;&nbsp;- Vision<br>
+    nav &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show navigation<br>
+    contact &nbsp;- Contact &amp; links<br>
+    sitemap &nbsp;- Site map &amp; directory<br>
     terms &nbsp;&nbsp;&nbsp;- Terms of Service<br>
     privacy &nbsp;- Privacy Policy<br>
-    sitemap &nbsp;- Site map &amp; directory<br>
     help &nbsp;&nbsp;&nbsp;&nbsp;- Show this help<br>
     clear &nbsp;&nbsp;&nbsp;- Clear the terminal<br>
     hello &nbsp;&nbsp;&nbsp;- ???
@@ -116,11 +120,45 @@ css: /assets/css/home.css
   </div>
 </template>
 
+<template id="template-nav">
+  <div class="template-content">
+    <h3>Navigation</h3>
+    <ul>
+      <li><strong>Home</strong> — <a href="{{ '/' | relative_url }}">/</a></li>
+      <li><strong>Projects</strong>
+        <ul>
+          <li><a href="{{ '/projects/bunkasai' | relative_url }}">R8 文化祭</a></li>
+          <li><a href="{{ '/projects/e-colleague' | relative_url }}">e-colleague</a></li>
+          <li><a href="{{ '/projects/shinkai' | relative_url }}">Shinkai</a></li>
+        </ul>
+      </li>
+      <li><strong>Apps</strong>
+        <ul>
+          <li><a href="{{ '/digital-ema' | relative_url }}">デジタル絵馬</a></li>
+          <li><a href="{{ '/digital-omikuji' | relative_url }}">デジタルおみくじ</a></li>
+          <li><a href="{{ '/mendako-bbs' | relative_url }}">Mendako BBS</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<template id="template-contact">
+  <div class="template-content">
+    <h3>Contact / Links</h3>
+    <ul>
+      <li><iconify-icon icon="mdi:email"></iconify-icon> <a href="mailto:shimataiyaki.dev@gmail.com">shimataiyaki.dev@gmail.com</a></li>
+      <li><iconify-icon icon="mdi:github"></iconify-icon> <a href="https://github.com/shimataiyaki" target="_blank">GitHub</a></li>
+      <li><iconify-icon icon="mdi:note-edit"></iconify-icon> <a href="https://note.com/shimataiyaki" target="_blank">note</a></li>
+    </ul>
+  </div>
+</template>
+
 <template id="template-sitemap">
   <div class="template-content">
     <h3>Site Map / Directory</h3>
     <ul>
-      <li><strong>Top</strong> — <a href="{{ '/index.html' | relative_url }}" target="_blank">index.html</a></li>
+      <li><strong>Top</strong> — <a href="{{ '/' | relative_url }}" target="_blank">index.html</a></li>
       <li><strong>このターミナル</strong> — /</li>
       <li><strong>Products</strong>
         <ul>
@@ -206,6 +244,8 @@ css: /assets/css/home.css
       work: 'template-work',
       vision: 'template-vision',
       about: 'template-about',
+      nav: 'template-nav',
+      contact: 'template-contact',
       sitemap: 'template-sitemap',
       terms: 'template-terms',
       privacy: 'template-privacy'
