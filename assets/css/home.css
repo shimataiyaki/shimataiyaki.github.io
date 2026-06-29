@@ -13,6 +13,11 @@ body {
   font-size: small;
 }
 
+/* テーブルに立体感を追加 */
+table {
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+}
+
 a:link {
   color: #0000ff;
   text-decoration: underline;
@@ -36,7 +41,7 @@ a:hover {
   font-size: 14px;
   padding: 5px;
   text-align: center;
-  border: 2px outset #808080;
+  border: 3px outset #808080;
   margin-bottom: 10px;
 }
 
@@ -55,7 +60,7 @@ font[size="6"] { font-size: xx-large; }
 /* アコーディオン（利用規約・プライバシー） */
 details {
   background: #ffffff;
-  border: 2px solid #808080;
+  border: 2px outset #c0c0c0;
   margin-bottom: 5px;
   padding: 5px;
 }
