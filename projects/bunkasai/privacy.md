@@ -1,5 +1,5 @@
 ---
-layout: articles
+layout: article
 title: データ方針
 ---
 
