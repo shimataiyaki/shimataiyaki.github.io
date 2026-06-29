@@ -23,8 +23,10 @@ layout: none
         vision &nbsp;&nbsp;- Vision<br>
         terms &nbsp;&nbsp;&nbsp;- Terms of Service<br>
         privacy &nbsp;- Privacy Policy<br>
+        sitemap &nbsp;- Site map &amp; directory<br>
         help &nbsp;&nbsp;&nbsp;&nbsp;- Show this help<br>
-        clear &nbsp;&nbsp;&nbsp;- Clear the terminal
+        clear &nbsp;&nbsp;&nbsp;- Clear the terminal<br>
+        hello &nbsp;&nbsp;&nbsp;- ???
       </div>
       <div class="command-line">---</div>
     </div>
@@ -44,8 +46,18 @@ layout: none
       vision &nbsp;&nbsp;- Vision<br>
       terms &nbsp;&nbsp;&nbsp;- Terms of Service<br>
       privacy &nbsp;- Privacy Policy<br>
+      sitemap &nbsp;- Site map &amp; directory<br>
       help &nbsp;&nbsp;&nbsp;&nbsp;- Show this help<br>
-      clear &nbsp;&nbsp;&nbsp;- Clear the terminal
+      clear &nbsp;&nbsp;&nbsp;- Clear the terminal<br>
+      hello &nbsp;&nbsp;&nbsp;- ???
+    </div>
+  </template>
+
+  <template id="template-hello">
+    <div class="template-content">
+      <h3>Hello, visitor.</h3>
+      <p>How can I help you?</p>
+      <p><em>— A rolling stone gathers no moss.</em></p>
     </div>
   </template>
 
@@ -97,6 +109,29 @@ layout: none
       <p>「ちょっと便利」をオープンソースで。肩書きは一つに絞らない。つくる・かく・のこす・でかける。</p>
       <hr>
       <p><em>A rolling stone gathers no moss.</em></p>
+    </div>
+  </template>
+
+  <template id="template-sitemap">
+    <div class="template-content">
+      <h3>Site Map / Directory</h3>
+      <ul>
+        <li><strong>Top</strong> — <a href="{{ '/index.html' | relative_url }}" target="_blank">index.html</a></li>
+        <li><strong>このターミナル</strong> — /terminal.html</li>
+        <li><strong>Products</strong>
+          <ul>
+            <li><a href="https://shimataiyaki.github.io/digital-ema/" target="_blank">デジタル絵馬</a></li>
+            <li><a href="https://shimataiyaki.github.io/digital-omikuji/" target="_blank">デジタルおみくじ</a></li>
+            <li><a href="https://shimataiyaki.github.io/projects/e-colleague/" target="_blank">e-colleague</a></li>
+            <li><a href="https://shimataiyaki.github.io/projects/bunkasai/" target="_blank">文化祭</a></li>
+          </ul>
+        </li>
+        <li><strong>Writing</strong>
+          <ul>
+            <li><a href="https://note.com/shimataiyaki" target="_blank">note</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </template>
 
@@ -156,10 +191,12 @@ layout: none
     const output = document.getElementById('output');
     const templates = {
       help: 'template-help',
+      hello: 'template-hello',
       whatido: 'template-whatido',
       work: 'template-work',
       vision: 'template-vision',
       about: 'template-about',
+      sitemap: 'template-sitemap',
       terms: 'template-terms',
       privacy: 'template-privacy'
     };
@@ -169,13 +206,11 @@ layout: none
         const command = input.value.trim().toLowerCase();
         if (command === '') return;
 
-        // コマンド行を出力
         const cmdLine = document.createElement('div');
         cmdLine.className = 'command-line';
         cmdLine.textContent = command;
         output.appendChild(cmdLine);
 
-        // コマンド実行
         if (command === 'clear') {
           output.innerHTML = '';
         } else if (templates[command]) {
@@ -190,13 +225,11 @@ layout: none
           output.appendChild(errorLine);
         }
 
-        // 自動スクロール
         window.scrollTo(0, document.body.scrollHeight);
         input.value = '';
       }
     });
 
-    // クリックでinputにフォーカス
     document.body.addEventListener('click', () => input.focus());
   </script>
 </body>
