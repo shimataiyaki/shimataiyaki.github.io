@@ -1,16 +1,13 @@
 <footer class="main-footer-ec">
     {% if page.product_nav %}
     <div class="footer-links">
-        <a href="{{ '/about/' | relative_url }}">運営者情報</a>
-        <a href="{{ '/contact/' | relative_url }}">お問い合わせ</a>
         <a href="https://github.com/shimataiyaki/e-colleague-app" target="_blank">ソースコード</a>
-        <a href="{{ '/e-colleague/portal/' | relative_url }}">管理者ポータル</a>
-        <a href="{{ '/e-colleague/terms/' | relative_url }}">利用規約</a>
-        <a href="{{ '/e-colleague/privacy/' | relative_url }}">プライバシーポリシー</a>
+        <a href="{{ '/projects/e-colleague/terms/' | relative_url }}">利用規約</a>
+        <a href="{{ '/projects/e-colleague/privacy/' | relative_url }}">プライバシーポリシー</a>
     </div>
     {% else %}
     <div class="footer-links">
-        <a href="./#">トップ</a>
+        <a href="#">ページトップ</a>
     </div>
     {% endif %}
 
