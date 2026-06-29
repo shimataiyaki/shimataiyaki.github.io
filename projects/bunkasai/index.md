@@ -1,5 +1,5 @@
 ---
-layout: articles
+layout: article
 title: R8年度文化祭展示プロジェクト
 ---
 
