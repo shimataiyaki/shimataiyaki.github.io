@@ -19,18 +19,19 @@ css: /assets/css/home.css
     <div class="command-line">---</div>
     <div class="template-content">
       <strong>Available commands:</strong><br>
-      about &nbsp;&nbsp;&nbsp;&nbsp;- About Shimataiyaki<br>
-      whatido &nbsp;- What I Do<br>
-      work &nbsp;&nbsp;&nbsp;&nbsp;- Work (Products, Awards, Exchange)<br>
-      vision &nbsp;&nbsp;- Vision<br>
-      nav &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show navigation<br>
-      contact &nbsp;- Contact &amp; links<br>
-      sitemap &nbsp;- Site map &amp; directory<br>
-      terms &nbsp;&nbsp;&nbsp;- Terms of Service<br>
-      privacy &nbsp;- Privacy Policy<br>
-      help &nbsp;&nbsp;&nbsp;&nbsp;- Show this help<br>
-      clear &nbsp;&nbsp;&nbsp;- Clear the terminal<br>
-      hello &nbsp;&nbsp;&nbsp;- ???
+      about &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- About Shimataiyaki<br>
+      clear &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Clear the terminal<br>
+      contact &nbsp;&nbsp;&nbsp;- Contact &amp; links<br>
+      copyright &nbsp;- Show copyright<br>
+      hello &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ???<br>
+      help &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show this help<br>
+      nav &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show navigation<br>
+      privacy &nbsp;&nbsp;&nbsp;- Privacy Policy<br>
+      sitemap &nbsp;&nbsp;&nbsp;- Site map &amp; directory<br>
+      terms &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Terms of Service<br>
+      vision &nbsp;&nbsp;&nbsp;&nbsp;- Vision<br>
+      whatido &nbsp;&nbsp;- What I Do<br>
+      work &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Work (Products, Awards, Exchange)
     </div>
     <div class="command-line">---</div>
   </div>
@@ -44,27 +45,26 @@ css: /assets/css/home.css
 <template id="template-help">
   <div class="template-content">
     <strong>Available commands:</strong><br>
-    about &nbsp;&nbsp;&nbsp;&nbsp;- About Shimataiyaki<br>
-    whatido &nbsp;- What I Do<br>
-    work &nbsp;&nbsp;&nbsp;&nbsp;- Work (Products, Awards, Exchange)<br>
-    vision &nbsp;&nbsp;- Vision<br>
-    nav &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show navigation<br>
-    contact &nbsp;- Contact &amp; links<br>
-    sitemap &nbsp;- Site map &amp; directory<br>
-    terms &nbsp;&nbsp;&nbsp;- Terms of Service<br>
-    privacy &nbsp;- Privacy Policy<br>
-    help &nbsp;&nbsp;&nbsp;&nbsp;- Show this help<br>
-    clear &nbsp;&nbsp;&nbsp;- Clear the terminal<br>
-    hello &nbsp;&nbsp;&nbsp;- ???
+    about &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- About Shimataiyaki<br>
+    clear &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Clear the terminal<br>
+    contact &nbsp;&nbsp;&nbsp;- Contact &amp; links<br>
+    copyright &nbsp;- Show copyright<br>
+    hello &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ???<br>
+    help &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show this help<br>
+    nav &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show navigation<br>
+    privacy &nbsp;&nbsp;&nbsp;- Privacy Policy<br>
+    sitemap &nbsp;&nbsp;&nbsp;- Site map &amp; directory<br>
+    terms &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Terms of Service<br>
+    vision &nbsp;&nbsp;&nbsp;&nbsp;- Vision<br>
+    whatido &nbsp;&nbsp;- What I Do<br>
+    work &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Work (Products, Awards, Exchange)
   </div>
 </template>
 
 <template id="template-hello">
   <div class="template-content">
     <h3>Hello, visitor.</h3>
-    <p>ようこそ、Shimataiyaki のターミナルへ。</p>
-    <p>この場所は、思考と好奇心のログブックです。</p>
-    <p>つくる・かく・のこす・でかける。</p>
+    <p>ようこそ、Shimataiyaki のサイトへ。</p>
     <p><em>— A rolling stone gathers no moss.</em></p>
   </div>
 </template>
@@ -154,12 +154,19 @@ css: /assets/css/home.css
   </div>
 </template>
 
+<template id="template-copyright">
+  <div class="template-content">
+    <h3>Copyright</h3>
+    <p>Copyright (c) 2026 Shimataiyaki. All rights reserved.</p>
+    <p><em>Since 2023</em></p>
+  </div>
+</template>
+
 <template id="template-sitemap">
   <div class="template-content">
     <h3>Site Map / Directory</h3>
     <ul>
       <li><strong>Top</strong> — <a href="{{ '/' | relative_url }}" target="_blank">index.html</a></li>
-      <li><strong>このターミナル</strong> — /</li>
       <li><strong>Products</strong>
         <ul>
           <li><a href="https://shimataiyaki.github.io/digital-ema/" target="_blank">デジタル絵馬</a></li>
@@ -167,15 +174,10 @@ css: /assets/css/home.css
           <li><a href="https://shimataiyaki.github.io/products/e-colleague/" target="_blank">e-colleague</a></li>
         </ul>
       </li>
-      <li><strong>Writing</strong>
-        <ul>
-          <li><a href="https://note.com/shimataiyaki" target="_blank">note</a></li>
-        </ul>
-      </li>
       <li><strong>Links</strong>
         <ul>
           <li><a href="https://github.com/shimataiyaki" target="_blank"><iconify-icon icon="mdi:github"></iconify-icon> GitHub</a></li>
-          <li><a href="https://note.com/shimataiyaki" target="_blank"><iconify-icon icon="mdi:note-edit"></iconify-icon> note</a></li>
+          <li><a href="https://note.com/shimataiyaki" target="_blank"><iconify-icon icon="mdi:note"></iconify-icon> note</a></li>
         </ul>
       </li>
     </ul>
@@ -238,17 +240,19 @@ css: /assets/css/home.css
     const input = document.getElementById('input');
     const output = document.getElementById('output');
     const templates = {
-      help: 'template-help',
-      hello: 'template-hello',
-      whatido: 'template-whatido',
-      work: 'template-work',
-      vision: 'template-vision',
       about: 'template-about',
-      nav: 'template-nav',
+      clear: null,
       contact: 'template-contact',
+      copyright: 'template-copyright',
+      hello: 'template-hello',
+      help: 'template-help',
+      nav: 'template-nav',
+      privacy: 'template-privacy',
       sitemap: 'template-sitemap',
       terms: 'template-terms',
-      privacy: 'template-privacy'
+      vision: 'template-vision',
+      whatido: 'template-whatido',
+      work: 'template-work'
     };
 
     input.addEventListener('keydown', function(e) {
@@ -269,6 +273,8 @@ css: /assets/css/home.css
             const clone = template.content.cloneNode(true);
             output.appendChild(clone);
           }
+        } else if (templates[command] === null) {
+          // clear は上で処理済み
         } else {
           const errorLine = document.createElement('div');
           errorLine.textContent = `command not found: ${command}. Type help for available commands.`;
