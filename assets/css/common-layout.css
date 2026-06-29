@@ -463,71 +463,55 @@ body {
   color: var(--muted-text);
 }
 
-/* ============================================
-   フッター
-   ============================================ */
-.main-footer-ec {
-  margin-top: 0;
-  padding: 40px 1.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--muted-text);
-  border-top: 1px solid var(--border-color);
-  background: var(--gray-bg);
-}
-
-.footer-links {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-  font-size: 0.85rem;
-}
-
-.footer-links a {
-  color: var(--muted-text);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.footer-links a:hover {
-  color: #1d1d1f;
-}
-
+/* ===== フッター下部（共通） ===== */
 .footer-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
 .footer-bottom p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--muted-text);
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted-text);
+    line-height: 1; /* 高さをアイコンに合わせる */
 }
 
+/* SNSリンク（フッター用） */
 .sns-links-ec {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
 }
 
 .sns-links-ec a {
-  color: var(--muted-text);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted-text);
+    text-decoration: none;
+    transition: color 0.2s;
+    line-height: 1; /* アイコンの高さを統一 */
 }
 
 .sns-links-ec a:hover {
-  color: #1d1d1f;
+    color: var(--text-color);
+}
+
+.sns-links-ec iconify-icon {
+    color: var(--muted-text);
+    transition: color 0.2s;
+    /* SVGアイコンの微調整 */
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.sns-links-ec a:hover iconify-icon {
+    color: var(--accent-color);
 }
 
 /* ============================================
