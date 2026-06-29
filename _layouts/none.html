@@ -1,3 +1,10 @@
----
----
-{{ content }}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {{ content }}
+  <script src="{{ '/assets/js/common-nav.js' | relative_url }}"></script>
+</body>
+</html>
