@@ -1,291 +1,107 @@
 ---
-layout: terminal
+layout: default
 title: "Shimataiyaki | Website"
 title_suffix: false
-description: "つくる・かく・のこす・でかける。好奇心のままに、かたちにして残していく。"
-og_title: "Shimataiyaki | Website"
-og_description: "つくる・かく・のこす・でかける。好奇心のままに、かたちにして残していく。"
+description: "Shimataiyakiのポートフォリオ。思考と制作物の記録。"
+og_title: "Shimataiyaki | Portfolio"
+og_description: "思考と制作物の記録。"
 og_type: website
 og_image: /images/ogp.png
 twitter_title: "Shimataiyaki | Website"
-twitter_description: "つくる・かく・のこす・でかける。好奇心のままに、かたちにして残していく。"
-css: /assets/css/home.css
+twitter_description: "思考と制作物の記録。"
+css: /assets/css/portfolio.css
 ---
 
-<main id="terminal">
-  <div id="output">
-    <div class="command-line">Welcome to Shimataiyaki's Site</div>
-    <div class="command-line">Available commands are listed below. Type a command and press Enter.</div>
-    <div class="command-line">---</div>
-    <div class="template-content">
-      <strong>Available commands:</strong><br>
-      about &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- About Shimataiyaki<br>
-      clear &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Clear the terminal<br>
-      contact &nbsp;&nbsp;&nbsp;- Contact &amp; links<br>
-      copyright &nbsp;- Show copyright<br>
-      hello &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ???<br>
-      help &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show this help<br>
-      nav &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show navigation<br>
-      privacy &nbsp;&nbsp;&nbsp;- Privacy Policy<br>
-      sitemap &nbsp;&nbsp;&nbsp;- Site map &amp; directory<br>
-      terms &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Terms of Service<br>
-      vision &nbsp;&nbsp;&nbsp;&nbsp;- Vision<br>
-      whatido &nbsp;&nbsp;- What I Do<br>
-      work &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Work (Products, Awards, Exchange)
+<main class="main-content">
+
+  <!-- Hero -->
+  <section class="section-hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Shimataiyaki</h1>
+      <p class="hero-copy">つくる・かく・のこす・でかける。</p>
+      <p class="hero-sub">好奇心と思考をかたちに。チームの「ちょっとした困った」を解決するプロダクトをつくっています。</p>
     </div>
-    <div class="command-line">---</div>
-  </div>
-  <div id="input-line">
-    <span class="prompt">$</span>
-    <input type="text" id="input" autofocus autocomplete="off">
-  </div>
+  </section>
+
+  <!-- About -->
+  <section class="section-ec" id="about">
+    <div class="section-ec-inner">
+      <h2>About</h2>
+      <p>2008年生まれ。高校生。</p>
+      <p>中学生でWebサイトを公開してから、気づけば色々つくってきた。コードを書くだけでなく、noteで文章を書いたり、カメラを持って歩いたり、海外に出たり。</p>
+      <p>興味の対象は「チームの情報共有」と「思考の言語化」。複数人で動くときに起こる「確認疲れ」や「属人化」を、ちょっとした仕組みで解決するのが好きです。</p>
+    </div>
+  </section>
+
+  <!-- Project: 文化祭 -->
+  <section class="section-ec" id="project">
+    <div class="section-ec-inner">
+      <h2>Project: 文化祭</h2>
+      <p>高校の文化祭で、情報処理部の展示として企画・開発した2つのWebアプリケーション。</p>
+      <div class="work-grid">
+        <div class="work-item">
+          <h3>デジタル絵馬</h3>
+          <p>願い事をモニターに絵馬として表示するインスタレーション。Googleフォームからの投稿をGASで処理し、5列のグリッドにリアルタイム表示。奉納アーカイブ機能付き。</p>
+          <a href="https://shimataiyaki.github.io/digital-ema/" target="_blank" class="btn-secondary">プロダクトページ</a>
+        </div>
+        <div class="work-item">
+          <h3>デジタルおみくじ</h3>
+          <p>16枚の札から1枚を選んでタップすると、漢数字の結果がポップアップ表示されるWebおみくじ。紙カードと連動し、文化祭の来場者に体験してもらった。</p>
+          <a href="https://shimataiyaki.github.io/digital-omikuji/" target="_blank" class="btn-secondary">プロダクトページ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writings -->
+  <section class="section-ec" id="writings">
+    <div class="section-ec-inner">
+      <h2>Writings</h2>
+      <p>noteで、プロジェクトの設計思想や開発の裏側を公開しています。単なる「作りました」ではなく、なぜその仕様にしたのか、何を考えたのかを残すことを大切にしています。</p>
+      <div class="news-list">
+        <a href="https://note.com/shimataiyaki/n/n55b311b7148d" target="_blank" class="news-row">
+          <span class="news-date">2026.05.14</span>
+          <span class="news-title">タスク管理、楽にしよ？：グループLINEで動作するAI botをGemini APIで実装してみた。</span>
+          <span class="news-arrow">→</span>
+        </a>
+        <div class="news-list">
+        <a href="https://note.com/shimataiyaki/n/nee4d5914f560" target="_blank" class="news-row">
+          <span class="news-date">2026.06.16</span>
+          <span class="news-title">#1 文化祭で「多い」を定義できなかった話</span>
+          <span class="news-arrow">→</span>
+        </a>
+        <!-- 他の記事があれば追加 -->
+      </div>
+      <div class="news-more">
+        <a href="https://note.com/shimataiyaki" target="_blank" class="btn-secondary">note を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experimental -->
+  <section class="section-ec" id="experimental">
+    <div class="section-ec-inner">
+      <h2>Experimental</h2>
+      <p>個人で試行的に開発しているプロダクト。</p>
+      <div class="work-grid">
+        <div class="work-item">
+          <h3>Tasno</h3>
+          <p>LINEグループの会話から、AIがタスクを自動抽出・管理するBot。</p>
+          <a href="/products/tasno/" class="btn-secondary">プロダクトページ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section-ec" id="contact">
+    <div class="section-ec-inner">
+      <h2>Contact</h2>
+      <p>ご質問やご相談は、以下のメールアドレスまで。</p>
+      <p>
+        <a href="mailto:shimataiyaki.dev@gmail.com">shimataiyaki.dev@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
 </main>
-
-<!-- コンテンツテンプレート群 -->
-<template id="template-help">
-  <div class="template-content">
-    <strong>Available commands:</strong><br>
-    about &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- About Shimataiyaki<br>
-    clear &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Clear the terminal<br>
-    contact &nbsp;&nbsp;&nbsp;- Contact &amp; links<br>
-    copyright &nbsp;- Show copyright<br>
-    hello &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ???<br>
-    help &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show this help<br>
-    nav &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Show navigation<br>
-    privacy &nbsp;&nbsp;&nbsp;- Privacy Policy<br>
-    sitemap &nbsp;&nbsp;&nbsp;- Site map &amp; directory<br>
-    terms &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Terms of Service<br>
-    vision &nbsp;&nbsp;&nbsp;&nbsp;- Vision<br>
-    whatido &nbsp;&nbsp;- What I Do<br>
-    work &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Work (Products, Awards, Exchange)
-  </div>
-</template>
-
-<template id="template-hello">
-  <div class="template-content">
-    <h3>Hello, visitor.</h3>
-    <p>ようこそ、Shimataiyaki のサイトへ。</p>
-    <p><em>— A rolling stone gathers no moss.</em></p>
-  </div>
-</template>
-
-<template id="template-whatido">
-  <div class="template-content">
-    <h3>What I Do</h3>
-    <ul>
-      <li><strong>つくる</strong> —— プロダクト開発</li>
-      <li><strong>かく</strong> —— <a href="https://note.com/shimataiyaki" target="_blank">note</a></li>
-      <li><strong>のこす</strong> —— 活動の記録</li>
-      <li><strong>でかける</strong> —— 海外・国際交流</li>
-    </ul>
-  </div>
-</template>
-
-<template id="template-work">
-  <div class="template-content">
-    <h3>Products</h3>
-    <ul>
-      <li><a href="https://shimataiyaki.github.io/digital-ema/" target="_blank">デジタル絵馬</a></li>
-      <li><a href="https://shimataiyaki.github.io/digital-omikuji/" target="_blank">デジタルおみくじ</a></li>
-      <li><a href="https://shimataiyaki.github.io/products/e-colleague/" target="_blank">e-colleague</a></li>
-    </ul>
-    <h3>Awards &amp; Recognition</h3>
-    <ul>
-      <li>2025.08.20 - LOVOT活用アイデアコンテスト 最優秀賞</li>
-      <li>2026.02.21 - アーバンデータチャレンジ2025 銀賞</li>
-    </ul>
-    <h3>International Exchange</h3>
-    <ul>
-      <li>2023.08 - ボーイスカウト韓国派遣</li>
-      <li>2025.08 - 静岡県事業 モンゴル訪問</li>
-    </ul>
-  </div>
-</template>
-
-<template id="template-vision">
-  <div class="template-content">
-    <h3>思考回路を、ひらく。</h3>
-    <p>考えたこと、つくったもの、選んだこと。そのプロセスを隠さずに残すのは、未来の自分と、たまたま通りかかった誰かのため。</p>
-  </div>
-</template>
-
-<template id="template-about">
-  <div class="template-content">
-    <h3>About Shimataiyaki</h3>
-    <p>Shimataiyaki（シマタイヤキ）。2008年生まれ。</p>
-    <p>中学生でWebサイトを公開してから、気づけば色々つくってきた。コードを書くだけでなく、noteで文章を書いたり、カメラを持って歩いたり。</p>
-    <p>「ちょっと便利」をオープンソースで。肩書きは一つに絞らない。つくる・かく・のこす・でかける。</p>
-    <hr>
-    <p><em>A rolling stone gathers no moss.</em></p>
-  </div>
-</template>
-
-<template id="template-nav">
-  <div class="template-content">
-    <h3>Navigation</h3>
-    <ul>
-      <li><strong>Home</strong> — <a href="{{ '/' | relative_url }}">/</a></li>
-      <li><strong>Projects</strong>
-        <ul>
-          <li><a href="{{ '/projects/bunkasai' | relative_url }}">R8 文化祭</a></li>
-          <li><a href="{{ '/projects/e-colleague' | relative_url }}">e-colleague</a></li>
-          <li><a href="{{ '/projects/shinkai' | relative_url }}">Shinkai</a></li>
-        </ul>
-      </li>
-      <li><strong>Apps</strong>
-        <ul>
-          <li><a href="{{ '/digital-ema' | relative_url }}">デジタル絵馬</a></li>
-          <li><a href="{{ '/digital-omikuji' | relative_url }}">デジタルおみくじ</a></li>
-          <li><a href="{{ '/mendako-bbs' | relative_url }}">Mendako BBS</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</template>
-
-<template id="template-contact">
-  <div class="template-content">
-    <h3>Contact / Links</h3>
-    <ul>
-      <li><iconify-icon icon="mdi:email"></iconify-icon> <a href="mailto:shimataiyaki.dev@gmail.com">shimataiyaki.dev@gmail.com</a></li>
-      <li><iconify-icon icon="simple-icons:github"></iconify-icon> <a href="https://github.com/shimataiyaki" target="_blank">GitHub</a></li>
-      <li><iconify-icon icon="simple-icons:note"></iconify-icon> <a href="https://note.com/shimataiyaki" target="_blank">note</a></li>
-    </ul>
-  </div>
-</template>
-
-<template id="template-copyright">
-  <div class="template-content">
-    <h3>Copyright</h3>
-    <p>Copyright (c) 2026 Shimataiyaki. All rights reserved.</p>
-    <p><em>Since 2023</em></p>
-  </div>
-</template>
-
-<template id="template-sitemap">
-  <div class="template-content">
-    <h3>Site Map / Directory</h3>
-    <ul>
-      <li><strong>Top</strong> — <a href="{{ '/' | relative_url }}" target="_blank">index.html</a></li>
-      <li><strong>Products</strong>
-        <ul>
-          <li><a href="https://shimataiyaki.github.io/digital-ema/" target="_blank">デジタル絵馬</a></li>
-          <li><a href="https://shimataiyaki.github.io/digital-omikuji/" target="_blank">デジタルおみくじ</a></li>
-          <li><a href="https://shimataiyaki.github.io/products/e-colleague/" target="_blank">e-colleague</a></li>
-        </ul>
-      </li>
-      <li><strong>Links</strong>
-        <ul>
-          <li><a href="https://github.com/shimataiyaki" target="_blank"><iconify-icon icon="simple-icons:github"></iconify-icon> GitHub</a></li>
-          <li><a href="https://note.com/shimataiyaki" target="_blank"><iconify-icon icon="simple-icons:note"></iconify-icon> note</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</template>
-
-<template id="template-terms">
-  <div class="template-content">
-    <h3>利用規約</h3>
-    <p>最終更新日: 2026年5月28日</p>
-    <h4>1. 適用範囲</h4>
-    <p>本規約は、Shimataiyaki（以下「運営者」）が提供するウェブサイト（以下「当サイト」）の利用に関し、すべての利用者に適用されます。</p>
-    <h4>2. 著作権</h4>
-    <p>当サイトに掲載されている文章、画像、コード等のコンテンツに関する著作権は、特に明記のない限り運営者に帰属します。無断転載・複製を禁じます。</p>
-    <h4>3. 禁止事項</h4>
-    <ol>
-      <li>法令または公序良俗に違反する行為</li>
-      <li>運営者または第三者の権利を侵害する行為</li>
-      <li>当サイトの運営を妨害する行為</li>
-      <li>その他、運営者が不適切と判断する行為</li>
-    </ol>
-    <h4>4. 免責事項</h4>
-    <p>当サイトの利用により生じたいかなる損害についても、運営者は一切の責任を負いません。また、掲載情報の正確性・完全性について保証するものではありません。</p>
-    <h4>5. 規約の変更</h4>
-    <p>運営者は、事前の通知なく本規約を変更することがあります。変更後は当サイト上に掲載された時点で効力を生じます。</p>
-    <h4>6. お問い合わせ</h4>
-    <p>本規約に関するお問い合わせは、以下の連絡先までお願いします。</p>
-    <ul>
-      <li><strong>運営者</strong>: Shimataiyaki</li>
-      <li><strong>メール</strong>: shimataiyaki.dev@gmail.com</li>
-    </ul>
-  </div>
-</template>
-
-<template id="template-privacy">
-  <div class="template-content">
-    <h3>プライバシーポリシー</h3>
-    <p>最終更新日: 2026年5月28日</p>
-    <h4>1. アクセス解析について</h4>
-    <p>当サイトでは、Google Analytics を使用してアクセスログを収集しています。収集されるデータは匿名であり、個人を特定するものではありません。データの収集にはCookieを使用しています。</p>
-    <h4>2. お問い合わせについて</h4>
-    <p>お問い合わせフォームまたはメールアドレスにご連絡いただいた際、送信者のメールアドレスおよびお問い合わせ内容を、返信およびサービス改善の目的でのみ利用します。</p>
-    <h4>3. Cookieについて</h4>
-    <p>当サイトでは、アクセス解析および広告配信のためにCookieを使用する場合があります。ブラウザの設定によりCookieを無効にすることができます。</p>
-    <h4>4. 広告について</h4>
-    <p>当サイトでは、Google AdSense などの第三者配信事業者による広告を掲載する場合があります。これらの広告配信事業者は、ユーザーの興味に応じた広告を表示するためにCookieを使用することがあります。</p>
-    <h4>5. 免責事項</h4>
-    <p>当サイトに掲載されている情報の正確性については万全を期しておりますが、その内容を保証するものではありません。当サイトの利用により生じたいかなる損害についても、運営者は一切の責任を負いません。</p>
-    <h4>6. お問い合わせ</h4>
-    <p>本ポリシーに関するお問い合わせは、以下の連絡先までお願いします。</p>
-    <ul>
-      <li><strong>運営者</strong>: Shimataiyaki</li>
-      <li><strong>メール</strong>: shimataiyaki.dev@gmail.com</li>
-    </ul>
-  </div>
-</template>
-
-<script>
-  (function() {
-    const input = document.getElementById('input');
-    const output = document.getElementById('output');
-    const templates = {
-      about: 'template-about',
-      clear: null,
-      contact: 'template-contact',
-      copyright: 'template-copyright',
-      hello: 'template-hello',
-      help: 'template-help',
-      nav: 'template-nav',
-      privacy: 'template-privacy',
-      sitemap: 'template-sitemap',
-      terms: 'template-terms',
-      vision: 'template-vision',
-      whatido: 'template-whatido',
-      work: 'template-work'
-    };
-
-    input.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') {
-        const command = input.value.trim().toLowerCase();
-        if (command === '') return;
-
-        const cmdLine = document.createElement('div');
-        cmdLine.className = 'command-line';
-        cmdLine.textContent = command;
-        output.appendChild(cmdLine);
-
-        if (command === 'clear') {
-          output.innerHTML = '';
-        } else if (templates[command]) {
-          const template = document.getElementById(templates[command]);
-          if (template) {
-            const clone = template.content.cloneNode(true);
-            output.appendChild(clone);
-          }
-        } else if (templates[command] === null) {
-          // clear は上で処理済み
-        } else {
-          const errorLine = document.createElement('div');
-          errorLine.textContent = `command not found: ${command}. Type help for available commands.`;
-          output.appendChild(errorLine);
-        }
-
-        window.scrollTo(0, document.body.scrollHeight);
-        input.value = '';
-      }
-    });
-
-    document.body.addEventListener('click', () => input.focus());
-  })();
-</script>
