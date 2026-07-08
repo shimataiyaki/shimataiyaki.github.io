@@ -1,0 +1,195 @@
+/* ============================================
+   portfolio.css - ポートフォリオ専用スタイル
+   common-layout.css の変数を継承
+   lp.css をベースに、温かみと誠実さを追加
+   ============================================ */
+
+body {
+    font-family: 'M PLUS 1p', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #fafaf9;
+    color: var(--text-color);
+    line-height: 1.8;
+    font-weight: 400;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.main-content {
+    padding: 0;
+    margin: 0;
+}
+
+/* Hero */
+.section-hero {
+    padding: 80px 1.5rem 60px;
+    text-align: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.hero-copy {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 24px;
+}
+
+.hero-sub {
+    font-size: 1rem;
+    color: var(--muted-text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* セクション共通 */
+.section-ec {
+    padding: 60px 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-ec:last-of-type {
+    border-bottom: none;
+}
+
+.section-ec-inner {
+    max-width: 100%;
+}
+
+.section-ec h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.section-ec p {
+    margin-bottom: 1rem;
+    color: var(--muted-text);
+}
+
+/* Work グリッド */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.work-item {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.work-item h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.work-item p {
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+/* ボタン */
+.btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--text-color);
+    padding: 8px 20px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    border: 1px solid var(--border-color);
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover {
+    background: var(--text-color);
+    color: #fff;
+    border-color: var(--text-color);
+}
+
+/* News リスト */
+.news-list {
+    margin-top: 24px;
+}
+
+.news-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-color);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.2s;
+}
+
+.news-row:first-child {
+    border-top: 1px solid var(--border-color);
+}
+
+.news-date {
+    font-size: 0.85rem;
+    color: var(--muted-text);
+    min-width: 100px;
+}
+
+.news-title {
+    flex: 1;
+    font-weight: 500;
+}
+
+.news-arrow {
+    color: var(--muted-text);
+    transition: color 0.2s;
+}
+
+.news-row:hover {
+    color: var(--accent-color);
+}
+
+.news-row:hover .news-arrow {
+    color: var(--accent-color);
+}
+
+.news-more {
+    margin-top: 20px;
+}
+
+/* モバイル */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .section-ec {
+        padding: 40px 1.2rem;
+    }
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+    .news-row {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .news-date {
+        min-width: auto;
+    }
+}
