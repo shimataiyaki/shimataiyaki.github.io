@@ -47,7 +47,7 @@ title: データ方針
 
 1. 生データは、Googleフォーム等の外部サービスを通じて取得される。  
 2. 生データは分析のため、必要に応じて開発者の管理する環境へ移管される。  
-3. 生データは、分析完了後に復元不能な方法により削除されるものとする。  
+3. 分析はタイムスタンプなどの個人を特定できない様なもののみを対象とする。 
 4. 統計データは、個人を特定しない形に限り保持および利用することができる。
 
 ---
@@ -90,4 +90,4 @@ title: データ方針
 - [プロジェクトページ](https://shimataiyaki.github.io/projects/bunkasai/)
 - [提供条件（利用範囲・運用方針）](https://shimataiyaki.github.io/projects/bunkasai/terms)
 
-© 2026 Shimataiyaki
+© 2026 Shimataiyaki, all roghts reserved.
