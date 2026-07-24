@@ -28,8 +28,8 @@ title: R8年度文化祭展示プロジェクト
 来場者の入力体験を受け付け、可視化するためのWebアプリケーションです。  
 文化祭展示におけるデジタル入力体験の基盤として機能します。
 
-[公開ページ](https://shimataiyaki.github.io/digital-ema)
-[リポジトリ](https://github.com/shimataiyaki/digital-ema)
+- [公開ページ](https://shimataiyaki.github.io/digital-ema)
+- [リポジトリ](https://github.com/shimataiyaki/digital-ema)
 
 ---
 
@@ -38,8 +38,8 @@ title: R8年度文化祭展示プロジェクト
 抽選体験を提供し、紙カードと連動した出力を行うWebアプリケーションです。  
 展示におけるインタラクティブな抽選体験を担当します。
 
-[公開ページ](https://shimataiyaki.github.io/digital-omikuji)
-[リポジトリ](https://github.com/shimataiyaki/digital-omikuji)
+- [公開ページ](https://shimataiyaki.github.io/digital-omikuji)
+- [リポジトリ](https://github.com/shimataiyaki/digital-omikuji)
 
 ---
 
