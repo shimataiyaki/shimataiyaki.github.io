@@ -1,7 +1,8 @@
---
-layout: default
+---
+title: サイト利用規約
 css: assets/css/document.css
---
+---
+
 # サイト利用規約
 
 本利用規約（以下「本規約」）は、個人サイト「shimataiyaki.github.io」（以下「当サイト」）が提供するコンテンツおよびWebアプリケーション（以下「本サービス」）の利用条件を定めるものです。
