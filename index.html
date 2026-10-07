@@ -2,13 +2,13 @@
 layout: default
 title: "Shimataiyaki | Portfolio"
 title_suffix: false
-description: "Webプロダクトをつくる高校生、Shimataiyakiのポートフォリオ。"
+description: "Shimataiyakiのプロダクトと活動の記録。"
 og_title: "Shimataiyaki | Portfolio"
-og_description: "個人開発と活動の記録。"
+og_description: "プロダクトと活動の記録。"
 og_type: website
 og_image: /images/ogp.png
 twitter_title: "Shimataiyaki | Portfolio"
-twitter_description: "個人開発と活動の記録。"
+twitter_description: "プロダクトと活動の記録。"
 css: /assets/css/lp.css
 ---
 
@@ -16,56 +16,123 @@ css: /assets/css/lp.css
   <section class="portfolio-hero" aria-labelledby="hero-title">
     <div class="portfolio-hero__glow portfolio-hero__glow--one" aria-hidden="true"></div>
     <div class="portfolio-hero__glow portfolio-hero__glow--two" aria-hidden="true"></div>
+
     <div class="portfolio-container portfolio-hero__inner">
-      <p class="portfolio-eyebrow"><span></span> Student developer · Japan</p>
-      <p class="portfolio-hero__lead">プロダクト、つくってます。</p>
+      <p class="portfolio-eyebrow">
+        <span></span> Student developer · Japan
+      </p>
+
+      <h1 id="hero-title">
+        つくったものと、<br>
+        <em>活動の記録。</em>
+      </h1>
+
+      <p class="portfolio-hero__lead">
+        Webサイトやアプリをつくっています。
+      </p>
+
       <div class="portfolio-actions">
-        <a class="portfolio-button portfolio-button--light" href="#works">制作物を見る <span aria-hidden="true">↘</span></a>
-        <a class="portfolio-button portfolio-button--ghost" href="https://github.com/shimataiyaki" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a class="portfolio-button portfolio-button--light" href="#works">
+          制作物を見る <span aria-hidden="true">↘</span>
+        </a>
+        <a
+          class="portfolio-button portfolio-button--ghost"
+          href="https://github.com/shimataiyaki"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
       </div>
+
       <div class="portfolio-hero__meta" aria-label="プロフィール概要">
         <p><span>Focus</span>Web / UI / Community</p>
         <p><span>Based in</span>Shizuoka, Japan</p>
-        <p><span>Status</span><strong><i></i> Building new things</strong></p>
+        <p><span>Profile</span>Student developer</p>
       </div>
     </div>
   </section>
 
-  <section class="portfolio-section portfolio-intro" id="about" aria-labelledby="about-title">
+  <section
+    class="portfolio-section portfolio-intro"
+    id="about"
+    aria-labelledby="about-title"
+  >
     <div class="portfolio-container portfolio-intro__grid">
       <p class="portfolio-section-label">01 / About</p>
+
       <div>
-        <h2 id="about-title">好奇心を起点に、<br>仕組みと体験をつくる。</h2>
-        <p class="portfolio-intro__copy">2008年生まれの高校生。身近な課題や「あったらいいな」を見つけ、Webサイトやアプリとして形にしています。実装だけでなく、使う人への伝わり方や運用まで含めて考えることを大切にしています。</p>
+        <h2 id="about-title">
+          Webサイトやアプリを<br>
+          つくっています。
+        </h2>
+
+        <p class="portfolio-intro__copy">
+          2008年生まれの高校生です。身近な課題や「あったらいいな」と思ったものを、
+          Webサイトやアプリとして形にしています。実装だけでなく、使う人への伝わり方や
+          公開後の運用も考えながら制作しています。
+        </p>
+
         <div class="portfolio-tags" aria-label="活動分野">
-          <span>Product design</span><span>Web development</span><span>Writing</span><span>Community</span>
+          <span>Product design</span>
+          <span>Web development</span>
+          <span>Writing</span>
+          <span>Community</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="portfolio-section portfolio-works" id="works" aria-labelledby="works-title">
+  <section
+    class="portfolio-section portfolio-works"
+    id="works"
+    aria-labelledby="works-title"
+  >
     <div class="portfolio-container">
       <div class="portfolio-heading-row">
         <div>
           <p class="portfolio-section-label">02 / Selected products</p>
           <h2 id="works-title">つくったもの</h2>
         </div>
+
         <p>開発から運用まで、一貫して行います。</p>
       </div>
 
       <article class="work-card work-card--featured">
         <div class="work-card__visual work-card__visual--tasno">
-          <img src="{{ '/images/taskdemo.png' | relative_url }}" alt="Tasnoのタスク管理画面" loading="lazy">
+          <img
+            src="{{ '/images/taskdemo.png' | relative_url }}"
+            alt="Tasnoのタスク管理画面"
+            loading="lazy"
+          >
           <span class="work-card__number">01</span>
         </div>
+
         <div class="work-card__content">
-          <div class="work-card__tags"><span>LINE Bot</span><span>AI</span><span>Task management</span></div>
+          <div class="work-card__tags">
+            <span>LINE Bot</span>
+            <span>AI</span>
+            <span>Task management</span>
+          </div>
+
           <h3>Tasno</h3>
-          <p>LINEグループの会話からAIがタスクを抽出し、チームの「やること」を整理するBot。会話の流れを止めずに、タスク管理へつなげます。</p>
+
+          <p>
+            LINEグループの会話からAIがタスクを抽出し、チームの「やること」を整理するBot。
+            会話の流れを止めずに、タスク管理へつなげます。
+          </p>
+
           <div class="work-card__links">
-            <a href="{{ '/projects/tasno/' | relative_url }}">Project details <span aria-hidden="true">↗</span></a>
-            <a href="https://github.com/shimataiyaki/tasno" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="{{ '/projects/tasno/' | relative_url }}">
+              Project details <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              href="https://github.com/shimataiyaki/tasno"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
       </article>
@@ -73,63 +140,127 @@ css: /assets/css/lp.css
       <div class="work-grid-modern">
         <article class="work-card">
           <div class="work-card__visual work-card__visual--ema">
-            <img src="{{ '/images/digital-ema.png' | relative_url }}" alt="デジタル絵馬の画面" loading="lazy">
+            <img
+              src="{{ '/images/digital-ema.png' | relative_url }}"
+              alt="デジタル絵馬の画面"
+              loading="lazy"
+            >
             <span class="work-card__number">02</span>
           </div>
+
           <div class="work-card__content">
-            <div class="work-card__tags"><span>Web app</span><span>Installation</span></div>
+            <div class="work-card__tags">
+              <span>Web app</span>
+              <span>Installation</span>
+            </div>
+
             <h3>デジタル絵馬</h3>
-            <p>願いごとをデジタルな絵馬として投稿し、会場のモニターへ映し出す文化祭向けインスタレーション。</p>
-            <div class="work-card__links"><a href="https://shimataiyaki.github.io/digital-ema/">View project <span aria-hidden="true">↗</span></a></div>
+
+            <p>
+              願いごとをデジタルな絵馬として投稿し、会場のモニターへ映し出す
+              文化祭向けインスタレーション。
+            </p>
+
+            <div class="work-card__links">
+              <a href="https://shimataiyaki.github.io/digital-ema/">
+                View project <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </article>
 
         <article class="work-card">
           <div class="work-card__visual work-card__visual--omikuji">
-            <img src="{{ '/images/digital-omikuji.png' | relative_url }}" alt="デジタルおみくじの画面" loading="lazy">
+            <img
+              src="{{ '/images/digital-omikuji.png' | relative_url }}"
+              alt="デジタルおみくじの画面"
+              loading="lazy"
+            >
             <span class="work-card__number">03</span>
           </div>
+
           <div class="work-card__content">
-            <div class="work-card__tags"><span>Web app</span><span>Interactive</span></div>
+            <div class="work-card__tags">
+              <span>Web app</span>
+              <span>Interactive</span>
+            </div>
+
             <h3>デジタルおみくじ</h3>
-            <p>札を選ぶ動作と結果表示を組み合わせた、会場で楽しめるインタラクティブなWebおみくじ。</p>
-            <div class="work-card__links"><a href="https://shimataiyaki.github.io/digital-omikuji/">View project <span aria-hidden="true">↗</span></a></div>
+
+            <p>
+              札を選ぶ動作と結果表示を組み合わせた、
+              会場で楽しめるインタラクティブなWebおみくじ。
+            </p>
+
+            <div class="work-card__links">
+              <a href="https://shimataiyaki.github.io/digital-omikuji/">
+                View project <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="portfolio-section portfolio-activity" id="activity" aria-labelledby="activity-title">
+  <section
+    class="portfolio-section portfolio-activity"
+    id="activity"
+    aria-labelledby="activity-title"
+  >
     <div class="portfolio-container">
-      <p class="portfolio-section-label">03 / Activity</p>
-      <h2 id="activity-title">開発以外。</h2>
+      <p class="portfolio-section-label">03 / Activity &amp; Contact</p>
+      <h2 id="activity-title">活動の記録と連絡先</h2>
 
       <div class="activity-log" aria-labelledby="activity-log-title">
         <div class="activity-log__heading">
           <p class="portfolio-section-label">Activity log</p>
           <h3 id="activity-log-title">活動の記録</h3>
         </div>
+
         <div class="activity-log__list">
-          <a class="activity-log__item" href="https://urbandata-challenge.jp/news/udc2025prize" target="_blank" rel="noopener noreferrer">
+          <a
+            class="activity-log__item"
+            href="https://urbandata-challenge.jp/news/udc2025prize"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <time datetime="2026-02-21">2026.02</time>
             <span class="activity-log__category">Challenge</span>
             <strong>アーバンデータチャレンジ2025 / 銀賞</strong>
             <span class="activity-log__arrow" aria-hidden="true">↗</span>
           </a>
-          <a class="activity-log__item" href="https://ascii.jp/elem/000/004/323/4323433/" target="_blank" rel="noopener noreferrer">
+
+          <a
+            class="activity-log__item"
+            href="https://ascii.jp/elem/000/004/323/4323433/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <time datetime="2025-08-20">2025.08</time>
             <span class="activity-log__category">Presentation</span>
             <strong>LOVOT活用アイデアコンテスト / 最優秀賞</strong>
             <span class="activity-log__arrow" aria-hidden="true">↗</span>
           </a>
-          <a class="activity-log__item" href="https://www.pref.shizuoka.jp/kodomokyoiku/school/kyoiku/shakaikyoiku/kokusaikoryu/1076829.html" target="_blank" rel="noopener noreferrer">
+
+          <a
+            class="activity-log__item"
+            href="https://www.pref.shizuoka.jp/kodomokyoiku/school/kyoiku/shakaikyoiku/kokusaikoryu/1076829.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <time datetime="2025-08-04">2025.08</time>
             <span class="activity-log__category">Exchange</span>
             <strong>モンゴル国・ドルノゴビ県高校生交流 / 副代表</strong>
             <span class="activity-log__arrow" aria-hidden="true">↗</span>
           </a>
-          <a class="activity-log__item" href="https://www.scout.or.jp/member/25sf" target="_blank" rel="noopener noreferrer">
+
+          <a
+            class="activity-log__item"
+            href="https://www.scout.or.jp/member/25sf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <time datetime="2024-11-02">2024.11</time>
             <span class="activity-log__category">Community</span>
             <strong>第25回全国スカウトフォーラム / 議長団</strong>
@@ -137,15 +268,25 @@ css: /assets/css/lp.css
           </a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="portfolio-section portfolio-contact" id="contact" aria-labelledby="contact-title">
-    <div class="portfolio-container portfolio-contact__inner">
-      <p class="portfolio-section-label">04 / Contact</p>
-      <h2 id="contact-title">Let's make<br><em>something good.</em></h2>
-      <p>お問い合わせはこちら。</p>
-      <a class="portfolio-contact__mail" href="mailto:shimataiyaki.dev@gmail.com">shimataiyaki.dev@gmail.com <span aria-hidden="true">↗</span></a>
+      <div class="activity-log" aria-labelledby="contact-title">
+        <div class="activity-log__heading">
+          <p class="portfolio-section-label">Contact</p>
+          <h3 id="contact-title">連絡先</h3>
+        </div>
+
+        <div class="activity-log__list">
+          <a
+            class="activity-log__item"
+            href="mailto:shimataiyaki.dev@gmail.com"
+          >
+            <span aria-hidden="true">—</span>
+            <span class="activity-log__category">Email</span>
+            <strong>shimataiyaki.dev@gmail.com</strong>
+            <span class="activity-log__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
