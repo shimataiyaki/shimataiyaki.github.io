@@ -66,4 +66,4 @@ title: R8文化祭展示
 
 ---
 
-© 2026 Taisuke Shimazaki, all rights reserved.
+© 2026 Shimataiyaki, all rights reserved.
