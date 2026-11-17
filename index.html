@@ -1,297 +1,268 @@
-<!DOCTYPE html>
-<html lang="ja" data-theme="light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>スマートフォン操作練習シミュレーター 一覧 | smart-navi</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./assets/simulator-common.css" />
-</head>
-<body class="min-h-screen flex flex-col">
+---
+layout: default
+title: "Shimataiyaki | Portfolio"
+title_suffix: false
+description: "Shimataiyakiのプロダクトと活動の記録。"
+og_title: "Shimataiyaki | Portfolio"
+og_description: "プロダクトと活動の記録。"
+og_type: website
+og_image: /images/ogp.png
+twitter_title: "Shimataiyaki | Portfolio"
+twitter_description: "プロダクトと活動の記録。"
+css: /assets/css/lp.css
+---
 
-  <header class="app-header sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-[8px] flex items-center justify-center shrink-0 text-xl"
-          style="background-color: var(--accent-primary); color: var(--accent-text);">
-          📱
-        </div>
-        <div>
-          <nav aria-label="パンくずリスト" class="text-[11px] font-semibold flex items-center gap-1.5 mb-0.5"
-            style="color: var(--text-muted);">
-            <span>smart-navi</span><span>＞</span><span>レッスン一覧</span>
-          </nav>
-          <h1 class="text-base sm:text-lg font-bold leading-tight" style="color: var(--text-primary);">
-            スマートフォン操作練習シミュレーター
-          </h1>
-        </div>
+<main class="portfolio-page">
+  <section class="portfolio-hero" aria-labelledby="hero-title">
+    <div class="portfolio-hero__glow portfolio-hero__glow--one" aria-hidden="true"></div>
+    <div class="portfolio-hero__glow portfolio-hero__glow--two" aria-hidden="true"></div>
+
+    <div class="portfolio-container portfolio-hero__inner">
+      <p class="portfolio-eyebrow">
+        <span></span> Student developer · Japan
+      </p>
+
+      <h1 id="hero-title">
+        Shimataiyaki
+      </h1>
+
+      <p class="portfolio-hero__lead">
+        Webサイトやアプリをつくっています。
+      </p>
+
+      <div class="portfolio-actions">
+        <a class="portfolio-button portfolio-button--light" href="#works">
+          制作物を見る <span aria-hidden="true">↘</span>
+        </a>
+        <a
+          class="portfolio-button portfolio-button--ghost"
+          href="https://github.com/shimataiyaki"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
       </div>
 
-      <div class="flex flex-wrap items-center gap-3 sm:gap-4">
-        <div class="flex items-center gap-2">
-          <span id="fontSizeStatusLabel" class="text-xs sm:text-sm font-semibold" style="color: var(--text-primary);">
-            文字サイズ：標準
-          </span>
-          <button type="button" id="fontToggleBtn" role="switch" aria-checked="false"
-            onclick="SmartNaviCommon.toggleFontSize(typeof onPrefUpdated === 'function' ? onPrefUpdated : null)"
-            class="ui-toggle" aria-label="文字サイズを標準と大きめで切り替える"></button>
-        </div>
-
-        <div class="flex items-center gap-2">
-          <span id="themeStatusLabel" class="text-xs sm:text-sm font-semibold" style="color: var(--text-primary);">
-            配色：ライト
-          </span>
-          <button type="button" id="themeToggleBtn" role="switch" aria-checked="false"
-            onclick="SmartNaviCommon.toggleTheme(typeof onPrefUpdated === 'function' ? onPrefUpdated : null)"
-            class="ui-toggle" aria-label="配色をライトとダークで切り替える"></button>
-        </div>
-        
+      <div class="portfolio-hero__meta" aria-label="プロフィール概要">
+        <p><span>Focus</span>Web / UI / Community</p>
+        <p><span>Based in</span>Shizuoka, Japan</p>
+        <p><span>Profile</span>Student developer</p>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 space-y-6">
+  <section
+    class="portfolio-section portfolio-intro"
+    id="about"
+    aria-labelledby="about-title"
+  >
+    <div class="portfolio-container portfolio-intro__grid">
+      <p class="portfolio-section-label">01 / About</p>
 
-    <!-- 導入バナー＆進捗状況 -->
-    <section class="ui-card p-5 sm:p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-l-4"
-      style="border-left-color: var(--accent-primary);">
-      <div class="space-y-1.5 max-w-2xl">
-        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-bold"
-          style="background-color: var(--accent-tint); color: var(--accent-primary);">
-          失敗しても壊れない・安全練習環境
-        </span>
-        <h2 class="text-lg sm:text-xl font-bold" style="color: var(--text-primary);">
-          「画面の裏側」を見ながら、つまずきやすい操作を練習しよう
-        </h2>
-        <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">
-          「別のアプリを開いたら元の画面が消えたと思った」「パスワードを毎回打つのが大変」といった日常のお悩みを、パソコンやタブレットの画面上で何度でも安全に体験できます。
+      <div>
+        <h2 id="about-title"></h2>
+
+        <p class="portfolio-intro__copy">
+          2008年生まれの高校生です。身近な課題や「あったらいいな」と思ったものを、
+          Webサイトやアプリとして形にしています。実装だけでなく、使う人への伝わり方や
+          公開後の運用も考えながら制作しています。
         </p>
-      </div>
 
-      <div class="ui-card-sub p-4 w-full md:w-auto min-w-[230px] flex flex-col items-center text-center">
-        <div class="text-xs font-bold" style="color: var(--text-secondary);">練習スタンプ達成数</div>
-        <div id="progressSummaryText" class="text-2xl font-extrabold my-1" style="color: var(--accent-primary);">
-          0 / 5 完了
+        <div class="portfolio-tags" aria-label="活動分野">
+          <span>Product design</span>
+          <span>Web development</span>
+          <span>Writing</span>
+          <span>Community</span>
         </div>
-        <button type="button" onclick="handleResetProgress()"
-          class="text-[11px] font-semibold underline cursor-pointer mt-1" style="color: var(--text-muted);">
-          達成記録をリセットする
-        </button>
       </div>
-    </section>
-
-    <!-- お悩み検索＆ワンタップ絞り込みバー -->
-    <section class="ui-card p-4 sm:p-5 space-y-3">
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-        <label for="lessonSearchInput" class="font-bold text-sm shrink-0" style="color: var(--text-primary);">
-          🔍 困りごとから探す：
-        </label>
-        <input id="lessonSearchInput" type="text" oninput="renderCatalog()"
-          placeholder="例：確認コード、SMS、パスワード、画面保存、改札、AI..."
-          class="flex-1 px-3.5 py-2.5 rounded-[8px] border text-sm outline-none"
-          style="background-color: var(--bg-card-sub); border-color: var(--border-strong); color: var(--text-primary);" />
-      </div>
-
-      <div class="flex flex-wrap items-center gap-2 pt-1">
-        <span class="text-xs font-bold mr-1" style="color: var(--text-secondary);">よくあるお悩み：</span>
-        <button type="button" onclick="setFilter('all')" id="filter_all" class="filter-chip ui-accent-btn px-3 py-1.5 text-xs">
-          すべて表示（5）
-        </button>
-        <button type="button" onclick="setFilter('auth')" id="filter_auth" class="filter-chip ui-btn px-3 py-1.5 text-xs">
-          🔐 確認コード・ログイン
-        </button>
-        <button type="button" onclick="setFilter('device')" id="filter_device" class="filter-chip ui-btn px-3 py-1.5 text-xs">
-          📷 画面の保存（スクショ）
-        </button>
-        <button type="button" onclick="setFilter('ai')" id="filter_ai" class="filter-chip ui-btn px-3 py-1.5 text-xs">
-          🤖 AIにやり方を聞く・改札
-        </button>
-      </div>
-    </section>
-
-    <!-- レッスンカード一覧グリッド -->
-    <section aria-label="練習テーマ一覧" id="catalogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <!-- JSで描画 -->
-    </section>
-
-  </main>
-
-  <footer class="app-footer mt-auto py-4 px-4 sm:px-6">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
-      <div>smart-navi スマートフォン操作練習シミュレーター</div>
-      <div class="font-semibold">© 2026 smart-navi</div>
     </div>
-  </footer>
+  </section>
 
-  <script src="./assets/simulator-common.js"></script>
-  <script>
-    const LESSONS = [
-      {
-        slug: 'email-auth',
-        category: 'auth',
-        stepTag: 'レッスン 1',
-        duration: '約3分',
-        icon: '✉️',
-        title: 'メール認証（確認コードの往復入力）',
-        summary: '会員サイトを閉じずにメールアプリを開き、6桁の確認コードを長押しコピーして元の画面へ貼り付ける基本動作を練習します。',
-        keywords: 'メール 認証 確認コード コピー 貼り付け 履歴 戻る',
-        useCase: 'ネット通販や会員登録で本人確認メールが届いたとき'
-      },
-      {
-        slug: 'sms-auth',
-        category: 'auth',
-        stepTag: 'レッスン 2',
-        duration: '約3分',
-        icon: '💬',
-        title: 'SMS（ショートメッセージ）認証',
-        summary: '携帯電話番号宛に届く短縮メッセージの6桁番号を確認し、元の手続き画面を消さずに帰還して入力する流れを体験します。',
-        keywords: 'sms ショートメッセージ 電話番号 認証番号 履歴 往復',
-        useCase: '銀行・予約サイトなどでSMSに認証番号が届いたとき'
-      },
-      {
-        slug: 'password-auth',
-        category: 'auth',
-        stepTag: 'レッスン 3',
-        duration: '約2分',
-        icon: '🔑',
-        title: 'パスワード自動入力ログイン',
-        summary: '小さな文字盤で1文字ずつ打たずに、スマホに保存済みの「鍵の保管庫」からIDとパスワードを一瞬で呼び出してログインします。',
-        keywords: 'パスワード ログイン 自動入力 鍵 保管庫 忘れた',
-        useCase: '会員サイトへ毎回パスワードを入力するのが大変なとき'
-      },
-      {
-        slug: 'screenshot',
-        category: 'device',
-        stepTag: 'レッスン 4',
-        duration: '約2分',
-        icon: '📷',
-        title: 'スクリーンショット（画面の撮影と確認）',
-        summary: '予約番号や地図などの画面をそのまま写真として保存し、あとから「写真アルバム」で見返す操作を練習します。',
-        keywords: 'スクリーンショット スクショ 画面保存 写真 電源 音量 同時押し',
-        useCase: '予約完了画面や大切な案内をメモ代わりに残したいとき'
-      },
-      {
-        slug: 'ai-assistant',
-        category: 'ai',
-        stepTag: 'レッスン 5',
-        duration: '約3分',
-        icon: '🤖',
-        title: 'AI相談室に質問して交通系ICカードを使う',
-        summary: 'わからない使い方をチャット型AIに質問して手順を教わり、その通りに交通系ICへチャージして改札を通る体験ができます。',
-        keywords: 'ai 質問 チャット 交通系ic チャージ 入金 改札 かざす',
-        useCase: '操作方法がわからず誰かにすぐ手順を聞きたいとき'
-      }
-    ];
+  <section
+    class="portfolio-section portfolio-works"
+    id="works"
+    aria-labelledby="works-title"
+  >
+    <div class="portfolio-container">
+      <div class="portfolio-heading-row">
+        <div>
+          <p class="portfolio-section-label">02 / Selected products</p>
+          <h2 id="works-title"></h2>
+        </div>
+      </div>
 
-    let activeCategory = 'all';
+      <article class="work-card work-card--featured">
+        <div class="work-card__visual work-card__visual--tasno">
+          <img
+            src="{{ '/images/taskdemo.png' | relative_url }}"
+            alt="Tasnoのタスク管理画面"
+            loading="lazy"
+          >
+          <span class="work-card__number">01</span>
+        </div>
 
-    function setFilter(cat) {
-      activeCategory = cat;
-      ['all', 'auth', 'device', 'ai'].forEach(key => {
-        const btn = document.getElementById(`filter_${key}`);
-        if (!btn) return;
-        btn.className = key === cat
-          ? 'filter-chip ui-accent-btn px-3 py-1.5 text-xs'
-          : 'filter-chip ui-btn px-3 py-1.5 text-xs';
-      });
-      renderCatalog();
-    }
-
-    function renderCatalog() {
-      const completed = SmartNaviCommon.getCompletedLessons();
-      document.getElementById('progressSummaryText').textContent = `${completed.length} / ${LESSONS.length} 完了`;
-
-      const query = (document.getElementById('lessonSearchInput').value || '').trim().toLowerCase();
-      const filtered = LESSONS.filter(item => {
-        const matchCat = activeCategory === 'all' || item.category === activeCategory;
-        const matchQuery = !query || (
-          item.title.toLowerCase().includes(query) ||
-          item.summary.toLowerCase().includes(query) ||
-          item.keywords.toLowerCase().includes(query) ||
-          item.useCase.toLowerCase().includes(query)
-        );
-        return matchCat && matchQuery;
-      });
-
-      const grid = document.getElementById('catalogGrid');
-      if (filtered.length === 0) {
-        grid.innerHTML = `
-          <div class="col-span-full ui-card p-6 text-center space-y-2">
-            <div class="font-bold text-base">該当するレッスンが見つかりませんでした</div>
-            <p class="text-xs sm:text-sm" style="color: var(--text-secondary);">
-              検索欄の文字を消すか、「すべて表示」ボタンを押してください。
-            </p>
+        <div class="work-card__content">
+          <div class="work-card__tags">
+            <span>LINE Bot</span>
+            <span>AI</span>
+            <span>Task management</span>
           </div>
-        `;
-        return;
-      }
 
-      grid.innerHTML = filtered.map(item => {
-        const isDone = completed.includes(item.slug);
-        return `
-          <article class="ui-card p-5 flex flex-col justify-between gap-4">
-            <div class="space-y-2.5">
-              <div class="flex items-center justify-between gap-2">
-                <div class="flex items-center gap-2">
-                  <span class="px-2.5 py-0.5 rounded-full text-xs font-bold"
-                    style="background-color: var(--accent-tint); color: var(--accent-primary);">
-                    ${item.stepTag}
-                  </span>
-                  <span class="text-xs font-semibold" style="color: var(--text-muted);">⏱ ${item.duration}</span>
-                </div>
-                ${isDone
-                  ? `<span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold"
-                       style="background-color: var(--success-bg); color: var(--success-fg); border: 1px solid var(--success-border);">
-                       ✓ 練習済み
-                     </span>`
-                  : `<span class="text-xs font-semibold" style="color: var(--text-muted);">未練習</span>`
-                }
-              </div>
+          <h3>Tasno</h3>
 
-              <div class="flex items-start gap-3 pt-1">
-                <div class="w-11 h-11 rounded-[10px] flex items-center justify-center text-2xl shrink-0"
-                  style="background-color: var(--accent-tint);">
-                  ${item.icon}
-                </div>
-                <h3 class="font-bold text-base leading-snug" style="color: var(--text-primary);">
-                  ${item.title}
-                </h3>
-              </div>
+          <p>
+            LINEグループの会話からAIがタスクを抽出し、チームの「やること」を整理するBot。
+            会話の流れを止めずに、タスク管理へつなげます。
+          </p>
 
-              <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--text-secondary);">
-                ${item.summary}
-              </p>
+          <div class="work-card__links">
+            <a href="{{ '/projects/tasno/' | relative_url }}">
+              Project details <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              href="https://github.com/shimataiyaki/tasno"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </article>
 
-              <div class="ui-card-sub p-2.5 text-xs">
-                <span class="font-bold" style="color: var(--accent-primary);">こんな場面で役立ちます：</span>
-                <span style="color: var(--text-primary);">${item.useCase}</span>
-              </div>
+      <div class="work-grid-modern">
+        <article class="work-card">
+          <div class="work-card__visual work-card__visual--ema">
+            <img
+              src="{{ '/images/digital-ema.png' | relative_url }}"
+              alt="デジタル絵馬の画面"
+              loading="lazy"
+            >
+            <span class="work-card__number">02</span>
+          </div>
+
+          <div class="work-card__content">
+            <div class="work-card__tags">
+              <span>Web app</span>
+              <span>Installation</span>
             </div>
 
-            <div class="grid grid-cols-2 gap-2.5 pt-2 border-t" style="border-color: var(--border-subtle);">
-              <a href="./${item.slug}/index.html"
-                class="ui-btn py-2.5 px-3 text-xs sm:text-sm text-center flex items-center justify-center gap-1 no-underline">
-                <span>📖 事前解説</span>
-              </a>
-              <a href="./${item.slug}/app.html"
-                class="ui-accent-btn py-2.5 px-3 text-xs sm:text-sm text-center flex items-center justify-center gap-1 no-underline">
-                <span>▶ 練習する</span>
+            <h3>デジタル絵馬</h3>
+
+            <p>
+              願いごとをデジタルな絵馬として投稿し、会場のモニターへ映し出す
+              文化祭向けインスタレーション。
+            </p>
+
+            <div class="work-card__links">
+              <a href="https://shimataiyaki.github.io/digital-ema/">
+                View project <span aria-hidden="true">↗</span>
               </a>
             </div>
-          </article>
-        `;
-      }).join('');
-    }
+          </div>
+        </article>
 
-    function handleResetProgress() {
-      SmartNaviCommon.resetCompletedLessons();
-      renderCatalog();
-    }
+        <article class="work-card">
+          <div class="work-card__visual work-card__visual--omikuji">
+            <img
+              src="{{ '/images/digital-omikuji.png' | relative_url }}"
+              alt="デジタルおみくじの画面"
+              loading="lazy"
+            >
+            <span class="work-card__number">03</span>
+          </div>
 
-    window.addEventListener('DOMContentLoaded', () => {
-      SmartNaviCommon.initPreferences();
-      renderCatalog();
-    });
-  </script>
-</body>
-</html>
+          <div class="work-card__content">
+            <div class="work-card__tags">
+              <span>Web app</span>
+              <span>Interactive</span>
+            </div>
+
+            <h3>デジタルおみくじ</h3>
+
+            <p>
+              札を選ぶ動作と結果表示を組み合わせた、
+              会場で楽しめるインタラクティブなWebおみくじ。
+            </p>
+
+            <div class="work-card__links">
+              <a href="https://shimataiyaki.github.io/digital-omikuji/">
+                View project <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="portfolio-section portfolio-activity"
+    id="activity"
+    aria-labelledby="activity-title"
+  >
+    <div class="portfolio-container">
+      <p class="portfolio-section-label">03 / Activity</p>
+      <h2 id="activity-title"></h2>
+      
+      <div class="activity-log" aria-labelledby="activity-log-title">
+        <div class="activity-log__heading">
+          <p class="portfolio-section-label">Activity log</p>
+          <h3 id="activity-log-title">活動の記録</h3>
+        </div>
+
+        <div class="activity-log__list">
+          <a
+            class="activity-log__item"
+            href="https://urbandata-challenge.jp/news/udc2025prize"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <time datetime="2026-02-21">2026.02</time>
+            <span class="activity-log__category">Challenge</span>
+            <strong>アーバンデータチャレンジ2025 / 銀賞</strong>
+            <span class="activity-log__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            class="activity-log__item"
+            href="https://ascii.jp/elem/000/004/323/4323433/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <time datetime="2025-08-20">2025.08</time>
+            <span class="activity-log__category">Presentation</span>
+            <strong>LOVOT活用アイデアコンテスト / 最優秀賞</strong>
+            <span class="activity-log__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            class="activity-log__item"
+            href="https://www.pref.shizuoka.jp/kodomokyoiku/school/kyoiku/shakaikyoiku/kokusaikoryu/1076829.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <time datetime="2025-08-04">2025.08</time>
+            <span class="activity-log__category">Exchange</span>
+            <strong>モンゴル国・ドルノゴビ県高校生交流 / 副代表</strong>
+            <span class="activity-log__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            class="activity-log__item"
+            href="https://www.scout.or.jp/member/25sf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <time datetime="2024-11-02">2024.11</time>
+            <span class="activity-log__category">Community</span>
+            <strong>第25回全国スカウトフォーラム / 議長団</strong>
+            <span class="activity-log__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+</main>
